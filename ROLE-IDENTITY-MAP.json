@@ -85,9 +85,9 @@
           "reviews/**"
         ]
       },
-      "effective_from": null,
+      "effective_from": "REVIEW_LEDGER_REVIEWER_IDENTITY_BINDING_001",
       "revoked_at": null,
-      "notes": "Exact reviewer transport identity is now owner-bound: GitHub login and numeric user ID captured, SSH public-key fingerprint captured, signing key configured with automatic signing off. No token, credential, private key, or passphrase is persisted here; transport facts only. Binding the identity is not activation: ledger status remains BOOTSTRAP_CANDIDATE_NOT_ACTIVE and effective_from stays null until owner acceptance."
+      "notes": "Exact reviewer transport identity is owner-bound: GitHub login and numeric user ID captured, SSH public-key fingerprint captured, signing key configured with automatic signing off. No token, credential, private key, or passphrase is persisted here; transport facts only. Reviewer role effectivity is bounded by REVIEW_LEDGER_REVIEWER_IDENTITY_BINDING_001 and is confined to the INDEPENDENT_REVIEWER role over review/ branches and reviews/** paths. Role effectivity is not ledger activation: ledger status remains BOOTSTRAP_CANDIDATE_NOT_ACTIVE and this principal confers no owner, implementer, infrastructure, or bootstrap authority."
     }
   ],
   "bootstrap_authority": {
