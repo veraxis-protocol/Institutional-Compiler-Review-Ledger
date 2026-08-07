@@ -45,9 +45,11 @@ Path authorization is enforced by repository protection plus fail-closed CI. COD
 
 The GitHub principal `veraxis-protocol` is currently an owner-controlled execution principal and may represent both owner actions and Claude/implementer execution. The ledger therefore must not infer institutional role solely from a GitHub username. Role is additionally constrained by branch class, path class, and explicit owner/reviewer artifacts.
 
-The independent reviewer transport identity must be bound before review-path activation. The reviewer has declared local transport handle `inventor1975`; the exact GitHub login and SSH public-key fingerprint remain **PENDING_BOOTSTRAP_CAPTURE** and must not be guessed.
+`INDEPENDENT_REVIEWER_001` is bound to the GitHub account `inventor1975`. Its transport and signing status — exact login, numeric user ID, SSH public-key fingerprint, and signing-key state — is recorded explicitly in `ROLE-IDENTITY-MAP.json`. No credential, token, private key, or passphrase is stored in this repository.
 
-Commit/tag signing keys are not assumed to exist. Establishing signing identities for accepted-state tags is a bootstrap task.
+Reviewer authority is bounded to the `INDEPENDENT_REVIEWER` role and its authorized branch and path classes (`review/` branches, `reviews/**` paths). It confers no owner, implementer, or infrastructure authority.
+
+Commit/tag signing keys are not assumed to exist. Signing-status information is explicit and is not upgraded by inference. Do not claim signed accepted-state tags unless the relevant signing identity is actually configured, captured, and used.
 
 ## Mechanical verification
 
@@ -62,9 +64,15 @@ The accepted Checkpoint B Verifier V3 identity is recorded in `verifier/CHECKPOI
 
 ## Bootstrap cutover
 
-M1-S1 continues through the pre-ledger transport channel. The ledger is not an authorized transport for M1-S1. M1-S2 may become the first native ledger-carried experiment only after the bootstrap itself has been independently reviewed and owner-accepted.
+The temporary `BOOTSTRAP` execution authority used for initial installation has been **decommissioned** (RL-15). No active `BOOTSTRAP` principal role, `bootstrap/` branch-role mapping, `BOOTSTRAP` path grant, or `bootstrap_authority` declaration exists, and mechanical verification fails closed if any is reinstalled. Steady-state authority over protected infrastructure is `INFRASTRUCTURE` only.
 
-See `LEDGER-INVARIANTS.md` for RL-01 through RL-14 and `owner-decisions/REVIEW-LEDGER-BOOTSTRAP-OWNER-AUTHORIZATION-002.md` for the bootstrap authorization.
+Records under `bootstrap/**`, together with the historical bootstrap branches and owner decisions, are retained as evidence. They are historical records, not authority, and reviving retired authority requires a fresh explicit owner event.
+
+Final owner bootstrap acceptance remains **pending**. Decommissioning the temporary authority is not acceptance and is not operational activation.
+
+M1-S1 continues through the pre-ledger transport channel. The ledger is not an authorized transport for M1-S1. M1-S2 remains unavailable and may become the first native ledger-carried experiment only after the bootstrap itself has been independently reviewed and owner-accepted.
+
+See `LEDGER-INVARIANTS.md` for RL-01 through RL-15 and `owner-decisions/REVIEW-LEDGER-BOOTSTRAP-OWNER-AUTHORIZATION-002.md` for the bootstrap authorization.
 
 
 ## Public visibility decision

@@ -44,15 +44,21 @@ Every closed gate receives an accepted-state reference binding owner decision, i
 ## RL-14 — Fail Closed
 Missing identity, ambiguous role, unauthorized path, changed verifier, malformed manifest, unresolved provenance, or failed mechanical verification cannot degrade to a warning.
 
-## RL-15 — Temporary Bootstrap Authority
-Initial installation of this ledger legitimately spans bootstrap-governance, owner-decision, and infrastructure paths at once, which no steady-state role covers. A single temporary authority class, `BOOTSTRAP`, exists solely for that initial installation. It does not relax RL-01 through RL-14; it is constrained by them.
+## RL-15 — Bootstrap Authority Decommissioned
+`BOOTSTRAP` existed solely as temporary initial-installation authority. It is now decommissioned.
 
-`BOOTSTRAP` is bound as follows:
+- No active `BOOTSTRAP` principal role may exist.
+- No `bootstrap/` branch-role mapping may exist.
+- No `BOOTSTRAP` path grant may exist.
+- No `bootstrap_authority` declaration may exist in policy or the identity map.
+- `bootstrap/**` is historical evidence only and grants no authority.
+- Retired `BOOTSTRAP` authority may not be silently revived.
 
-- **Branch.** Only the `bootstrap/` branch prefix maps to `BOOTSTRAP`.
-- **Window.** Authority exists only while `ROLE-IDENTITY-MAP.json.status` is exactly `BOOTSTRAP_CANDIDATE_NOT_ACTIVE`. Once ledger status leaves that state the authority lapses permanently and every `bootstrap/*` PR fails closed under RL-14. A missing or altered status gate is itself a failure.
-- **Principal.** Authority is explicit, never inferred. The acting account must be owner-bound in `ROLE-IDENTITY-MAP.json.bootstrap_authority`, carry the `BOOTSTRAP` role, and be unrevoked. Repository write access confers nothing. An unbound actor on a `bootstrap/` branch fails closed.
-- **Paths.** Only the initial-installation classes enumerated in `policy/PATH-AUTHORITY.json` under `role_paths.BOOTSTRAP`. `stage-*/**` and `reviews/**` are never installation paths and are never writable under `BOOTSTRAP`. Paths listed in `bootstrap_authority.removal_only_paths` may be removed but never created or modified.
-- **Non-grant.** `BOOTSTRAP` grants no evidence, review, or acceptance authority, and supplies no independent review. RL-08 and RL-12 continue to apply in full: the bootstrap author may not accept the bootstrap.
+Any future extraordinary installation authority requires all of:
 
-`BOOTSTRAP` expires at `ACCEPT_REVIEW_LEDGER_BOOTSTRAP`. Any later use of an initial-installation authority requires a fresh owner event, not the reuse of this one.
+- a fresh explicit owner event;
+- a protected infrastructure change;
+- non-author independent review;
+- fail-closed mechanical verification.
+
+The ledger remains a bootstrap candidate until a separate final owner acceptance and activation transition.

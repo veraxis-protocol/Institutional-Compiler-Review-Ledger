@@ -13,11 +13,13 @@ INFRA_PATTERNS = [
     '.github/**','verifier/**','schemas/**','policy/**','CODEOWNERS',
     'ROLE-IDENTITY-MAP.json','LEDGER-INVARIANTS.md','README.md'
 ]
-BOOTSTRAP_ROLE = 'BOOTSTRAP'
-BOOTSTRAP_STATUS = 'BOOTSTRAP_CANDIDATE_NOT_ACTIVE'
-# Roles permitted to install/alter the protected infrastructure set. BOOTSTRAP is
-# temporary and additionally gated on ledger status + explicit principal binding.
-INFRA_CAPABLE_ROLES = ('INFRASTRUCTURE', BOOTSTRAP_ROLE)
+# RETIRED authority class. BOOTSTRAP was temporary initial-installation authority
+# and is decommissioned (RL-15). The name survives here only as a detection marker
+# so the guard below can fail closed if the retired authority is ever reinstalled.
+# It is never resolved to an executable role.
+RETIRED_ROLE = 'BOOTSTRAP'
+RETIRED_BRANCH_PREFIX = 'bootstrap/'
+RETIRED_AUTHORITY_KEY = 'bootstrap_authority'
 HEX40 = re.compile(r'^[0-9a-f]{40}$')
 HEX64 = re.compile(r'^[0-9a-f]{64}$')
 HEX128 = re.compile(r'^[0-9a-f]{128}$')
@@ -48,52 +50,39 @@ def changed_files(base: str, head: str) -> list[str]:
     out=git('diff','--name-only',f'{base}...{head}')
     return [x for x in out.splitlines() if x]
 
-def deleted_files(base: str, head: str) -> set[str]:
-    out=git('diff','--name-status','--no-renames',f'{base}...{head}')
-    got=set()
-    for line in out.splitlines():
-        if not line: continue
-        parts=line.split('\t')
-        if len(parts)<2: continue
-        if parts[0][:1]=='D': got.add(parts[-1])
-    return got
-
 def role_for_branch(branch: str, policy: dict) -> str:
     matches=[role for prefix,role in policy['branch_role_prefixes'].items() if branch.startswith(prefix)]
     if len(matches)!=1: raise Failure(f'branch {branch!r} does not bind exactly one role')
     return matches[0]
 
-def bootstrap_window(policy: dict, role_map: dict) -> dict:
-    """Temporary bootstrap authority is open only during the candidate window.
+def verify_retired_bootstrap_absent():
+    """RL-15: the retired BOOTSTRAP authority may never be silently revived.
 
-    Fails closed on a missing declaration or any status other than the exact
-    declared bootstrap status, so a bootstrap/* PR cannot survive activation.
+    Fails closed if any active authority configuration reinstalls the retired
+    class. Historical prose in README.md, LEDGER-INVARIANTS.md, and bootstrap/**
+    is evidence, not authority, and is deliberately not inspected here.
     """
-    pb=policy.get('bootstrap_authority')
-    rb=role_map.get('bootstrap_authority')
-    if not isinstance(pb,dict) or not isinstance(rb,dict):
-        raise Failure('bootstrap authority is not declared in policy and identity map')
-    required=pb.get('valid_only_while_ledger_status')
-    if required!=BOOTSTRAP_STATUS or rb.get('valid_only_while_status')!=BOOTSTRAP_STATUS:
-        raise Failure('bootstrap authority declares a status gate other than the bootstrap candidate state')
-    status=role_map.get('status')
-    if status!=BOOTSTRAP_STATUS:
-        raise Failure(f'bootstrap authority is closed: ledger status is {status!r}, not {BOOTSTRAP_STATUS!r}')
-    return rb
-
-def bootstrap_principal(actor: str, role_map: dict, binding: dict) -> dict:
-    """Bootstrap authority is explicit, never inferred from repository write access."""
-    if actor not in binding.get('github_accounts',[]):
-        raise Failure(f'actor {actor!r} is not an owner-bound bootstrap execution principal')
-    ids=binding.get('principal_ids',[])
-    found=[p for p in role_map['principals']
-           if p.get('principal_id') in ids
-           and p.get('github_account')==actor
-           and BOOTSTRAP_ROLE in p.get('roles',[])
-           and p.get('revoked_at') is None]
-    if len(found)!=1:
-        raise Failure(f'actor {actor!r} is not uniquely bound to role {BOOTSTRAP_ROLE} by owner decision')
-    return found[0]
+    role_map=load_json(ROOT/'ROLE-IDENTITY-MAP.json')
+    policy=load_json(ROOT/'policy/PATH-AUTHORITY.json')
+    found=[]
+    for p in role_map.get('principals',[]):
+        if RETIRED_ROLE in p.get('roles',[]):
+            found.append(f"principal {p.get('principal_id')!r} declares retired role {RETIRED_ROLE}")
+    if RETIRED_AUTHORITY_KEY in role_map:
+        found.append(f'ROLE-IDENTITY-MAP.json declares retired {RETIRED_AUTHORITY_KEY}')
+    if RETIRED_ROLE in policy.get('role_paths',{}):
+        found.append(f'policy role_paths declares retired class {RETIRED_ROLE}')
+    prefixes=policy.get('branch_role_prefixes',{})
+    if RETIRED_BRANCH_PREFIX in prefixes:
+        found.append(f'policy branch_role_prefixes declares retired prefix {RETIRED_BRANCH_PREFIX!r}')
+    for prefix,role in prefixes.items():
+        if role==RETIRED_ROLE:
+            found.append(f'policy branch_role_prefixes maps {prefix!r} to retired role {RETIRED_ROLE}')
+    if RETIRED_AUTHORITY_KEY in policy:
+        found.append(f'policy declares retired {RETIRED_AUTHORITY_KEY}')
+    if found:
+        raise Failure(f'retired BOOTSTRAP authority is present in active configuration: {found}')
+    return {'retired_role':RETIRED_ROLE,'active_declarations':0}
 
 def principal_for_actor(actor: str, role_map: dict, role: str) -> dict:
     found=[]
@@ -105,41 +94,19 @@ def principal_for_actor(actor: str, role_map: dict, role: str) -> dict:
         raise Failure(f'actor {actor!r} is not uniquely bound to role {role}; reviewer identity may still be pending')
     return found[0]
 
-def bootstrap_unauthorized(files: list[str], deleted: set[str], policy: dict, allowed: list[str]) -> list[str]:
-    """Initial-installation classes only; evidence/review trees are never writable."""
-    pb=policy['bootstrap_authority']
-    forbidden=[p for p in files if matches_any(p,pb.get('never_authorized_paths',[]))]
-    if forbidden:
-        raise Failure(f'bootstrap authority never covers evidence/review paths: {forbidden}')
-    removal_only=pb.get('removal_only_paths',[])
-    bad=[]
-    for p in files:
-        if matches_any(p,removal_only):
-            # Removing a stray ignored artifact is installation hygiene; creating or
-            # modifying one is not authorized under any role.
-            if p not in deleted: bad.append(p)
-            continue
-        if not matches_any(p,allowed): bad.append(p)
-    return bad
-
 def verify_path_authority(actor: str, branch: str, base: str, head: str):
     policy=load_json(ROOT/'policy/PATH-AUTHORITY.json')
     role_map=load_json(ROOT/'ROLE-IDENTITY-MAP.json')
+    verify_retired_bootstrap_absent()
     role=role_for_branch(branch,policy)
-    if role==BOOTSTRAP_ROLE:
-        binding=bootstrap_window(policy,role_map)
-        principal=bootstrap_principal(actor,role_map,binding)['principal_id']
-    else:
-        principal=principal_for_actor(actor,role_map,role).get('principal_id')
+    principal=principal_for_actor(actor,role_map,role).get('principal_id')
     files=changed_files(base,head)
     if not files: raise Failure('PR changes no files')
     allowed=policy['role_paths'][role]
-    if role==BOOTSTRAP_ROLE:
-        bad=bootstrap_unauthorized(files,deleted_files(base,head),policy,allowed)
-    else:
-        bad=[p for p in files if not matches_any(p,allowed)]
+    bad=[p for p in files if not matches_any(p,allowed)]
     if bad: raise Failure(f'unauthorized paths for role {role}: {bad}')
-    if role not in INFRA_CAPABLE_ROLES:
+    # Steady state: only INFRASTRUCTURE may alter protected infrastructure paths.
+    if role!='INFRASTRUCTURE':
         infra=[p for p in files if matches_any(p,INFRA_PATTERNS)]
         if infra: raise Failure(f'non-infrastructure PR alters protected verifier/policy paths: {infra}')
     return {'role':role,'principal':actor,'principal_id':principal,'changed_files':files}
@@ -208,6 +175,7 @@ def verify_manifests():
     return results
 
 def verify_identity_map():
+    verify_retired_bootstrap_absent()
     m=load_json(ROOT/'ROLE-IDENTITY-MAP.json')
     if not m.get('principals'): raise Failure('identity map has no principals')
     ids=[p.get('principal_id') for p in m['principals']]
@@ -227,6 +195,7 @@ def run_all(args):
         # rather than failing incidentally in a later content check.
         result['path_authority']=verify_path_authority(args.actor,args.branch,args.base,args.head)
     result.update({
+      'retired_bootstrap_absent':verify_retired_bootstrap_absent(),
       'identity_map':verify_identity_map(),
       'checkpoint_pin':verify_checkpoint_pin(),
       'workflow_supply_chain':verify_workflow_supply_chain(),

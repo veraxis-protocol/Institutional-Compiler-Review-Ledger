@@ -20,44 +20,17 @@
       "ROLE-IDENTITY-MAP.json",
       "LEDGER-INVARIANTS.md",
       "README.md"
-    ],
-    "BOOTSTRAP": [
-      ".github/**",
-      ".gitignore",
-      "CODEOWNERS",
-      "README.md",
-      "LEDGER-INVARIANTS.md",
-      "ROLE-IDENTITY-MAP.json",
-      "bootstrap/**",
-      "owner-decisions/**",
-      "policy/**",
-      "schemas/**",
-      "verifier/**"
     ]
   },
   "branch_role_prefixes": {
     "owner/": "OWNER",
     "evidence/": "IMPLEMENTER_EXECUTION",
     "review/": "INDEPENDENT_REVIEWER",
-    "infra/": "INFRASTRUCTURE",
-    "bootstrap/": "BOOTSTRAP"
+    "infra/": "INFRASTRUCTURE"
   },
-  "bootstrap_authority": {
-    "role": "BOOTSTRAP",
-    "temporary": true,
-    "valid_only_while_ledger_status": "BOOTSTRAP_CANDIDATE_NOT_ACTIVE",
-    "requires_explicit_principal_binding": true,
-    "never_authorized_paths": [
-      "stage-*/**",
-      "reviews/**"
-    ],
-    "removal_only_paths": [
-      ".DS_Store",
-      "*/.DS_Store"
-    ],
-    "expires_on": "ACCEPT_REVIEW_LEDGER_BOOTSTRAP",
-    "note": "Temporary initial-installation authority. It grants no evidence, review, or acceptance authority, and is not inferred from repository write access; the acting principal must be explicitly bound in ROLE-IDENTITY-MAP.json.bootstrap_authority. removal_only_paths may be deleted but never created or modified."
-  },
+  "retired_authority_classes": [
+    "BOOTSTRAP"
+  ],
   "deny_mixed_role_pr": true,
   "secrets_free_ci": true,
   "fail_closed": true
