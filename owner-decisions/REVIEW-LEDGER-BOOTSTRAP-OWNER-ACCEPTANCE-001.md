@@ -29,30 +29,61 @@ The owner accepts the completed Review Ledger bootstrap, **subject to persistenc
 
 ### Governing prior owner decisions
 
-- Bootstrap construction authorization: `AUTHORIZE_REVIEW_LEDGER_BOOTSTRAP_CONSTRUCTION`
-- Public visibility decision: `PUBLIC_VISIBILITY_OWNER_OVERRIDE_001`
+A decision **record** and the **operative decision token** it carries are distinct identities and are bound separately:
 
-Both are recorded in `owner-decisions/REVIEW-LEDGER-BOOTSTRAP-OWNER-AUTHORIZATION-002.md` and `owner-decisions/PUBLIC_VISIBILITY_OWNER_OVERRIDE_001.md`. Public visibility remains a repository-state choice, not an acceptance signal.
+| Subject | Record identifier | Operative decision token |
+|---|---|---|
+| Bootstrap construction | `REVIEW-LEDGER-BOOTSTRAP-OWNER-AUTHORIZATION-002` | `AUTHORIZE_REVIEW_LEDGER_BOOTSTRAP_CONSTRUCTION` |
+| Public visibility | `PUBLIC_VISIBILITY_OWNER_OVERRIDE_001` | `AUTHORIZE_PUBLIC_REVIEW_LEDGER_VISIBILITY` |
 
-### Independent review
+The records are held at `owner-decisions/REVIEW-LEDGER-BOOTSTRAP-OWNER-AUTHORIZATION-002.md` and `owner-decisions/PUBLIC_VISIBILITY_OWNER_OVERRIDE_001.md`. Neither historical source record is altered by this decision. Public visibility remains a repository-state choice, not an acceptance signal.
+
+### Independent review — accepted bootstrap review chain
+
+The independent-review basis for this acceptance is the **complete chain below**, not any single review. Review `4885872274` alone is not the bootstrap independent-review basis; it is the final link.
+
+Independent reviewer throughout: `inventor1975` — GitHub user `2254348`.
+
+**PR #1 — bootstrap installation**
 
 | | |
 |---|---|
-| Independent reviewer | `inventor1975` — GitHub user `2254348` |
-| Bootstrap decommission review | review `4885872274` |
-| Accepted review tokens | `ACCEPT_REVIEW_LEDGER_BOOTSTRAP_DECOMMISSION_001`<br>`ACCEPT_REVIEW_LEDGER_BOOTSTRAP_DECOMMISSION_CORRECTION_001` |
+| Review ID | `4884911346` |
+| Reviewed head | `00074eeb98517fd4cd4e76ca31758dfdda15fc93` |
+| Accepted tokens | `ACCEPT_REVIEW_LEDGER_BOOTSTRAP_AUTHORITY_CORRECTION_001`<br>`ACCEPT_REVIEW_LEDGER_BOOTSTRAP_EXACT_HEAD_CORRECTION_002` |
+| Mechanical run | `31198947856` — SUCCESS |
+
+**PR #2 — reviewer identity binding**
+
+| | |
+|---|---|
+| Review ID | `4885485435` |
+| Reviewed head | `59e4cd5c6101766a825b9cf93df7202ef1a6e254` |
+| Accepted tokens | `ACCEPT_REVIEW_LEDGER_REVIEWER_IDENTITY_BINDING_001`<br>`ACCEPT_REVIEW_LEDGER_REVIEWER_EFFECTIVITY_ALIGNMENT_001` |
+| Mechanical run | `31205443180` — SUCCESS |
+
+**PR #3 — bootstrap authority decommission**
+
+| | |
+|---|---|
+| Review ID | `4885872274` |
+| Reviewed head | `cb38c13bad436d860b34dd75269d4fbdd648e931` |
+| Accepted tokens | `ACCEPT_REVIEW_LEDGER_BOOTSTRAP_DECOMMISSION_001`<br>`ACCEPT_REVIEW_LEDGER_BOOTSTRAP_DECOMMISSION_CORRECTION_001` |
+| Mechanical run | `31209207015` — SUCCESS |
 
 Reviewer transport and signing identity are bound explicitly in `ROLE-IDENTITY-MAP.json`. Per RL-12, the reviewing principal is distinct from the authoring principal; the owner-controlled execution principal did not review its own artifacts.
 
 ### Mechanical verification
 
-| | |
-|---|---|
-| Decommission CI run | `31209207015` |
-| Exact head verified | `cb38c13bad436d860b34dd75269d4fbdd648e931` |
-| Result | SUCCESS |
+Each link in the chain was verified against its exact PR head, not a synthetic merge commit:
 
-CI executed against the exact PR head, not a synthetic merge commit. Mechanical verification is secrets-free. Per RL-06, CI PASS is not acceptance.
+| Reviewed head | Run | Result |
+|---|---|---|
+| `00074eeb98517fd4cd4e76ca31758dfdda15fc93` | `31198947856` | SUCCESS |
+| `59e4cd5c6101766a825b9cf93df7202ef1a6e254` | `31205443180` | SUCCESS |
+| `cb38c13bad436d860b34dd75269d4fbdd648e931` | `31209207015` | SUCCESS |
+
+Mechanical verification is secrets-free. Per RL-06, CI PASS is not acceptance.
 
 ### Checkpoint B Verifier V3 — governing cryptographic identity
 
@@ -117,14 +148,12 @@ No principal carries the `BOOTSTRAP` role; no `bootstrap/` branch-role mapping e
 |---|---|
 | Owner decision token | `ACCEPT_REVIEW_LEDGER_BOOTSTRAP` |
 | Record path | `owner-decisions/REVIEW-LEDGER-BOOTSTRAP-OWNER-ACCEPTANCE-001.md` |
+| Prior owner records / tokens | `REVIEW-LEDGER-BOOTSTRAP-OWNER-AUTHORIZATION-002` → `AUTHORIZE_REVIEW_LEDGER_BOOTSTRAP_CONSTRUCTION`; `PUBLIC_VISIBILITY_OWNER_OVERRIDE_001` → `AUTHORIZE_PUBLIC_REVIEW_LEDGER_VISIBILITY` |
 | Pre-acceptance `main` | `cb38c13bad436d860b34dd75269d4fbdd648e931` |
 | Pre-acceptance tree | `602f5227ea02b258d7d249554be964af18abf951` |
-| Independent-review identity | `inventor1975` / GitHub user `2254348` |
-| Independent-review ID | `4885872274` |
-| Review tokens | `ACCEPT_REVIEW_LEDGER_BOOTSTRAP_DECOMMISSION_001`, `ACCEPT_REVIEW_LEDGER_BOOTSTRAP_DECOMMISSION_CORRECTION_001` |
-| CI run | `31209207015` |
-| CI exact head | `cb38c13bad436d860b34dd75269d4fbdd648e931` |
-| CI result | SUCCESS |
+| Independent-review identity | `inventor1975` / GitHub user `2254348` (all links) |
+| **Independent-review chain** | **PR #1** review `4884911346` @ `00074eeb98517fd4cd4e76ca31758dfdda15fc93`, run `31198947856` SUCCESS, tokens `ACCEPT_REVIEW_LEDGER_BOOTSTRAP_AUTHORITY_CORRECTION_001` + `ACCEPT_REVIEW_LEDGER_BOOTSTRAP_EXACT_HEAD_CORRECTION_002`<br>**PR #2** review `4885485435` @ `59e4cd5c6101766a825b9cf93df7202ef1a6e254`, run `31205443180` SUCCESS, tokens `ACCEPT_REVIEW_LEDGER_REVIEWER_IDENTITY_BINDING_001` + `ACCEPT_REVIEW_LEDGER_REVIEWER_EFFECTIVITY_ALIGNMENT_001`<br>**PR #3** review `4885872274` @ `cb38c13bad436d860b34dd75269d4fbdd648e931`, run `31209207015` SUCCESS, tokens `ACCEPT_REVIEW_LEDGER_BOOTSTRAP_DECOMMISSION_001` + `ACCEPT_REVIEW_LEDGER_BOOTSTRAP_DECOMMISSION_CORRECTION_001` |
+| Final chain link | PR #3, review `4885872274`, CI run `31209207015` at exact head `cb38c13bad436d860b34dd75269d4fbdd648e931`, SUCCESS |
 | Checkpoint B V3 bytes | `87316` |
 | Checkpoint B V3 SHA-256 | `d0605d459adc7164d2b23a66755b2d9e0e715328fb38c63b21c2bbb0ee99b65f` |
 | Checkpoint B V3 SHA-512 | `536f4ba6d228ebb61ce2543f69963e34850ce477fd9d616dcbd45d8f819c7c49dab71d5b9ebf85635473cd05710bc8d887bf17152c1131a06214cb162e7a1c42` |
@@ -138,3 +167,12 @@ Accepted state is **tamper-evident and append-only under enforced repository con
 ## Ratification
 
 This record is not effective until Arkadiy explicitly ratifies the exact reviewed PR head carrying it. The ratification event is the owner's to write; it has not been written here and must not be inferred from the existence of this candidate.
+
+The eventual owner ratification event must bind:
+
+- the exact independently reviewed PR #4 head;
+- the exact bytes, SHA-256, and SHA-512 of this owner-decision record;
+- Vitaliy's formal GitHub review ID for the final PR #4 candidate;
+- the exact-head mechanical-verification run and result for that final reviewed candidate.
+
+Those four values do not yet exist and are deliberately **not** written into this file. Embedding them here would require the record to contain its own post-commit identity and the review of itself, which is self-referential and unverifiable. They belong in the external owner-ratification event, which observes this artifact from outside.
