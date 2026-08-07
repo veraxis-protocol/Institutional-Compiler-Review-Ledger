@@ -1,0 +1,34 @@
+{
+  "schema_version": "1.0.0",
+  "default_branch": "main",
+  "role_paths": {
+    "OWNER": [
+      "owner-decisions/**"
+    ],
+    "IMPLEMENTER_EXECUTION": [
+      "stage-*/**"
+    ],
+    "INDEPENDENT_REVIEWER": [
+      "reviews/**"
+    ],
+    "INFRASTRUCTURE": [
+      ".github/**",
+      "verifier/**",
+      "schemas/**",
+      "policy/**",
+      "CODEOWNERS",
+      "ROLE-IDENTITY-MAP.json",
+      "LEDGER-INVARIANTS.md",
+      "README.md"
+    ]
+  },
+  "branch_role_prefixes": {
+    "owner/": "OWNER",
+    "evidence/": "IMPLEMENTER_EXECUTION",
+    "review/": "INDEPENDENT_REVIEWER",
+    "infra/": "INFRASTRUCTURE"
+  },
+  "deny_mixed_role_pr": true,
+  "secrets_free_ci": true,
+  "fail_closed": true
+}
