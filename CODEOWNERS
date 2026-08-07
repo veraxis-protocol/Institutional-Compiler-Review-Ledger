@@ -1,15 +1,21 @@
 # CODEOWNERS is review routing, not a filesystem ACL.
 # Branch rules and ledger_core_verifier.py provide the enforcement boundary.
 
-/.github/ @veraxis-protocol
-/verifier/ @veraxis-protocol
-/schemas/ @veraxis-protocol
-/policy/ @veraxis-protocol
-/CODEOWNERS @veraxis-protocol
-/ROLE-IDENTITY-MAP.json @veraxis-protocol
-/LEDGER-INVARIANTS.md @veraxis-protocol
-/README.md @veraxis-protocol
-/owner-decisions/ @veraxis-protocol
+# Protected infrastructure: reviewable by owner or independent reviewer.
+/.github/ @veraxis-protocol @inventor1975
+/verifier/ @veraxis-protocol @inventor1975
+/schemas/ @veraxis-protocol @inventor1975
+/policy/ @veraxis-protocol @inventor1975
+/CODEOWNERS @veraxis-protocol @inventor1975
+/ROLE-IDENTITY-MAP.json @veraxis-protocol @inventor1975
+/LEDGER-INVARIANTS.md @veraxis-protocol @inventor1975
+/README.md @veraxis-protocol @inventor1975
 
-# Reviewer CODEOWNER intentionally remains unbound until the exact reviewer GitHub login is owner-captured.
-# /reviews/ @PENDING_REVIEWER_BINDING
+# Implementer evidence routes to the independent reviewer.
+/stage-*/ @inventor1975
+
+# Reviewer records route to the owner.
+/reviews/ @veraxis-protocol
+
+# Owner decisions route to the independent reviewer.
+/owner-decisions/ @inventor1975

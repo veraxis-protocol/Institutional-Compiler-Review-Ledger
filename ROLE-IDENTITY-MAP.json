@@ -58,19 +58,22 @@
     {
       "principal_id": "INDEPENDENT_REVIEWER_001",
       "declared_transport_handle": "inventor1975",
-      "github_account": null,
-      "github_user_id": null,
+      "github_account": "inventor1975",
+      "github_user_id": 2254348,
       "roles": [
         "INDEPENDENT_REVIEWER"
       ],
       "transport_identity": {
         "type": "ssh",
-        "status": "PENDING_BOOTSTRAP_CAPTURE",
-        "fingerprint": null
+        "status": "BOUND",
+        "fingerprint": "SHA256:mz1KDWAgn+fNywN14iUx3u/uyVcGoBDy8NLt/IAF6ok",
+        "git_transport": "SSH (git@github.com)",
+        "api_review_transport": "HTTPS REST API using reviewer-controlled fine-grained authentication"
       },
       "signing_identity": {
-        "status": "PENDING_BOOTSTRAP_SETUP",
-        "fingerprint": null
+        "status": "KEY_CONFIGURED_AUTOSIGN_OFF",
+        "algorithm": "ed25519",
+        "fingerprint": "F170414DDBB78F231929121175B13F5AEC28313A"
       },
       "branch_prefixes": {
         "INDEPENDENT_REVIEWER": [
@@ -84,7 +87,7 @@
       },
       "effective_from": null,
       "revoked_at": null,
-      "notes": "Do not activate review-path authorization until exact GitHub login and SSH public-key fingerprint are captured and owner-bound."
+      "notes": "Exact reviewer transport identity is now owner-bound: GitHub login and numeric user ID captured, SSH public-key fingerprint captured, signing key configured with automatic signing off. No token, credential, private key, or passphrase is persisted here; transport facts only. Binding the identity is not activation: ledger status remains BOOTSTRAP_CANDIDATE_NOT_ACTIVE and effective_from stays null until owner acceptance."
     }
   ],
   "bootstrap_authority": {
