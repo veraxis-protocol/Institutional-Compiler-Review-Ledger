@@ -1,0 +1,15 @@
+{
+  "pin_version": "1.0.0",
+  "checkpoint": "CHECKPOINT_B_EXACT_VERIFIER_V3",
+  "review_state": "OWNER_ACCEPTED",
+  "path": "verifier/checkpoint_b_verifier.py",
+  "bytes": 87316,
+  "sha256": "d0605d459adc7164d2b23a66755b2d9e0e715328fb38c63b21c2bbb0ee99b65f",
+  "sha512": "536f4ba6d228ebb61ce2543f69963e34850ce477fd9d616dcbd45d8f819c7c49dab71d5b9ebf85635473cd05710bc8d887bf17152c1131a06214cb162e7a1c42",
+  "zip_mode": "0755",
+  "source_package": {
+    "bytes": 67324,
+    "sha256": "9c07f487bef312f32a92e12913e9e4d3b6206d3954d5e91efb10cc9f8b8a2a64"
+  },
+  "note": "Checkpoint verifier identity is governing by bytes + SHA-256 + SHA-512. Git blob identity is transport-only."
+}

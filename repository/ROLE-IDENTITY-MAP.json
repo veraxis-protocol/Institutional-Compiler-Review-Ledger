@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0.0",
+  "status": "BOOTSTRAP_CANDIDATE_NOT_ACTIVE",
+  "principals": [
+    {
+      "principal_id": "OWNER_EXECUTION_PRINCIPAL_001",
+      "github_account": "veraxis-protocol",
+      "github_user_id": 261453745,
+      "roles": [
+        "OWNER",
+        "IMPLEMENTER_EXECUTION"
+      ],
+      "transport_identity": {
+        "type": "github_app_authenticated_account",
+        "status": "BOUND"
+      },
+      "signing_identity": {
+        "status": "PENDING_BOOTSTRAP_SETUP",
+        "fingerprint": null
+      },
+      "branch_prefixes": {
+        "OWNER": [
+          "owner/"
+        ],
+        "IMPLEMENTER_EXECUTION": [
+          "evidence/"
+        ]
+      },
+      "path_classes": {
+        "OWNER": [
+          "owner-decisions/**"
+        ],
+        "IMPLEMENTER_EXECUTION": [
+          "stage-*/**"
+        ]
+      },
+      "effective_from": "BOOTSTRAP",
+      "revoked_at": null,
+      "notes": "Owner-controlled GitHub principal. Institutional role must not be inferred from username alone."
+    },
+    {
+      "principal_id": "INDEPENDENT_REVIEWER_001",
+      "declared_transport_handle": "inventor1975",
+      "github_account": null,
+      "github_user_id": null,
+      "roles": [
+        "INDEPENDENT_REVIEWER"
+      ],
+      "transport_identity": {
+        "type": "ssh",
+        "status": "PENDING_BOOTSTRAP_CAPTURE",
+        "fingerprint": null
+      },
+      "signing_identity": {
+        "status": "PENDING_BOOTSTRAP_SETUP",
+        "fingerprint": null
+      },
+      "branch_prefixes": {
+        "INDEPENDENT_REVIEWER": [
+          "review/"
+        ]
+      },
+      "path_classes": {
+        "INDEPENDENT_REVIEWER": [
+          "reviews/**"
+        ]
+      },
+      "effective_from": null,
+      "revoked_at": null,
+      "notes": "Do not activate review-path authorization until exact GitHub login and SSH public-key fingerprint are captured and owner-bound."
+    }
+  ],
+  "infrastructure_authority": {
+    "github_accounts": [
+      "veraxis-protocol"
+    ],
+    "branch_prefixes": [
+      "infra/"
+    ],
+    "requires_non_author_independent_review": true,
+    "protected_paths": [
+      ".github/**",
+      "verifier/**",
+      "schemas/**",
+      "policy/**",
+      "CODEOWNERS",
+      "ROLE-IDENTITY-MAP.json",
+      "LEDGER-INVARIANTS.md"
+    ]
+  }
+}
