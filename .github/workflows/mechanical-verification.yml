@@ -16,8 +16,28 @@ jobs:
       - name: Checkout exact pull-request head
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2, full-SHA pinned
         with:
+          # Without an explicit ref a pull_request event checks out GitHub's
+          # synthetic refs/pull/N/merge commit, so the verifier would execute
+          # from a tree that is not the governing PR head. Pin the ref.
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.sha }}
           fetch-depth: 0
           persist-credentials: false
+
+      - name: Assert exact pull-request head execution
+        if: github.event_name == 'pull_request'
+        env:
+          LEDGER_HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          ACTUAL_HEAD="$(git rev-parse HEAD)"
+          echo "declared_LEDGER_HEAD=$LEDGER_HEAD"
+          echo "actual_git_HEAD=$ACTUAL_HEAD"
+          if [ "$ACTUAL_HEAD" != "$LEDGER_HEAD" ]; then
+            echo "exact_head_match=false"
+            echo "::error::exact-head execution violated: checked out $ACTUAL_HEAD, declared PR head $LEDGER_HEAD"
+            exit 1
+          fi
+          echo "exact_head_match=true"
 
       - name: Verify ledger mechanics
         env:
