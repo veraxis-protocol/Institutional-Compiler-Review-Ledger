@@ -46,6 +46,38 @@ Requirements:
 Reviewer: Vitaliy.
 Claude may not independently accept these authored artifacts.
 
+## CLAUDE-BOOTSTRAP-WO-002 — Bootstrap Authority Correction 001
+Author: Claude / owner-controlled implementation principal
+Scope: bootstrap authority binding only.
+
+Defect corrected: `.github/workflows/mechanical-verification.yml` invokes `ledger_core_verifier.py verify-pr`, but the verifier bound only the `owner/`, `evidence/`, `review/`, and `infra/` prefixes. The bootstrap branch `bootstrap/review-ledger-001` therefore failed to bind any role, so the bootstrap PR could not mechanically verify the bootstrap. Renaming the branch to `infra/*` is not a correction, because initial installation legitimately spans bootstrap-governance, owner-decision, and infrastructure paths in one change.
+
+Correction: introduce the temporary `BOOTSTRAP` authority class defined in RL-15.
+
+Revised:
+- `policy/PATH-AUTHORITY.json`
+- `ROLE-IDENTITY-MAP.json`
+- `verifier/ledger_core_verifier.py`
+- `LEDGER-INVARIANTS.md`
+- `bootstrap/BOOTSTRAP-WORK-ORDERS.md`
+
+Constraints held:
+- `bootstrap/` binds `BOOTSTRAP` and nothing else;
+- authority open only while ledger status is exactly `BOOTSTRAP_CANDIDATE_NOT_ACTIVE`;
+- acting principal explicitly owner-bound in `ROLE-IDENTITY-MAP.json.bootstrap_authority`; write access alone grants nothing;
+- path authority limited to the enumerated initial-installation classes;
+- `stage-*/**` and `reviews/**` rejected under `BOOTSTRAP` before any other path evaluation;
+- `.DS_Store` removal permitted as removal-only; creation or modification of it is not authorized under any role;
+- OWNER / IMPLEMENTER_EXECUTION / INDEPENDENT_REVIEWER / INFRASTRUCTURE semantics unchanged;
+- RL-01 through RL-14 unweakened; RL-15 added as a constrained, expiring class;
+- no secrets, no tokens, no privileged workflow paths, no floating Action versions, no bypass semantics;
+- Checkpoint B V3 pin untouched.
+
+Expiry: `BOOTSTRAP` lapses at `ACCEPT_REVIEW_LEDGER_BOOTSTRAP`. Removing the class after acceptance is a follow-up infrastructure work order.
+
+Reviewer: Vitaliy or another non-author.
+Claude may not independently accept these authored artifacts (RL-08, RL-12).
+
 ## OWNER-BOOTSTRAP-WO-001
 Owner: Arkadiy
 

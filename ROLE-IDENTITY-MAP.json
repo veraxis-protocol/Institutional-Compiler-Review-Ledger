@@ -8,7 +8,8 @@
       "github_user_id": 261453745,
       "roles": [
         "OWNER",
-        "IMPLEMENTER_EXECUTION"
+        "IMPLEMENTER_EXECUTION",
+        "BOOTSTRAP"
       ],
       "transport_identity": {
         "type": "github_app_authenticated_account",
@@ -24,6 +25,9 @@
         ],
         "IMPLEMENTER_EXECUTION": [
           "evidence/"
+        ],
+        "BOOTSTRAP": [
+          "bootstrap/"
         ]
       },
       "path_classes": {
@@ -32,6 +36,19 @@
         ],
         "IMPLEMENTER_EXECUTION": [
           "stage-*/**"
+        ],
+        "BOOTSTRAP": [
+          ".github/**",
+          ".gitignore",
+          "CODEOWNERS",
+          "README.md",
+          "LEDGER-INVARIANTS.md",
+          "ROLE-IDENTITY-MAP.json",
+          "bootstrap/**",
+          "owner-decisions/**",
+          "policy/**",
+          "schemas/**",
+          "verifier/**"
         ]
       },
       "effective_from": "BOOTSTRAP",
@@ -70,6 +87,24 @@
       "notes": "Do not activate review-path authorization until exact GitHub login and SSH public-key fingerprint are captured and owner-bound."
     }
   ],
+  "bootstrap_authority": {
+    "role": "BOOTSTRAP",
+    "temporary": true,
+    "valid_only_while_status": "BOOTSTRAP_CANDIDATE_NOT_ACTIVE",
+    "owner_decision_reference": "REVIEW-LEDGER-BOOTSTRAP-OWNER-AUTHORIZATION-002",
+    "principal_ids": [
+      "OWNER_EXECUTION_PRINCIPAL_001"
+    ],
+    "github_accounts": [
+      "veraxis-protocol"
+    ],
+    "branch_prefixes": [
+      "bootstrap/"
+    ],
+    "requires_non_author_independent_review": true,
+    "expires_on": "ACCEPT_REVIEW_LEDGER_BOOTSTRAP",
+    "notes": "Explicit owner binding of the bootstrap execution principal for initial ledger installation only. Repository write access alone confers no bootstrap authority: the acting GitHub account must match a principal listed in principal_ids that carries the BOOTSTRAP role and is not revoked. This authority grants no evidence, review, or acceptance authority, and lapses the moment ledger status leaves BOOTSTRAP_CANDIDATE_NOT_ACTIVE."
+  },
   "infrastructure_authority": {
     "github_accounts": [
       "veraxis-protocol"
