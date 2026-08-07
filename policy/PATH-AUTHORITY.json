@@ -28,9 +28,6 @@
     "review/": "INDEPENDENT_REVIEWER",
     "infra/": "INFRASTRUCTURE"
   },
-  "retired_authority_classes": [
-    "BOOTSTRAP"
-  ],
   "deny_mixed_role_pr": true,
   "secrets_free_ci": true,
   "fail_closed": true
