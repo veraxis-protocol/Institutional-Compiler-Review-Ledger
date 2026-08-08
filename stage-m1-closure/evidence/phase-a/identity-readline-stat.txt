@@ -1,0 +1,1 @@
+/opt/anaconda3/lib/python3.12/lib-dynload/readline.cpython-312-darwin.so|Regular File|-rwxr-xr-x|36456

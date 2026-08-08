@@ -1,0 +1,1 @@
+/opt/anaconda3/lib/libreadline.8.dylib|Symbolic Link|lrwxr-xr-x|21

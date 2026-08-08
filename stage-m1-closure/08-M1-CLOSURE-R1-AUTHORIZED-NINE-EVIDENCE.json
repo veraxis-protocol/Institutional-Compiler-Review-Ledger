@@ -1,0 +1,1 @@
+{"document_id":"M1-CLOSURE-R1-AUTHORIZED-NINE-EVIDENCE-001","result_bearing":true,"collected":9,"passed":8,"failed":1,"skipped":0,"failing_ids":["tests/test_audit_lineage.py::test_governed_success_tokens_are_distinct"]}

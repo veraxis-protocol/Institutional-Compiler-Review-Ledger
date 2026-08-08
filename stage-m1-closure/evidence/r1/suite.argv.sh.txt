@@ -1,0 +1,1 @@
+/usr/bin/env LANG=C LC_ALL=C LC_CTYPE=C /Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python -m pytest -q --junitxml=/Users/arkadiymiteiko/Downloads/Institutional-Compiler-Review-Ledger/stage-m1-closure/evidence/r1/suite.junit.xml 

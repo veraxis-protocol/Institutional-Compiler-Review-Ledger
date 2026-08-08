@@ -1,0 +1,580 @@
+.............FF........FF...............................F............... [  6%]
+...............F.F...................................................... [ 13%]
+F...F.............................................F.................F..F [ 20%]
+..............................FF.................................F...... [ 27%]
+...............ssss......s.............................................. [ 34%]
+........................................s............................s.. [ 41%]
+........................................................................ [ 48%]
+........................................................................ [ 55%]
+........................................................................ [ 62%]
+......................................F.......................F......... [ 69%]
+........................................................................ [ 76%]
+.........................................F....F......................... [ 82%]
+.................................................F..F......FF........... [ 89%]
+..................................................................F..... [ 96%]
+............FF...................                                        [100%]
+=================================== FAILURES ===================================
+________________ test_audit_003_is_authorized_and_now_generated ________________
+
+    @contract
+    def test_audit_003_is_authorized_and_now_generated() -> None:
+        record = _load(INDEX_PATH)["gate_sar_05_authorized_audit_reports"][
+            "OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-003"
+        ]
+        assert record["authorized_by"] == AUTH_ID
+        assert record["role"] == "CURRENT_STATE_AUDIT"
+        assert record["path"] == AUDIT_003
+        assert record["target_lineage"] == "AUDIT-001 -> AUDIT-002 -> AUDIT-003"
+        assert "PROFILE_CORRECTION_NOT_YET_EXECUTED" in record["audited_state"]
+        # It has since been generated under this authorization, in the authorized role.
+        assert (REPO / AUDIT_003).is_file()
+        index = _load(OPERATIONAL_INDEX)
+        live = next(r for r in index["reports"] if r["report_id"].endswith("003"))
+>       assert live["role"] == record["role"]
+E       AssertionError: assert 'SUPERSEDED_HISTORICAL_AUDIT' == 'CURRENT_STATE_AUDIT'
+E         
+E         - CURRENT_STATE_AUDIT
+E         + SUPERSEDED_HISTORICAL_AUDIT
+
+tests/test_amendment_lineage_coupling_authorization_001.py:362: AssertionError
+____________________ test_audit_004_is_reserved_and_absent _____________________
+
+    @contract
+    def test_audit_004_is_reserved_and_absent() -> None:
+        record = _load(INDEX_PATH)["gate_sar_05_authorized_audit_reports"][
+            "OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004"
+        ]
+        assert record["state"] == "RESERVED_FOR_CORRECTED_PACKAGE_AUDIT"
+        assert record["reserved_by"] == AUTH_ID
+        assert record["authorized_by"] == CORRECTION_AUTH
+        assert record["generated"] is False
+        assert record["path"] == AUDIT_004
+        assert record["target_lineage"] == "AUDIT-001 -> AUDIT-002 -> AUDIT-003 -> AUDIT-004"
+>       assert not (REPO / AUDIT_004).exists()
+E       AssertionError: assert not True
+E        +  where True = exists()
+E        +    where exists = (PosixPath('/private/tmp/oam-m1-s2-r1.7gUAmz/repo') / 'docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json').exists
+
+tests/test_amendment_lineage_coupling_authorization_001.py:377: AssertionError
+_____________ test_the_lineage_is_the_authorized_three_link_chain ______________
+
+    @contract
+    def test_the_lineage_is_the_authorized_three_link_chain() -> None:
+        index = _load(OPERATIONAL_INDEX)
+>       assert index["current_report_id"] == "OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-003"
+E       AssertionError: assert 'OAM-GATE-SAR...ILE-AUDIT-004' == 'OAM-GATE-SAR...ILE-AUDIT-003'
+E         
+E         - OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-003
+E         ?                                     ^
+E         + OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004
+E         ?                                     ^
+
+tests/test_amendment_lineage_coupling_authorization_001.py:541: AssertionError
+_________ test_no_profile_artifact_exists_and_audit_004_stays_reserved _________
+
+    @contract
+    def test_no_profile_artifact_exists_and_audit_004_stays_reserved() -> None:
+        tracked = set(
+            subprocess.run(
+                ["git", "ls-files"], cwd=REPO, check=True, capture_output=True, text=True
+            ).stdout.split()
+        )
+        for relpath in (MANIFEST, DELIVERABLE, AUDIT_004):
+>           assert not (REPO / relpath).exists(), relpath
+E           AssertionError: profile/profile-manifest.json
+E           assert not True
+E            +  where True = exists()
+E            +    where exists = (PosixPath('/private/tmp/oam-m1-s2-r1.7gUAmz/repo') / 'profile/profile-manifest.json').exists
+
+tests/test_amendment_lineage_coupling_authorization_001.py:557: AssertionError
+________ test_contract_0_5_1_approved_artifacts_still_hash_as_approved _________
+
+    @contract
+    def test_contract_0_5_1_approved_artifacts_still_hash_as_approved() -> None:
+        """Eight paths, eight digests, recomputed from the working tree."""
+        entry = _approval_0_5_1_entry()
+        assert entry["approved_artifact_paths"] == EIGHT
+        assert entry["approved_artifact_sha256"] == APPROVED_0_5_1_SHA256
+        for relpath, digest in APPROVED_0_5_1_SHA256.items():
+            body = (REPO / relpath).read_bytes()
+>           assert hashlib.sha256(body).hexdigest() == digest, relpath
+E           AssertionError: docs/governance/gates/OAM-GATE-SAR-05-CDC-AUDIT-INDEX.json
+E           assert '20de3c39d714...3ee8c202bb376' == '347fde4f4a8f...428476693c190'
+E             
+E             - 347fde4f4a8f88f485fc661b12fd1280065ffe410ecac63aca5428476693c190
+E             + 20de3c39d714f392d6511efc9aeb2b49a011c9a168baa1a7d683ee8c202bb376
+
+tests/test_amendment_lineage_coupling_authorization_001.py:866: AssertionError
+____________ test_no_profile_artifact_was_created_by_this_expansion ____________
+
+    @contract
+    def test_no_profile_artifact_was_created_by_this_expansion() -> None:
+        tracked = set(
+            subprocess.run(
+                ["git", "ls-files"], cwd=REPO, check=True, capture_output=True, text=True
+            ).stdout.split()
+        )
+        for relpath in ("profile/profile-manifest.json", "profile/deliverable-profile.json"):
+>           assert not (REPO / relpath).exists(), relpath
+E           AssertionError: profile/profile-manifest.json
+E           assert not True
+E            +  where True = exists()
+E            +    where exists = (PosixPath('/private/tmp/oam-m1-s2-r1.7gUAmz/repo') / 'profile/profile-manifest.json').exists
+
+tests/test_amendment_scope_expansion_authorization_001.py:416: AssertionError
+___________________ test_the_lineage_terminates_at_audit_003 ___________________
+
+    @contract
+    def test_the_lineage_terminates_at_audit_003() -> None:
+        index = _load("docs/governance/gates/OAM-GATE-SAR-05-CDC-AUDIT-INDEX.json")
+>       assert index["current_report_id"] == "OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-003"
+E       AssertionError: assert 'OAM-GATE-SAR...ILE-AUDIT-004' == 'OAM-GATE-SAR...ILE-AUDIT-003'
+E         
+E         - OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-003
+E         ?                                     ^
+E         + OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004
+E         ?                                     ^
+
+tests/test_amendment_scope_expansion_authorization_001.py:434: AssertionError
+__________________ test_governed_success_tokens_are_distinct ___________________
+
+tmp_path = PosixPath('/private/var/folders/47/n7bpzp2d3f35z35vskk5l2fh0000gn/T/pytest-of-arkadiymiteiko/pytest-55/test_governed_success_tokens_a0')
+
+    @contract
+    def test_governed_success_tokens_are_distinct(tmp_path: Path) -> None:
+        root = _isolated(tmp_path)
+        assert "AUDIT_INDEX_VERIFIED" in _run(root, "--verify-index").stdout
+>       assert "AUDIT_CURRENT_REPORT_VERIFIED" in _run(root, "--check-current").stdout
+E       AssertionError: assert 'AUDIT_CURRENT_REPORT_VERIFIED' in ''
+E        +  where '' = CompletedProcess(args=['/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python', '/private/var...tdout='', stderr='FAIL AUDIT_CURRENT_REPORT_STALE: docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json\n').stdout
+E        +    where CompletedProcess(args=['/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python', '/private/var...tdout='', stderr='FAIL AUDIT_CURRENT_REPORT_STALE: docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json\n') = _run(PosixPath('/private/var/folders/47/n7bpzp2d3f35z35vskk5l2fh0000gn/T/pytest-of-arkadiymiteiko/pytest-55/test_governed_success_tokens_a0/repo'), '--check-current')
+
+tests/test_audit_lineage.py:433: AssertionError
+__________________ test_audit_003_removed_while_current_fails __________________
+
+tmp_path = PosixPath('/private/var/folders/47/n7bpzp2d3f35z35vskk5l2fh0000gn/T/pytest-of-arkadiymiteiko/pytest-55/test_audit_003_removed_while_c0')
+
+    @mutation
+    def test_audit_003_removed_while_current_fails(tmp_path: Path) -> None:
+        root = _isolated(tmp_path)
+        (root / "docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-003.json").unlink()
+        findings = auditor.verify_audit_index(root)
+>       assert any("AUDIT_CURRENT_REPORT_MISSING" in f for f in findings), findings
+E       AssertionError: ['AUDIT_HISTORICAL_REPORT_MISSING: docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-003.json']
+E       assert False
+E        +  where False = any(<generator object test_audit_003_removed_while_current_fails.<locals>.<genexpr> at 0x105e4a5a0>)
+
+tests/test_audit_lineage.py:470: AssertionError
+____________ test_report_generation_requires_an_explicit_report_id _____________
+
+tmp_path = PosixPath('/private/var/folders/47/n7bpzp2d3f35z35vskk5l2fh0000gn/T/pytest-of-arkadiymiteiko/pytest-55/test_report_generation_require0')
+
+    @mutation
+    def test_report_generation_requires_an_explicit_report_id(tmp_path: Path) -> None:
+        root = _isolated(tmp_path)
+        fresh = "docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json"
+        missing = _run(root, "--write", fresh)
+        assert missing.returncode == 1
+        assert "AUDIT_REPORT_ID_REQUIRED" in missing.stderr
+        mismatched = _run(
+            root, "--write", fresh, "--report-id", "OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-005"
+        )
+        assert mismatched.returncode == 1
+        assert "AUDIT_REPORT_PATH_IDENTITY_MISMATCH" in mismatched.stderr
+        good = _run(root, "--write", fresh, "--report-id", "OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004")
+>       assert good.returncode == 0, good.stderr
+E       AssertionError: FAIL AUDIT_REPORT_OVERWRITE_PROHIBITED: docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python', '/private/var...', stderr='FAIL AUDIT_REPORT_OVERWRITE_PROHIBITED: docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json\n').returncode
+
+tests/test_audit_lineage.py:1001: AssertionError
+_________ test_nothing_this_authorization_permits_has_been_created_yet _________
+
+    @contract
+    def test_nothing_this_authorization_permits_has_been_created_yet() -> None:
+        """Profile correction is still blocked, so its artifacts still do not exist."""
+        tracked = set(
+            subprocess.run(
+                ["git", "ls-files"], cwd=REPO, check=True, capture_output=True, text=True
+            ).stdout.split()
+        )
+        for relpath in NOT_YET_CREATED:
+            if relpath.endswith("AUDIT-003.json"):
+                # Audit 003 was reassigned to the amendment state by the lineage-coupling
+                # authorization; this authorization's report is now audit 004.
+                continue
+>           assert not (REPO / relpath).exists(), relpath
+E           AssertionError: profile/deliverable-profile.json
+E           assert not True
+E            +  where True = exists()
+E            +    where exists = (PosixPath('/private/tmp/oam-m1-s2-r1.7gUAmz/repo') / 'profile/deliverable-profile.json').exists
+
+tests/test_cdc_profile_correction_authorization_002.py:369: AssertionError
+_____ test_the_audit_lineage_advanced_only_under_the_later_authorizations ______
+
+    @contract
+    def test_the_audit_lineage_advanced_only_under_the_later_authorizations() -> None:
+        index = _load("docs/governance/gates/OAM-GATE-SAR-05-CDC-AUDIT-INDEX.json")
+>       assert index["current_report_id"] == "OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-003"
+E       AssertionError: assert 'OAM-GATE-SAR...ILE-AUDIT-004' == 'OAM-GATE-SAR...ILE-AUDIT-003'
+E         
+E         - OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-003
+E         ?                                     ^
+E         + OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004
+E         ?                                     ^
+
+tests/test_cdc_profile_correction_authorization_002.py:395: AssertionError
+_____________________ test_stage_b_artifacts_remain_absent _____________________
+
+    @contract
+    def test_stage_b_artifacts_remain_absent() -> None:
+        """No ProfileManifest, deliverable profile or audit 004 may exist yet."""
+        tracked = set(
+            subprocess.run(
+                ["git", "ls-files"], cwd=REPO, check=True, capture_output=True, text=True
+            ).stdout.split()
+        )
+        for relpath in STAGE_B_PATHS:
+>           assert not (REPO / relpath).exists(), relpath
+E           AssertionError: profile/profile-manifest.json
+E           assert not True
+E            +  where True = exists()
+E            +    where exists = (PosixPath('/private/tmp/oam-m1-s2-r1.7gUAmz/repo') / 'profile/profile-manifest.json').exists
+
+tests/test_cdc_profile_correction_authorization_002.py:659: AssertionError
+____________ test_operational_audit_index_and_schema_are_unchanged _____________
+
+    @contract
+    def test_operational_audit_index_and_schema_are_unchanged() -> None:
+        """The audit-index transition belongs to the later implementation commit."""
+        for relpath, digest in (
+            (OPERATIONAL_AUDIT_INDEX, OPERATIONAL_AUDIT_INDEX_SHA256),
+            (AUDIT_INDEX_SCHEMA, AUDIT_INDEX_SCHEMA_SHA256),
+        ):
+            body = (REPO / relpath).read_bytes()
+>           assert hashlib.sha256(body).hexdigest() == digest, relpath
+E           AssertionError: docs/governance/gates/OAM-GATE-SAR-05-CDC-AUDIT-INDEX.json
+E           assert '20de3c39d714...3ee8c202bb376' == '347fde4f4a8f...428476693c190'
+E             
+E             - 347fde4f4a8f88f485fc661b12fd1280065ffe410ecac63aca5428476693c190
+E             + 20de3c39d714f392d6511efc9aeb2b49a011c9a168baa1a7d683ee8c202bb376
+
+tests/test_cdc_profile_correction_authorization_002.py:671: AssertionError
+___________________ test_tracked_file_inventory_matches_git ____________________
+
+    @contract
+    def test_tracked_file_inventory_matches_git() -> None:
+        inventory = load("corpus/TRACKED-FILE-INVENTORY.json")
+        tracked = set(
+            subprocess.run(
+                ["git", "ls-files"], cwd=REPO, check=True, capture_output=True, text=True
+            ).stdout.splitlines()
+        )
+        # The inventory cannot record its own digest, so it excludes itself.
+        listed = {e["path"] for e in inventory["files"]}
+        assert "corpus/TRACKED-FILE-INVENTORY.json" not in listed
+        assert listed == tracked - {"corpus/TRACKED-FILE-INVENTORY.json"}, (
+            f"inventory drift: {listed ^ (tracked - {'corpus/TRACKED-FILE-INVENTORY.json'})}"
+        )
+        for entry in inventory["files"]:
+            body = (REPO / entry["path"]).read_bytes()
+>           assert hashlib.sha256(body).hexdigest() == entry["sha256"]
+E           AssertionError: assert '20de3c39d714...3ee8c202bb376' == '347fde4f4a8f...428476693c190'
+E             
+E             - 347fde4f4a8f88f485fc661b12fd1280065ffe410ecac63aca5428476693c190
+E             + 20de3c39d714f392d6511efc9aeb2b49a011c9a168baa1a7d683ee8c202bb376
+
+tests/test_close_001.py:433: AssertionError
+__________ test_cdc_profile_audit_never_claims_conformance_or_closure __________
+
+    @contract
+    def test_cdc_profile_audit_never_claims_conformance_or_closure() -> None:
+        import audit_cdc_profile_conformance as auditor
+    
+        report = auditor.audit(REPO)
+        assert report["profile_correction_authorized"] is False
+        assert report["gate_closure_authorized"] is False
+        assert report["gate_sar_05"] == "OPEN_PENDING_PROFILE_CORRECTION"
+        assert report["publication_authorized"] is False
+        assert report["semantic_implementation_gate"] == "BLOCKED"
+        assert report["cdc_profile_conformance"] != "CONFORMING"
+>       assert report["blocking_nonconformance_count"] > 0
+E       assert 0 > 0
+
+tests/test_gate_sar_05_contract.py:2671: AssertionError
+___________ test_amended_audit_no_longer_demands_profile_extensions ____________
+
+    @contract
+    def test_amended_audit_no_longer_demands_profile_extensions() -> None:
+        """Test 19."""
+        import audit_cdc_profile_conformance as auditor
+    
+        report = auditor.audit(REPO)
+        by_artifact = {f["artifact"]: f for f in report["findings"]}
+        assert by_artifact["profile_extensions"]["classification"] == (
+            "NOT_APPLICABLE_NO_EXTENSION_INSTANCES"
+        )
+        assert by_artifact["unknown_namespaces"]["classification"] == (
+            "NOT_APPLICABLE_NO_EXTENSION_INSTANCES"
+        )
+        assert by_artifact["profile/** (canonical shadowing)"]["classification"] == (
+            "UNRESOLVED_PENDING_GATE_SAR_01"
+        )
+>       assert report["blocking_nonconformance_count"] == 1
+E       assert 0 == 1
+
+tests/test_gate_sar_05_contract.py:3059: AssertionError
+____________ test_the_rebinding_was_performed_exactly_as_authorized ____________
+
+    @contract
+    def test_the_rebinding_was_performed_exactly_as_authorized() -> None:
+        record = _audit_002_record()
+        assert record["verified_state_head"] == HISTORICAL_STATE_HEAD
+        assert record["verified_state_artifact_set_sha256"] is None
+        assert record["role"] == "SUPERSEDED_HISTORICAL_AUDIT"
+        assert record == {**record, **AUTHORIZED_RECORD}
+        index = _load(OPERATIONAL_INDEX)
+>       assert index["current_report_id"] == "OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-003"
+E       AssertionError: assert 'OAM-GATE-SAR...ILE-AUDIT-004' == 'OAM-GATE-SAR...ILE-AUDIT-003'
+E         
+E         - OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-003
+E         ?                                     ^
+E         + OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004
+E         ?                                     ^
+
+tests/test_historical_state_rebinding_authorization_001.py:338: AssertionError
+____________ test_no_profile_artifact_and_no_audit_004_were_created ____________
+
+    @contract
+    def test_no_profile_artifact_and_no_audit_004_were_created() -> None:
+        tracked = set(
+            subprocess.run(
+                ["git", "ls-files"], cwd=REPO, check=True, capture_output=True, text=True
+            ).stdout.split()
+        )
+        for relpath in (
+            "docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json",
+            "profile/profile-manifest.json",
+            "profile/deliverable-profile.json",
+        ):
+>           assert not (REPO / relpath).exists(), relpath
+E           AssertionError: docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json
+E           assert not True
+E            +  where True = exists()
+E            +    where exists = (PosixPath('/private/tmp/oam-m1-s2-r1.7gUAmz/repo') / 'docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json').exists
+
+tests/test_historical_state_rebinding_authorization_001.py:416: AssertionError
+__ test_audit_003_reports_the_manifest_absent_without_a_false_namespace_claim __
+
+    @contract
+    def test_audit_003_reports_the_manifest_absent_without_a_false_namespace_claim() -> None:
+        report = _load(AUDIT_003_REL)
+        assert "AUDIT_PROFILE_MANIFEST_MISSING" in _codes(report)
+        assert "profile_package_binding" not in report
+        assert report["counts"]["MISSING_WITH_PROFILEMANIFEST"] == 0
+        text = json.dumps(report)
+        assert "no ProfileManifest exists to declare it" not in text
+        assert "No manifest was inspected and no namespace observation is made." in text
+        for relpath in (MANIFEST_REL, DELIVERABLE_REL):
+>           assert not (REPO / relpath).exists(), relpath
+E           AssertionError: profile/profile-manifest.json
+E           assert not True
+E            +  where True = exists()
+E            +    where exists = (PosixPath('/private/tmp/oam-m1-s2-r1.7gUAmz/repo') / 'profile/profile-manifest.json').exists
+
+tests/test_profile_aware_audit.py:459: AssertionError
+______________ test_the_lineage_is_the_required_three_link_chain _______________
+
+    @contract
+    def test_the_lineage_is_the_required_three_link_chain() -> None:
+        index = _load(OPERATIONAL_INDEX_REL)
+>       assert [r["report_id"][-3:] for r in index["reports"]] == ["001", "002", "003"]
+E       AssertionError: assert ['001', '002', '003', '004'] == ['001', '002', '003']
+E         
+E         Left contains one more item: '004'
+E         Use -v to get more diff
+
+tests/test_profile_aware_audit.py:492: AssertionError
+_______________________ test_audit_004_was_not_generated _______________________
+
+    @contract
+    def test_audit_004_was_not_generated() -> None:
+        tracked = set(
+            subprocess.run(
+                ["git", "ls-files"], cwd=REPO, check=True, capture_output=True, text=True
+            ).stdout.split()
+        )
+>       assert not (REPO / AUDIT_004_REL).exists()
+E       AssertionError: assert not True
+E        +  where True = exists()
+E        +    where exists = (PosixPath('/private/tmp/oam-m1-s2-r1.7gUAmz/repo') / 'docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json').exists
+
+tests/test_profile_aware_audit.py:622: AssertionError
+___________________ test_synthetic_valid_path_discriminator ____________________
+
+tmp_path = PosixPath('/private/var/folders/47/n7bpzp2d3f35z35vskk5l2fh0000gn/T/pytest-of-arkadiymiteiko/pytest-55/test_synthetic_valid_path_disc0')
+
+    @contract
+    def test_synthetic_valid_path_discriminator(tmp_path: Path) -> None:
+        """The corrected package, proven end to end through production, in isolation."""
+        root = _valid_package(tmp_path)
+    
+        validation = subprocess.run(
+            [sys.executable, VERIFIER_REL, "--validate-profile-manifest", MANIFEST_REL],
+            cwd=root,
+            capture_output=True,
+            text=True,
+        )
+        assert validation.returncode == 0, validation.stderr
+        assert auditor.PROFILE_VALIDATION_VALID in validation.stdout
+    
+        assert _candidate(root).returncode == 0
+        run_one = (root / CANDIDATE_REL).read_bytes()
+        (root / CANDIDATE_REL).unlink()
+        assert _candidate(root).returncode == 0
+        run_two = (root / CANDIDATE_REL).read_bytes()
+        assert run_one == run_two, "two independent generations must be byte-identical"
+    
+        report = _report(root)
+        binding = report["profile_package_binding"]
+    
+        assert report["counts"]["MISSING"] == 0
+        assert report["counts"]["MISSING_WITH_PROFILEMANIFEST"] == 0
+        assert _codes(report) == set()
+    
+        assert binding["profile"]["profile_namespace"] == NAMESPACE
+        assert binding["profile"]["declared_extension_points"] == EXTENSION_POINTS
+        assert binding["profile"]["contract_version"] == CONTRACT_VERSION
+        assert binding["profile"]["core_binding_status"] == "UNBOUND_PRE_CORE_RELEASE"
+    
+        manifest_bytes = (root / MANIFEST_REL).read_bytes()
+        deliverable_bytes = (root / DELIVERABLE_REL).read_bytes()
+        assert binding["profile_manifest"]["byte_length"] == len(manifest_bytes)
+        assert binding["profile_manifest"]["sha256"] == hashlib.sha256(manifest_bytes).hexdigest()
+        assert binding["profile_manifest"]["sha512"] == hashlib.sha512(manifest_bytes).hexdigest()
+        assert (
+            binding["profile_manifest"]["manifest_digest"]
+            == (json.loads(manifest_bytes)["manifest_digest"])
+        )
+        assert binding["deliverable_package"]["path"] == DELIVERABLE_REL
+        assert binding["deliverable_package"]["byte_length"] == len(deliverable_bytes)
+        assert binding["deliverable_package"]["sha256"] == hashlib.sha256(deliverable_bytes).hexdigest()
+        assert binding["deliverable_package"]["sha512"] == hashlib.sha512(deliverable_bytes).hexdigest()
+    
+        assert binding["validation"]["production_validation_result"] == (
+            auditor.PROFILE_VALIDATION_VALID
+        )
+        assert binding["validation"]["computed_profile_status"] == (
+            "STRUCTURALLY_VALID_PRE_CORE_BINDING"
+        )
+    
+        for claim in (
+            "gate_closure_authorized",
+            "publication_authorized",
+            "profile_correction_authorized",
+        ):
+            assert report[claim] is False, claim
+        assert report["semantic_implementation_gate"] == "BLOCKED"
+        assert report["gate_sar_05"] == "OPEN_PENDING_PROFILE_CORRECTION"
+    
+        # The implementation repository gains nothing from this fixture.
+>       assert not (REPO / MANIFEST_REL).exists()
+E       AssertionError: assert not True
+E        +  where True = exists()
+E        +    where exists = (PosixPath('/private/tmp/oam-m1-s2-r1.7gUAmz/repo') / 'profile/profile-manifest.json').exists
+
+tests/test_profile_aware_audit.py:695: AssertionError
+______ test_mut_an_edited_current_report_binding_fails_the_production_cli ______
+
+tmp_path = PosixPath('/private/var/folders/47/n7bpzp2d3f35z35vskk5l2fh0000gn/T/pytest-of-arkadiymiteiko/pytest-55/test_mut_an_edited_current_rep0')
+
+    @mutation
+    def test_mut_an_edited_current_report_binding_fails_the_production_cli(tmp_path: Path) -> None:
+        """End to end: tamper with the indexed current report, then run --check-current."""
+        root = _valid_package(tmp_path)
+        current = root / AUDIT_003_REL
+        current.unlink()
+        assert _generate(root, AUDIT_003_REL, AUDIT_003_ID).returncode == 0
+        _reseal_current_report(root)
+    
+        clean = subprocess.run(
+            [sys.executable, AUDIT_TOOL_REL, "--check-current"],
+            cwd=root,
+            capture_output=True,
+            text=True,
+        )
+>       assert clean.returncode == 0, clean.stderr
+E       AssertionError: FAIL AUDIT_CURRENT_REPORT_MISSING: docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json
+E         FAIL AUDIT_CURRENT_REPORT_MISSING: docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python', 'tools/audit_...AUDIT-004.json\nFAIL AUDIT_CURRENT_REPORT_MISSING: docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json\n').returncode
+
+tests/test_profile_aware_audit.py:1479: AssertionError
+_______ test_no_profile_artifact_was_created_and_audit_003_is_authorized _______
+
+    @contract
+    def test_no_profile_artifact_was_created_and_audit_003_is_authorized() -> None:
+        tracked = set(
+            subprocess.run(
+                ["git", "ls-files"], cwd=REPO, check=True, capture_output=True, text=True
+            ).stdout.split()
+        )
+        for relpath in (MANIFEST_PATH, DELIVERABLE_PATH):
+>           assert not (REPO / relpath).exists(), relpath
+E           AssertionError: profile/profile-manifest.json
+E           assert not True
+E            +  where True = exists()
+E            +    where exists = (PosixPath('/private/tmp/oam-m1-s2-r1.7gUAmz/repo') / 'profile/profile-manifest.json').exists
+
+tests/test_profile_aware_audit_amendment_authorization_001.py:427: AssertionError
+___________ test_the_lineage_terminates_at_the_authorized_audit_003 ____________
+
+    @contract
+    def test_the_lineage_terminates_at_the_authorized_audit_003() -> None:
+        index = _load("docs/governance/gates/OAM-GATE-SAR-05-CDC-AUDIT-INDEX.json")
+>       assert index["current_report_id"] == "OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-003"
+E       AssertionError: assert 'OAM-GATE-SAR...ILE-AUDIT-004' == 'OAM-GATE-SAR...ILE-AUDIT-003'
+E         
+E         - OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-003
+E         ?                                     ^
+E         + OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004
+E         ?                                     ^
+
+tests/test_profile_aware_audit_amendment_authorization_001.py:437: AssertionError
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_close_002.py:256: local exact evidence is not present in this checkout
+SKIPPED [1] tests/test_close_002.py:288: local exact evidence is not present in this checkout
+SKIPPED [1] tests/test_close_002.py:299: local exact evidence is not present in this checkout
+SKIPPED [1] tests/test_close_002.py:314: local exact evidence is not present in this checkout
+SKIPPED [1] tests/test_close_002.py:456: local exact evidence is not present in this checkout
+SKIPPED [1] tests/test_corpus_contract.py:129: no retained bytes in this checkout; see LOCAL_EXACT_EVIDENCE_VERIFICATION
+SKIPPED [1] tests/test_corpus_contract.py:486: local-only bytes are absent from this checkout
+FAILED tests/test_amendment_lineage_coupling_authorization_001.py::test_audit_003_is_authorized_and_now_generated
+FAILED tests/test_amendment_lineage_coupling_authorization_001.py::test_audit_004_is_reserved_and_absent
+FAILED tests/test_amendment_lineage_coupling_authorization_001.py::test_the_lineage_is_the_authorized_three_link_chain
+FAILED tests/test_amendment_lineage_coupling_authorization_001.py::test_no_profile_artifact_exists_and_audit_004_stays_reserved
+FAILED tests/test_amendment_lineage_coupling_authorization_001.py::test_contract_0_5_1_approved_artifacts_still_hash_as_approved
+FAILED tests/test_amendment_scope_expansion_authorization_001.py::test_no_profile_artifact_was_created_by_this_expansion
+FAILED tests/test_amendment_scope_expansion_authorization_001.py::test_the_lineage_terminates_at_audit_003
+FAILED tests/test_audit_lineage.py::test_governed_success_tokens_are_distinct
+FAILED tests/test_audit_lineage.py::test_audit_003_removed_while_current_fails
+FAILED tests/test_audit_lineage.py::test_report_generation_requires_an_explicit_report_id
+FAILED tests/test_cdc_profile_correction_authorization_002.py::test_nothing_this_authorization_permits_has_been_created_yet
+FAILED tests/test_cdc_profile_correction_authorization_002.py::test_the_audit_lineage_advanced_only_under_the_later_authorizations
+FAILED tests/test_cdc_profile_correction_authorization_002.py::test_stage_b_artifacts_remain_absent
+FAILED tests/test_cdc_profile_correction_authorization_002.py::test_operational_audit_index_and_schema_are_unchanged
+FAILED tests/test_close_001.py::test_tracked_file_inventory_matches_git - Ass...
+FAILED tests/test_gate_sar_05_contract.py::test_cdc_profile_audit_never_claims_conformance_or_closure
+FAILED tests/test_gate_sar_05_contract.py::test_amended_audit_no_longer_demands_profile_extensions
+FAILED tests/test_historical_state_rebinding_authorization_001.py::test_the_rebinding_was_performed_exactly_as_authorized
+FAILED tests/test_historical_state_rebinding_authorization_001.py::test_no_profile_artifact_and_no_audit_004_were_created
+FAILED tests/test_profile_aware_audit.py::test_audit_003_reports_the_manifest_absent_without_a_false_namespace_claim
+FAILED tests/test_profile_aware_audit.py::test_the_lineage_is_the_required_three_link_chain
+FAILED tests/test_profile_aware_audit.py::test_audit_004_was_not_generated - ...
+FAILED tests/test_profile_aware_audit.py::test_synthetic_valid_path_discriminator
+FAILED tests/test_profile_aware_audit.py::test_mut_an_edited_current_report_binding_fails_the_production_cli
+FAILED tests/test_profile_aware_audit_amendment_authorization_001.py::test_no_profile_artifact_was_created_and_audit_003_is_authorized
+FAILED tests/test_profile_aware_audit_amendment_authorization_001.py::test_the_lineage_terminates_at_the_authorized_audit_003
+26 failed, 1008 passed, 7 skipped in 253.57s (0:04:13)

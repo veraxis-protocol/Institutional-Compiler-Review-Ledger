@@ -1,0 +1,56 @@
+{
+  "authorized-nine": {
+    "collected": 9,
+    "passed": 8,
+    "failed": 1,
+    "skipped": 0,
+    "failing_ids": [
+      "tests/test_audit_lineage.py::test_governed_success_tokens_are_distinct"
+    ]
+  },
+  "module": {
+    "collected": 87,
+    "passed": 84,
+    "failed": 3,
+    "skipped": 0,
+    "failing_ids": [
+      "tests/test_audit_lineage.py::test_audit_003_removed_while_current_fails",
+      "tests/test_audit_lineage.py::test_governed_success_tokens_are_distinct",
+      "tests/test_audit_lineage.py::test_report_generation_requires_an_explicit_report_id"
+    ]
+  },
+  "suite": {
+    "collected": 1041,
+    "passed": 1008,
+    "failed": 26,
+    "skipped": 7,
+    "failing_ids": [
+      "tests/test_amendment_lineage_coupling_authorization_001.py::test_audit_003_is_authorized_and_now_generated",
+      "tests/test_amendment_lineage_coupling_authorization_001.py::test_audit_004_is_reserved_and_absent",
+      "tests/test_amendment_lineage_coupling_authorization_001.py::test_contract_0_5_1_approved_artifacts_still_hash_as_approved",
+      "tests/test_amendment_lineage_coupling_authorization_001.py::test_no_profile_artifact_exists_and_audit_004_stays_reserved",
+      "tests/test_amendment_lineage_coupling_authorization_001.py::test_the_lineage_is_the_authorized_three_link_chain",
+      "tests/test_amendment_scope_expansion_authorization_001.py::test_no_profile_artifact_was_created_by_this_expansion",
+      "tests/test_amendment_scope_expansion_authorization_001.py::test_the_lineage_terminates_at_audit_003",
+      "tests/test_audit_lineage.py::test_audit_003_removed_while_current_fails",
+      "tests/test_audit_lineage.py::test_governed_success_tokens_are_distinct",
+      "tests/test_audit_lineage.py::test_report_generation_requires_an_explicit_report_id",
+      "tests/test_cdc_profile_correction_authorization_002.py::test_nothing_this_authorization_permits_has_been_created_yet",
+      "tests/test_cdc_profile_correction_authorization_002.py::test_operational_audit_index_and_schema_are_unchanged",
+      "tests/test_cdc_profile_correction_authorization_002.py::test_stage_b_artifacts_remain_absent",
+      "tests/test_cdc_profile_correction_authorization_002.py::test_the_audit_lineage_advanced_only_under_the_later_authorizations",
+      "tests/test_close_001.py::test_tracked_file_inventory_matches_git",
+      "tests/test_gate_sar_05_contract.py::test_amended_audit_no_longer_demands_profile_extensions",
+      "tests/test_gate_sar_05_contract.py::test_cdc_profile_audit_never_claims_conformance_or_closure",
+      "tests/test_historical_state_rebinding_authorization_001.py::test_no_profile_artifact_and_no_audit_004_were_created",
+      "tests/test_historical_state_rebinding_authorization_001.py::test_the_rebinding_was_performed_exactly_as_authorized",
+      "tests/test_profile_aware_audit.py::test_audit_003_reports_the_manifest_absent_without_a_false_namespace_claim",
+      "tests/test_profile_aware_audit.py::test_audit_004_was_not_generated",
+      "tests/test_profile_aware_audit.py::test_mut_an_edited_current_report_binding_fails_the_production_cli",
+      "tests/test_profile_aware_audit.py::test_synthetic_valid_path_discriminator",
+      "tests/test_profile_aware_audit.py::test_the_lineage_is_the_required_three_link_chain",
+      "tests/test_profile_aware_audit_amendment_authorization_001.py::test_no_profile_artifact_was_created_and_audit_003_is_authorized",
+      "tests/test_profile_aware_audit_amendment_authorization_001.py::test_the_lineage_terminates_at_the_authorized_audit_003"
+    ]
+  }
+}

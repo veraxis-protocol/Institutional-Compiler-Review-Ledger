@@ -1,0 +1,9 @@
+{
+  "s1_minus_r1": [
+    "tests/test_audit_lineage.py::test_valid_confined_alternate_index_is_accepted"
+  ],
+  "r1_minus_s1": [
+    "tests/test_audit_lineage.py::test_audit_003_removed_while_current_fails",
+    "tests/test_audit_lineage.py::test_report_generation_requires_an_explicit_report_id"
+  ]
+}

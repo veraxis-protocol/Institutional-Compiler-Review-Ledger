@@ -1,0 +1,1 @@
+{"document_id":"M1-CLOSURE-COMMAND-MATRIX-001","phase_a":{"overlay_observations":1,"qualification_trials":3,"pytest_runs":0},"phase_b":{"authority":"ACTIVE_BY_PREAUTHORIZED_CONDITION","pytest_runs":3,"sequence":["authorized-nine","module","suite"],"reruns":0},"environment_delta":{"LANG":"C","LC_ALL":"C","LC_CTYPE":"C"}}

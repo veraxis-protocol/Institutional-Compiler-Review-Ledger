@@ -1,0 +1,61 @@
+..................................F...F................................. [ 82%]
+............F..                                                          [100%]
+=================================== FAILURES ===================================
+__________________ test_governed_success_tokens_are_distinct ___________________
+
+tmp_path = PosixPath('/private/var/folders/47/n7bpzp2d3f35z35vskk5l2fh0000gn/T/pytest-of-arkadiymiteiko/pytest-54/test_governed_success_tokens_a0')
+
+    @contract
+    def test_governed_success_tokens_are_distinct(tmp_path: Path) -> None:
+        root = _isolated(tmp_path)
+        assert "AUDIT_INDEX_VERIFIED" in _run(root, "--verify-index").stdout
+>       assert "AUDIT_CURRENT_REPORT_VERIFIED" in _run(root, "--check-current").stdout
+E       AssertionError: assert 'AUDIT_CURRENT_REPORT_VERIFIED' in ''
+E        +  where '' = CompletedProcess(args=['/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python', '/private/var...tdout='', stderr='FAIL AUDIT_CURRENT_REPORT_STALE: docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json\n').stdout
+E        +    where CompletedProcess(args=['/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python', '/private/var...tdout='', stderr='FAIL AUDIT_CURRENT_REPORT_STALE: docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json\n') = _run(PosixPath('/private/var/folders/47/n7bpzp2d3f35z35vskk5l2fh0000gn/T/pytest-of-arkadiymiteiko/pytest-54/test_governed_success_tokens_a0/repo'), '--check-current')
+
+tests/test_audit_lineage.py:433: AssertionError
+__________________ test_audit_003_removed_while_current_fails __________________
+
+tmp_path = PosixPath('/private/var/folders/47/n7bpzp2d3f35z35vskk5l2fh0000gn/T/pytest-of-arkadiymiteiko/pytest-54/test_audit_003_removed_while_c0')
+
+    @mutation
+    def test_audit_003_removed_while_current_fails(tmp_path: Path) -> None:
+        root = _isolated(tmp_path)
+        (root / "docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-003.json").unlink()
+        findings = auditor.verify_audit_index(root)
+>       assert any("AUDIT_CURRENT_REPORT_MISSING" in f for f in findings), findings
+E       AssertionError: ['AUDIT_HISTORICAL_REPORT_MISSING: docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-003.json']
+E       assert False
+E        +  where False = any(<generator object test_audit_003_removed_while_current_fails.<locals>.<genexpr> at 0x108e6c790>)
+
+tests/test_audit_lineage.py:470: AssertionError
+____________ test_report_generation_requires_an_explicit_report_id _____________
+
+tmp_path = PosixPath('/private/var/folders/47/n7bpzp2d3f35z35vskk5l2fh0000gn/T/pytest-of-arkadiymiteiko/pytest-54/test_report_generation_require0')
+
+    @mutation
+    def test_report_generation_requires_an_explicit_report_id(tmp_path: Path) -> None:
+        root = _isolated(tmp_path)
+        fresh = "docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json"
+        missing = _run(root, "--write", fresh)
+        assert missing.returncode == 1
+        assert "AUDIT_REPORT_ID_REQUIRED" in missing.stderr
+        mismatched = _run(
+            root, "--write", fresh, "--report-id", "OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-005"
+        )
+        assert mismatched.returncode == 1
+        assert "AUDIT_REPORT_PATH_IDENTITY_MISMATCH" in mismatched.stderr
+        good = _run(root, "--write", fresh, "--report-id", "OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004")
+>       assert good.returncode == 0, good.stderr
+E       AssertionError: FAIL AUDIT_REPORT_OVERWRITE_PROHIBITED: docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python', '/private/var...', stderr='FAIL AUDIT_REPORT_OVERWRITE_PROHIBITED: docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json\n').returncode
+
+tests/test_audit_lineage.py:1001: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_audit_lineage.py::test_governed_success_tokens_are_distinct
+FAILED tests/test_audit_lineage.py::test_audit_003_removed_while_current_fails
+FAILED tests/test_audit_lineage.py::test_report_generation_requires_an_explicit_report_id
+3 failed, 84 passed in 45.08s

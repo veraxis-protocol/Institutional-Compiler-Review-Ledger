@@ -1,0 +1,19 @@
+.....F...                                                                [100%]
+=================================== FAILURES ===================================
+__________________ test_governed_success_tokens_are_distinct ___________________
+
+tmp_path = PosixPath('/private/var/folders/47/n7bpzp2d3f35z35vskk5l2fh0000gn/T/pytest-of-arkadiymiteiko/pytest-53/test_governed_success_tokens_a0')
+
+    @contract
+    def test_governed_success_tokens_are_distinct(tmp_path: Path) -> None:
+        root = _isolated(tmp_path)
+        assert "AUDIT_INDEX_VERIFIED" in _run(root, "--verify-index").stdout
+>       assert "AUDIT_CURRENT_REPORT_VERIFIED" in _run(root, "--check-current").stdout
+E       AssertionError: assert 'AUDIT_CURRENT_REPORT_VERIFIED' in ''
+E        +  where '' = CompletedProcess(args=['/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python', '/private/var...tdout='', stderr='FAIL AUDIT_CURRENT_REPORT_STALE: docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json\n').stdout
+E        +    where CompletedProcess(args=['/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python', '/private/var...tdout='', stderr='FAIL AUDIT_CURRENT_REPORT_STALE: docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json\n') = _run(PosixPath('/private/var/folders/47/n7bpzp2d3f35z35vskk5l2fh0000gn/T/pytest-of-arkadiymiteiko/pytest-53/test_governed_success_tokens_a0/repo'), '--check-current')
+
+tests/test_audit_lineage.py:433: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_audit_lineage.py::test_governed_success_tokens_are_distinct
+1 failed, 8 passed in 14.75s

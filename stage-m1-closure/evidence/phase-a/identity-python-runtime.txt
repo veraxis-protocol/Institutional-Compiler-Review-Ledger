@@ -1,0 +1,4 @@
+sys.executable=/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python
+sys.prefix=/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv
+sys.base_prefix=/opt/anaconda3
+sys.version=3.12.2 | packaged by conda-forge | (main, Feb 16 2024, 21:00:12) [Clang 16.0.6 ]

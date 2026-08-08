@@ -1,0 +1,7 @@
+LANG=C
+LC_ALL=C
+LC_CTYPE=C
+locale=C
+sys.executable=/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python
+sys.prefix=/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv
+sys.base_prefix=/opt/anaconda3

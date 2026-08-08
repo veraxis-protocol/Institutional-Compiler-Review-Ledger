@@ -1,0 +1,10 @@
+qualification_trials_attempted=3
+qualification_trials_passed=3
+pytest_runs=0
+project_test_runs=0
+m1_s2_measurement_runs=0
+package_mutations=0
+venv_mutations=0
+interpreter_mutations=0
+persistent_environment_mutations=0
+canonical_source_mutations=0

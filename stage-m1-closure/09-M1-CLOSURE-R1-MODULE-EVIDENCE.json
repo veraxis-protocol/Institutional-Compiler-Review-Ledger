@@ -1,0 +1,1 @@
+{"document_id":"M1-CLOSURE-R1-MODULE-EVIDENCE-001","result_bearing":true,"collected":87,"passed":84,"failed":3,"skipped":0,"failing_ids":["tests/test_audit_lineage.py::test_audit_003_removed_while_current_fails","tests/test_audit_lineage.py::test_governed_success_tokens_are_distinct","tests/test_audit_lineage.py::test_report_generation_requires_an_explicit_report_id"]}

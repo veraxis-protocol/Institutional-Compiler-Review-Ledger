@@ -1,0 +1,282 @@
+{
+  "document_id": "M1-CLOSURE-PHASE-A-ACTIVATION-001",
+  "predicates": [
+    {
+      "id": "P01",
+      "statement": "Review Ledger main equals persisted authorization commit",
+      "proven": true,
+      "evidence": [
+        {
+          "path": "evidence/phase-a/P01-ledger-head.txt",
+          "sha256": "f260008ec661c0cba6d9ec7bea709db32d081f035119781b0e5399c7b230901b"
+        }
+      ]
+    },
+    {
+      "id": "P02",
+      "statement": "canonical source exact HEAD/tree/CLEAN",
+      "proven": true,
+      "evidence": [
+        {
+          "path": "evidence/phase-a/P02-canonical-head.txt",
+          "sha256": "0a621678b271b2381e4555b56d0270f056ad0a14485dd5919fdbf468c1e9805b"
+        },
+        {
+          "path": "evidence/phase-a/P02-canonical-tree.txt",
+          "sha256": "5d6c8593184cfe412deb8f14d27b824bc226ce0a7155ce53978f52826139eca0"
+        },
+        {
+          "path": "evidence/phase-a/P02-canonical-status.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "id": "P03",
+      "statement": "environment identities have no unexplained material drift",
+      "proven": true,
+      "evidence": [
+        {
+          "path": "evidence/phase-a/identity-comparison-result.txt",
+          "sha256": "92cadfa004384143baa21143679ca757464679bbf18e09e3d852b7a63b7e95f1"
+        },
+        {
+          "path": "evidence/phase-a/identity-readline.sha256",
+          "sha256": "e75afdccae3fd34773ff8bdef6717f2bab82d32ccadddf83c98b476424a1dcb3"
+        },
+        {
+          "path": "evidence/phase-a/identity-readline.sha512",
+          "sha256": "3d34afa79a10f8b02bcaea13930bcad99017ae91fe403c283a513be4b1daf433"
+        },
+        {
+          "path": "evidence/phase-a/identity-libreadline.sha256",
+          "sha256": "6776f6659e69341fad23978cf04514c65569f7a121910154fdf5a216d3eb8272"
+        },
+        {
+          "path": "evidence/phase-a/identity-libreadline.sha512",
+          "sha256": "536df55f18c004761794b3aad478108e354020eacbb0a26ed6e06426ccba64c0"
+        }
+      ]
+    },
+    {
+      "id": "P04",
+      "statement": "only intentional environment delta is LANG=C LC_ALL=C LC_CTYPE=C",
+      "proven": true,
+      "evidence": [
+        {
+          "path": "evidence/phase-a/overlay-observation.environment-delta.json",
+          "sha256": "a3177d065ebf26e693bcc52405a1c7ede8f430c2206aacd305ee85cbb80cd207"
+        }
+      ]
+    },
+    {
+      "id": "P05",
+      "statement": "overlay observation completed successfully without mutation",
+      "proven": true,
+      "evidence": [
+        {
+          "path": "evidence/phase-a/overlay-observation.stdout.txt",
+          "sha256": "a0d08101a3975b421bc2f70b7c67293fc46061669a97230e1493a05a77075483"
+        },
+        {
+          "path": "evidence/phase-a/overlay-observation.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "evidence/phase-a/overlay-observation.exit-code.txt",
+          "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        {
+          "path": "evidence/phase-a/overlay-observation-mutations.txt",
+          "sha256": "a5db7c796325fd2689b70e8a184380df141498ce2e8fa2d8500da3227201f580"
+        }
+      ]
+    },
+    {
+      "id": "P06",
+      "statement": "all three qualification trials attempted exactly once",
+      "proven": true,
+      "evidence": [
+        {
+          "path": "evidence/phase-a/QUAL_TRIAL_01.exit-code.txt",
+          "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        {
+          "path": "evidence/phase-a/QUAL_TRIAL_02.exit-code.txt",
+          "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        {
+          "path": "evidence/phase-a/QUAL_TRIAL_03.exit-code.txt",
+          "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        }
+      ]
+    },
+    {
+      "id": "P07",
+      "statement": "all three trials exited 0",
+      "proven": true,
+      "evidence": [
+        {
+          "path": "evidence/phase-a/QUAL_TRIAL_01.exit-code.txt",
+          "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        {
+          "path": "evidence/phase-a/QUAL_TRIAL_02.exit-code.txt",
+          "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        },
+        {
+          "path": "evidence/phase-a/QUAL_TRIAL_03.exit-code.txt",
+          "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+        }
+      ]
+    },
+    {
+      "id": "P08",
+      "statement": "each stdout exact",
+      "proven": true,
+      "evidence": [
+        {
+          "path": "evidence/phase-a/QUAL_TRIAL_01.stdout.txt",
+          "sha256": "3f7809ff68e38b738f45789e7552964c47648c24243897c21345ba1abaca196d"
+        },
+        {
+          "path": "evidence/phase-a/QUAL_TRIAL_02.stdout.txt",
+          "sha256": "3f7809ff68e38b738f45789e7552964c47648c24243897c21345ba1abaca196d"
+        },
+        {
+          "path": "evidence/phase-a/QUAL_TRIAL_03.stdout.txt",
+          "sha256": "3f7809ff68e38b738f45789e7552964c47648c24243897c21345ba1abaca196d"
+        }
+      ]
+    },
+    {
+      "id": "P09",
+      "statement": "each stderr zero bytes",
+      "proven": true,
+      "evidence": [
+        {
+          "path": "evidence/phase-a/QUAL_TRIAL_01.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "evidence/phase-a/QUAL_TRIAL_02.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "evidence/phase-a/QUAL_TRIAL_03.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "id": "P10",
+      "statement": "no trial crash report",
+      "proven": true,
+      "evidence": [
+        {
+          "path": "evidence/phase-a/QUAL_TRIAL_01.new-crash-reports.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "evidence/phase-a/QUAL_TRIAL_02.new-crash-reports.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "evidence/phase-a/QUAL_TRIAL_03.new-crash-reports.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    },
+    {
+      "id": "P11",
+      "statement": "Phase A pytest runs zero",
+      "proven": true,
+      "evidence": [
+        {
+          "path": "evidence/phase-a/phase-a-counters.txt",
+          "sha256": "47c4391846a91c52120ab050740616de20881fc334909f34c8e1854c3820aa95"
+        }
+      ]
+    },
+    {
+      "id": "P12",
+      "statement": "Phase A project-test runs zero",
+      "proven": true,
+      "evidence": [
+        {
+          "path": "evidence/phase-a/phase-a-counters.txt",
+          "sha256": "47c4391846a91c52120ab050740616de20881fc334909f34c8e1854c3820aa95"
+        }
+      ]
+    },
+    {
+      "id": "P13",
+      "statement": "Phase A measurement runs zero",
+      "proven": true,
+      "evidence": [
+        {
+          "path": "evidence/phase-a/phase-a-counters.txt",
+          "sha256": "47c4391846a91c52120ab050740616de20881fc334909f34c8e1854c3820aa95"
+        }
+      ]
+    },
+    {
+      "id": "P14",
+      "statement": "package mutations zero",
+      "proven": true,
+      "evidence": [
+        {
+          "path": "evidence/phase-a/phase-a-counters.txt",
+          "sha256": "47c4391846a91c52120ab050740616de20881fc334909f34c8e1854c3820aa95"
+        }
+      ]
+    },
+    {
+      "id": "P15",
+      "statement": "venv mutations zero",
+      "proven": true,
+      "evidence": [
+        {
+          "path": "evidence/phase-a/phase-a-counters.txt",
+          "sha256": "47c4391846a91c52120ab050740616de20881fc334909f34c8e1854c3820aa95"
+        }
+      ]
+    },
+    {
+      "id": "P16",
+      "statement": "interpreter mutations zero",
+      "proven": true,
+      "evidence": [
+        {
+          "path": "evidence/phase-a/phase-a-counters.txt",
+          "sha256": "47c4391846a91c52120ab050740616de20881fc334909f34c8e1854c3820aa95"
+        }
+      ]
+    },
+    {
+      "id": "P17",
+      "statement": "persistent environment mutations zero",
+      "proven": true,
+      "evidence": [
+        {
+          "path": "evidence/phase-a/phase-a-counters.txt",
+          "sha256": "47c4391846a91c52120ab050740616de20881fc334909f34c8e1854c3820aa95"
+        }
+      ]
+    },
+    {
+      "id": "P18",
+      "statement": "canonical mutations zero",
+      "proven": true,
+      "evidence": [
+        {
+          "path": "evidence/phase-a/phase-a-counters.txt",
+          "sha256": "47c4391846a91c52120ab050740616de20881fc334909f34c8e1854c3820aa95"
+        }
+      ]
+    }
+  ],
+  "conjunction_result": true,
+  "phase_b_authority": "ACTIVE_BY_PREAUTHORIZED_CONDITION"
+}
+
