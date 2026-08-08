@@ -1,0 +1,56 @@
+{
+  "commands": [
+    {
+      "argv": ["git", "-C", "/Users/arkadiymiteiko/oam-cdc-wo007-clean", "rev-parse", "HEAD"],
+      "expected": "9b1754040c3dafa0123c6b13ea9e5f5eaa2b7bd1",
+      "observed": "9b1754040c3dafa0123c6b13ea9e5f5eaa2b7bd1",
+      "status": "COMPLETED_PASS"
+    },
+    {
+      "argv": ["git", "-C", "/Users/arkadiymiteiko/oam-cdc-wo007-clean", "rev-parse", "HEAD^{tree}"],
+      "expected": "8d898a5d69164db1d4d64e08fb7b71facf459e8b",
+      "observed": "8d898a5d69164db1d4d64e08fb7b71facf459e8b",
+      "status": "COMPLETED_PASS"
+    },
+    {
+      "argv": ["git", "-C", "/Users/arkadiymiteiko/oam-cdc-wo007-clean", "status", "--porcelain"],
+      "expected": "empty output",
+      "observed": "empty output",
+      "status": "COMPLETED_PASS"
+    },
+    {
+      "check": "S2 test-file and _isolated exact identities",
+      "expected": {
+        "bytes": 40975,
+        "isolated_sha256": "9a11894fc361911fe9a6273062686e88e9018b2299aa61a1f03373919a4c19d8",
+        "sha256": "04bd2679de95ec831ba010d99fee1cb578f70497916951035e9518340371f2cc",
+        "sha512": "5c56b9a105122586e1fe1d26855d54d5b695179dbd1d7325a8b1f714f0c2dd397e45361a6dfa5b1b949eb9b1b347e9095477a96eb65e69aa5f0fbed3a0046f9b"
+      },
+      "observed": "ALL_MATCH",
+      "status": "COMPLETED_PASS"
+    },
+    {
+      "check": "AUDIT-004 and operational-index exact identities",
+      "observed": "ALL_MATCH",
+      "status": "COMPLETED_PASS"
+    },
+    {
+      "argv_reference": "evidence/authorized-nine.execution.json",
+      "exit_code": 139,
+      "result": "SIGSEGV",
+      "status": "ATTEMPTED_BLOCKED_BEFORE_RESULT"
+    },
+    {
+      "command": "complete tests/test_audit_lineage.py",
+      "reason": "prior authorized-nine infrastructure block",
+      "status": "NOT_RUN"
+    },
+    {
+      "command": "full pytest suite",
+      "reason": "prior authorized-nine infrastructure block",
+      "status": "NOT_RUN"
+    }
+  ],
+  "document_id": "M1-S2-VERIFICATION-COMMAND-MATRIX-001",
+  "reruns": 0
+}

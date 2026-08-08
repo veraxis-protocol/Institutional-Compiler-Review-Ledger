@@ -1,0 +1,9 @@
+{
+  "corrective_edits": 0,
+  "decision": "BLOCKED",
+  "document_id": "M1-S2-HYPOTHESIS-ADJUDICATION-001",
+  "h1_disposition": "H1_UNADJUDICATED",
+  "reason": "INFRASTRUCTURE_SIGSEGV_BEFORE_MEASUREMENT",
+  "reruns": 0,
+  "second_measurement_authorized": false
+}

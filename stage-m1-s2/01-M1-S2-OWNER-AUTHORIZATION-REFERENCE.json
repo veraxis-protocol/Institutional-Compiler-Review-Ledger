@@ -1,0 +1,11 @@
+{
+  "authorization_reference_state": "RESOLVED",
+  "bytes": 10506,
+  "decision": "AUTHORIZE_M1_S2_LEDGER_NATIVE_EXECUTION_001",
+  "document_id": "M1-S2-OWNER-AUTHORIZATION-REFERENCE-001",
+  "ledger_commit": "86adb7d84d4a6bb469705afc04397a8260553f23",
+  "ledger_path": "owner-decisions/AUTHORIZE-M1-S2-LEDGER-NATIVE-EXECUTION-001.md",
+  "sha256": "971ce005d0771dadf7ad7e6827c8b9f19ce63d22f408a462cad53bc014cdd020",
+  "sha512": "b2a35c65512cf85b476814478ce0777f804d84ddbf1703fdb2c41dba35043c56390fa385e3027a1bd33739c4f1cd766a3823598c2ad6690d9f29cfbec59f5dff",
+  "state": "ACCEPTED_STATE_PERSISTED"
+}

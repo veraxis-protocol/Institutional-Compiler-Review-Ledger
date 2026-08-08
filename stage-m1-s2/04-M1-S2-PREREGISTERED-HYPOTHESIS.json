@@ -1,0 +1,16 @@
+{
+  "document_id": "M1-S2-PREREGISTERED-HYPOTHESIS-001",
+  "expected": {
+    "authorized_nine": "9P / 0F",
+    "full_suite": "1011P / 23F / 7S",
+    "module": "87P / 0F",
+    "s1_minus_s2": [
+      "tests/test_audit_lineage.py::test_governed_success_tokens_are_distinct",
+      "tests/test_audit_lineage.py::test_valid_confined_alternate_index_is_accepted"
+    ],
+    "s2_minus_s1": []
+  },
+  "h1": "The two remaining failures persist because _isolated reproduces AUDIT-003 but does not reproduce the operational index's current AUDIT-004.",
+  "measurement_attempts_authorized": 1,
+  "status_after_attempt": "UNADJUDICATED_DUE_TO_INFRASTRUCTURE_BLOCK"
+}

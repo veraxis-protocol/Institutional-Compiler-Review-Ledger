@@ -1,0 +1,31 @@
+{
+  "argv": [
+    "/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python",
+    "-m",
+    "pytest",
+    "tests/test_audit_lineage.py::test_operational_index_validates_and_verifies",
+    "tests/test_audit_lineage.py::test_supersession_lineage_is_a_single_normalized_graph",
+    "tests/test_audit_lineage.py::test_currentness_is_unaffected_by_filesystem_tricks[higher numbered unindexed report]",
+    "tests/test_audit_lineage.py::test_currentness_is_unaffected_by_filesystem_tricks[newer modification time]",
+    "tests/test_audit_lineage.py::test_currentness_is_unaffected_by_filesystem_tricks[lexically later name]",
+    "tests/test_audit_lineage.py::test_governed_success_tokens_are_distinct",
+    "tests/test_audit_lineage.py::test_focused_audit_tests_do_not_mutate_the_reviewed_repository",
+    "tests/test_audit_lineage.py::test_valid_confined_alternate_index_is_accepted",
+    "tests/test_audit_lineage.py::test_lineage_is_a_single_root_injective_linear_chain",
+    "-q",
+    "--junitxml=/Users/arkadiymiteiko/Downloads/Institutional-Compiler-Review-Ledger/stage-m1-s2/evidence/authorized-nine.junit.xml"
+  ],
+  "collected": "UNMEASURED",
+  "completed_at": null,
+  "corrective_edits": 0,
+  "cwd": "/tmp/oam-m1-s2-reconstruction.GW79ZJ/repo",
+  "exit_code": 139,
+  "failed": "UNMEASURED",
+  "junit_file_created": false,
+  "passed": "UNMEASURED",
+  "reruns": 0,
+  "skipped": "UNMEASURED",
+  "started_at": "2026-08-08T16:39:19Z",
+  "status": "BLOCKED_BEFORE_RESULT",
+  "termination": "SIGSEGV"
+}

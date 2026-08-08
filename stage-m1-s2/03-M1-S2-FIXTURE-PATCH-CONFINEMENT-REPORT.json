@@ -1,0 +1,17 @@
+{
+  "authorized_intervention_count": 1,
+  "canonical_source_mutations": 0,
+  "corrective_edits": 0,
+  "document_id": "M1-S2-FIXTURE-PATCH-CONFINEMENT-REPORT-001",
+  "function": "_isolated",
+  "isolated_post_sha256": "9a11894fc361911fe9a6273062686e88e9018b2299aa61a1f03373919a4c19d8",
+  "path": "tests/test_audit_lineage.py",
+  "post": "OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json",
+  "pre": "OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-003.json",
+  "result": "PASS_EXACT_ONE_CHARACTER_SAME_LENGTH",
+  "s2_test_file": {
+    "bytes": 40975,
+    "sha256": "04bd2679de95ec831ba010d99fee1cb578f70497916951035e9518340371f2cc",
+    "sha512": "5c56b9a105122586e1fe1d26855d54d5b695179dbd1d7325a8b1f714f0c2dd397e45361a6dfa5b1b949eb9b1b347e9095477a96eb65e69aa5f0fbed3a0046f9b"
+  }
+}

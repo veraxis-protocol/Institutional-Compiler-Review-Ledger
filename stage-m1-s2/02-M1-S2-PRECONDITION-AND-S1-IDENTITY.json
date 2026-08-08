@@ -1,0 +1,33 @@
+{
+  "audit_004": {
+    "bytes": 13494,
+    "path": "docs/governance/gates/OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004.json",
+    "sha256": "0c7143c500d7912dca95cd01301a2d388c3f8c46ffc3427c95e2089e5425e631",
+    "sha512": "7ca118fe5ed9e75926dd3b8efe12a649fa0afc168f0a3b6104356a9e8a83b0797b6fe0e4a22fb64cba066d76316ad63a6b0e86f56c6f9f97e1c1171adb406c7d"
+  },
+  "canonical_governed_repository": {
+    "branch": "governance/gate-sar-05-contract-amendment-v2",
+    "clean": true,
+    "head": "9b1754040c3dafa0123c6b13ea9e5f5eaa2b7bd1",
+    "mutations": 0,
+    "tree": "8d898a5d69164db1d4d64e08fb7b71facf459e8b"
+  },
+  "document_id": "M1-S2-PRECONDITION-AND-S1-IDENTITY-001",
+  "operational_index": {
+    "bytes": 4204,
+    "current_report_id": "OAM-GATE-SAR-05-CDC-PROFILE-AUDIT-004",
+    "path": "docs/governance/gates/OAM-GATE-SAR-05-CDC-AUDIT-INDEX.json",
+    "sha256": "20de3c39d714f392d6511efc9aeb2b49a011c9a168baa1a7d683ee8c202bb376",
+    "sha512": "f28a58aebf2e207c820f93cf47592424395c04fb23a82389ae2ba2d6f7eeb95a3fa545f684fbedd67d1cf44c6f13151c8221fa33d335b1b451f7fd6c1decacf9"
+  },
+  "s1": {
+    "authorized_nine": "7P / 2F",
+    "fixture_callers": 23,
+    "full_suite": "1009P / 25F / 7S",
+    "isolated_bytes": 1109,
+    "isolated_sha256": "766f1f66e03bb82f043263c60d6a437a2818793bd07a2ba29ed8ff69911e9431",
+    "module": "85P / 2F",
+    "test_file_bytes": 40975,
+    "test_file_sha256": "8e6f51a1613456f4a52ce37f1da8f999694fb3195da10c7dc78697b1f9c57410"
+  }
+}

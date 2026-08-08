@@ -1,0 +1,11 @@
+{
+  "accepted_comparability_source": "M1-S1 predecessor execution metadata",
+  "canonical_governed_head": "9b1754040c3dafa0123c6b13ea9e5f5eaa2b7bd1",
+  "canonical_governed_tree": "8d898a5d69164db1d4d64e08fb7b71facf459e8b",
+  "crash_diagnostic_os_version": "macOS 13.7.8 (22H730)",
+  "crash_incident_id": "08311862-69C2-42E9-B9BF-BB51E9E3B469",
+  "mypy_version": "2.3.0",
+  "pytest_version": "9.1.1",
+  "python_executable": "/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python",
+  "python_version": "3.12.2"
+}

@@ -1,0 +1,21 @@
+{
+  "collected": "UNMEASURED",
+  "document_id": "M1-S2-AUTHORIZED-NINE-EVIDENCE-001",
+  "exit_code": 139,
+  "failed": "UNMEASURED",
+  "junit_file_created": false,
+  "passed": "UNMEASURED",
+  "raw_evidence": {
+    "crash_diagnostic": "evidence/python3.12-2026-08-08-123926.ips",
+    "execution": "evidence/authorized-nine.execution.json",
+    "shell_diagnostic": "evidence/authorized-nine.shell-diagnostic.txt",
+    "started_at": "evidence/authorized-nine.started-at.txt",
+    "stderr": "evidence/authorized-nine.stderr.txt",
+    "stdout": "evidence/authorized-nine.stdout.txt"
+  },
+  "reruns": 0,
+  "skipped": "UNMEASURED",
+  "started_at": "2026-08-08T16:39:19Z",
+  "status": "BLOCKED_BEFORE_RESULT",
+  "termination": "SIGSEGV"
+}
