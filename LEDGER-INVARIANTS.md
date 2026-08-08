@@ -1,6 +1,6 @@
 # Review Ledger Invariants
 
-Status: **BOOTSTRAP CANDIDATE — owner-authorized for construction, not yet accepted for operational use.**
+Status: **OPERATIONALLY ACTIVE — bootstrap accepted and persisted; steady-state ledger authority in force.**
 
 ## RL-01 — Source / Evidence Separation
 `Institutional-Compiler` remains the governed system. This ledger contains evidence about that system. Evidence commits do not mutate the governed system.
@@ -61,4 +61,4 @@ Any future extraordinary installation authority requires all of:
 - non-author independent review;
 - fail-closed mechanical verification.
 
-The ledger remains a bootstrap candidate until a separate final owner acceptance and activation transition.
+Bootstrap acceptance is persisted at `ec66062ed9a63fae77eeb840b766b84162059c69` and the Review Ledger is operationally active. Activation authorizes the ledger transport/evidence layer only; governed-source mutation and mission execution, including M1-S2, require separate explicit authority.

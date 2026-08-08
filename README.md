@@ -1,6 +1,6 @@
 # Institutional Compiler Review Ledger
 
-Status: **BOOTSTRAP CANDIDATE — NOT YET ACTIVE**
+Status: **OPERATIONALLY ACTIVE**
 
 This repository is the transport and evidence-lineage layer for independent review of the Institutional Compiler. It is intentionally separate from the governed source repository. A commit here records evidence *about* the governed system; it does not mutate the system under review.
 
@@ -68,9 +68,9 @@ The temporary `BOOTSTRAP` execution authority used for initial installation has 
 
 Records under `bootstrap/**`, together with the historical bootstrap branches and owner decisions, are retained as evidence. They are historical records, not authority, and reviving retired authority requires a fresh explicit owner event.
 
-Final owner bootstrap acceptance remains **pending**. Decommissioning the temporary authority is not acceptance and is not operational activation.
+Final owner bootstrap acceptance is **accepted and persisted** at `ec66062ed9a63fae77eeb840b766b84162059c69`. Decommissioning the temporary authority remained distinct from acceptance; this subsequent infrastructure transition activates the already accepted Review Ledger for operational evidence transport.
 
-M1-S1 continues through the pre-ledger transport channel. The ledger is not an authorized transport for M1-S1. M1-S2 remains unavailable and may become the first native ledger-carried experiment only after the bootstrap itself has been independently reviewed and owner-accepted.
+M1-S1 remains historical under the pre-ledger transport channel. The Review Ledger is now the authorized evidence/review transport layer for M1-S2 onward. Operational activation does **not** itself authorize M1-S2 execution; M1-S2 requires a separate explicit owner mission authorization after this activation is independently reviewed, accepted, persisted, and adjudicated.
 
 See `LEDGER-INVARIANTS.md` for RL-01 through RL-15 and `owner-decisions/REVIEW-LEDGER-BOOTSTRAP-OWNER-AUTHORIZATION-002.md` for the bootstrap authorization.
 

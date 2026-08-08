@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "status": "BOOTSTRAP_CANDIDATE_NOT_ACTIVE",
+  "status": "REVIEW_LEDGER_ACTIVE",
   "principals": [
     {
       "principal_id": "OWNER_EXECUTION_PRINCIPAL_001",
@@ -70,7 +70,7 @@
       },
       "effective_from": "REVIEW_LEDGER_REVIEWER_IDENTITY_BINDING_001",
       "revoked_at": null,
-      "notes": "Exact reviewer transport identity is owner-bound: GitHub login and numeric user ID captured, SSH public-key fingerprint captured, signing key configured with automatic signing off. No token, credential, private key, or passphrase is persisted here; transport facts only. Reviewer role effectivity is bounded by REVIEW_LEDGER_REVIEWER_IDENTITY_BINDING_001 and is confined to the INDEPENDENT_REVIEWER role over review/ branches and reviews/** paths. Role effectivity is not ledger activation: ledger status remains BOOTSTRAP_CANDIDATE_NOT_ACTIVE and this principal confers no owner, implementer, infrastructure, or bootstrap authority."
+      "notes": "Exact reviewer transport identity is owner-bound: GitHub login and numeric user ID captured, SSH public-key fingerprint captured, signing key configured with automatic signing off. No token, credential, private key, or passphrase is persisted here; transport facts only. Reviewer role effectivity is bounded by REVIEW_LEDGER_REVIEWER_IDENTITY_BINDING_001 and is confined to the INDEPENDENT_REVIEWER role over review/ branches and reviews/** paths. Reviewer role effectivity is distinct from ledger activation and this principal confers no owner, implementer, infrastructure, or bootstrap authority."
     }
   ],
   "infrastructure_authority": {
