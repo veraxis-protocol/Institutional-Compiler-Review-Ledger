@@ -1,0 +1,1 @@
+/usr/bin/otool -hv /Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python 

@@ -1,0 +1,1 @@
+/usr/bin/otool -D /opt/anaconda3/lib/libreadline.8.dylib 

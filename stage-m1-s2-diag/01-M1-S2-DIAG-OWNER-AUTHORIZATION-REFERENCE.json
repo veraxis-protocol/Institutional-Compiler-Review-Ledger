@@ -1,0 +1,17 @@
+{
+  "authorization_reference_state": "RESOLVED",
+  "bytes": 7570,
+  "decision": "AUTHORIZE_M1_S2_INFRASTRUCTURE_DIAGNOSTIC_001",
+  "document_id": "M1-S2-DIAG-OWNER-AUTHORIZATION-REFERENCE-001",
+  "ledger_commit": "88a81aba060806157c6d3b63f36c0dcd1a99827a",
+  "ledger_path": "owner-decisions/AUTHORIZE-M1-S2-DIAGNOSTIC-001.md",
+  "ledger_tree": "1b0fb440970718bc7ce03195f4ec03d381c5b870",
+  "review": {
+    "id": 4889485795,
+    "reviewer": "inventor1975",
+    "token": "ACCEPT_M1_S2_INFRASTRUCTURE_DIAGNOSTIC_AUTHORIZATION_001"
+  },
+  "sha256": "3fae0fe4bdf8c60761ff9d6c25e5122280b9553f906fbf8f7952130b61d3a321",
+  "sha512": "beb373b61897ec95a8887facdd162750673a67c4a57db4db09a5b2dce40657412101bcde444afab0c683914c62c037a89e5d31da1e24aac89c80ae4286a4954b",
+  "state": "ACCEPTED_STATE_PERSISTED"
+}

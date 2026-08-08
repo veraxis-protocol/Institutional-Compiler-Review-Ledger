@@ -1,0 +1,6 @@
+"symbol":"_platform_strlen"
+"symbol":"_rl_init_locale"
+"symbol":"_rl_init_eightbit"
+"symbol":"rl_initialize"
+"symbol":"setup_readline"
+"symbol":"PyInit_readline"

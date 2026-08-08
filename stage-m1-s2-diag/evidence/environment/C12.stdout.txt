@@ -1,0 +1,14 @@
+LANG=C.UTF-8
+LC_ALL=C.UTF-8
+LC_CTYPE=C.UTF-8
+TERM=dumb
+PATH=/usr/local/bin:/usr/local/sbin:/Library/Frameworks/Python.framework/Versions/3.13/bin:/Library/Frameworks/Python.framework/Versions/3.13/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/arkadiymiteiko/.codex/tmp/arg0/codex-arg0rRpsn3:/Users/arkadiymiteiko/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/override:/usr/local/sbin:/Library/Frameworks/Python.framework/Versions/3.13/bin:/opt/anaconda3/bin:/opt/anaconda3/condabin:/Users/arkadiymiteiko/.cache/codex-runtimes/codex-primary-runtime/dependencies/bin/fallback:/Applications/ChatGPT.app/Contents/Resources
+VIRTUAL_ENV=ABSENT
+PYTHONHOME=ABSENT
+PYTHONPATH=ABSENT
+CONDA_PREFIX=/opt/anaconda3
+CONDA_DEFAULT_ENV=base
+CONDA_SHLVL=1
+CONDA_EXE=/opt/anaconda3/bin/conda
+_CE_M=''
+_CE_CONDA=''

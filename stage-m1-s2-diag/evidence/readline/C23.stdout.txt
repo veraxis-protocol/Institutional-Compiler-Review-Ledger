@@ -1,0 +1,1 @@
+/opt/anaconda3/lib/libreadline.8.dylib: Mach-O 64-bit dynamically linked shared library x86_64

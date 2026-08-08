@@ -1,0 +1,15 @@
+{
+  "document_id": "M1-S2-DIAG-PREDECESSOR-BLOCKED-STATE-REFERENCE-001",
+  "h1": "UNADJUDICATED_DUE_TO_INFRASTRUCTURE_BLOCK",
+  "manifest": {
+    "bytes": 5888,
+    "path": "stage-m1-s2/12-M1-S2-EVIDENCE-MANIFEST.json",
+    "sha256": "1626f2b608fda34f56e4a8ddb3c39e229f510028322d923a061e4606e216cdf8",
+    "sha512": "732d272b5dcb2c9c842779e3584eb3af688c997a039ced11087477cd406b760e435291a008fe93593a84e194ef854c8fe5965d1c23d4156cf0547079ec41b580"
+  },
+  "measurement_rerun_authority": "NONE",
+  "m1_s2": "BLOCKED",
+  "original_execution_authority": "CONSUMED",
+  "predecessor_commit": "f44d1cc337d20cb8b01f85d232795b7bff93954a",
+  "predecessor_tree": "8c48fe4bd01eca42abde77b55618023a4260c618"
+}

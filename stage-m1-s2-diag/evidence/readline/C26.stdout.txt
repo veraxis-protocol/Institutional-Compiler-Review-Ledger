@@ -1,0 +1,2 @@
+/opt/anaconda3/lib/libreadline.8.dylib:
+@rpath/libreadline.8.dylib

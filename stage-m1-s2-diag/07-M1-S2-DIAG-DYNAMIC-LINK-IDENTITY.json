@@ -1,0 +1,16 @@
+{
+  "document_id": "M1-S2-DIAG-DYNAMIC-LINK-IDENTITY-001",
+  "extension_link": "@rpath/libreadline.8.dylib",
+  "extension_rpath": "@loader_path/../../",
+  "libreadline": {
+    "compatibility_version": "8.2.0",
+    "current_version": "8.2.0",
+    "file_type": "Mach-O 64-bit dynamically linked shared library x86_64",
+    "observed_path": "/opt/anaconda3/lib/libreadline.8.dylib",
+    "sha256": "84dc31aa5b160d057a6677f1c157cb53fa99a2b074a71ac6498357704a9b48fc",
+    "sha512": "416390af25ea396499c701a2b2378695ee96ce6e7a7cdbcc52097a6ef81412918c170b91d599a89b83b2b86eab550d2d3065ba542d690a164e4d97b13ae96d58",
+    "symlink_target": "libreadline.8.2.dylib"
+  },
+  "path_resolution": "C20 @rpath token resolved using C21 LC_RPATH and the C15-observed extension loader path",
+  "transitive_links": ["@rpath/libncursesw.6.dylib", "/usr/lib/libSystem.B.dylib"]
+}

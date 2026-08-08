@@ -1,0 +1,143 @@
+{"app_name":"python3.12","timestamp":"2026-08-08 15:17:50.00 -0400","app_version":"","slice_uuid":"d5c26400-cafc-317a-a6bb-9786e031e709","build_version":"","platform":1,"share_with_app_devs":0,"is_first_party":1,"bug_type":"309","os_version":"macOS 13.7.8 (22H730)","roots_installed":0,"incident_id":"5C210BBF-79AE-452B-9309-A9DDE3C3D772","name":"python3.12"}
+{
+  "uptime" : 260000,
+  "procRole" : "Unspecified",
+  "version" : 2,
+  "userID" : 501,
+  "deployVersion" : 210,
+  "modelCode" : "MacBookPro14,1",
+  "coalitionID" : 693,
+  "osVersion" : {
+    "train" : "macOS 13.7.8",
+    "build" : "22H730",
+    "releaseType" : "User"
+  },
+  "captureTime" : "2026-08-08 15:17:48.0618 -0400",
+  "incident" : "5C210BBF-79AE-452B-9309-A9DDE3C3D772",
+  "pid" : 96570,
+  "cpuType" : "X86-64",
+  "roots_installed" : 0,
+  "bug_type" : "309",
+  "procLaunch" : "2026-08-08 15:17:47.8397 -0400",
+  "procStartAbsTime" : 262024882706616,
+  "procExitAbsTime" : 262024992684673,
+  "procName" : "python3.12",
+  "procPath" : "\/opt\/anaconda3\/*\/python3.12",
+  "parentProc" : "Exited process",
+  "parentPid" : 96547,
+  "coalitionName" : "com.openai.codex",
+  "crashReporterKey" : "53DC7CBD-3C72-E943-DFEB-7E792831217F",
+  "responsiblePid" : 540,
+  "responsibleProc" : "ChatGPT",
+  "codeSigningID" : "",
+  "codeSigningTeamID" : "",
+  "codeSigningValidationCategory" : 0,
+  "codeSigningTrustLevel" : 0,
+  "wakeTime" : 20873,
+  "sleepWakeUUID" : "7215D456-3518-43D5-B734-3525E2BB2174",
+  "sip" : "enabled",
+  "vmRegionInfo" : "0 is not in any region.  Bytes before following region: 4528599040\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      UNUSED SPACE AT START\n--->  \n      __TEXT                      10decf000-10e2e7000    [ 4192K] r-x\/r-x SM=COW  ...\/*\/python3.12",
+  "exception" : {"codes":"0x0000000000000001, 0x0000000000000000","rawCodes":[1,0],"type":"EXC_BAD_ACCESS","signal":"SIGSEGV","subtype":"KERN_INVALID_ADDRESS at 0x0000000000000000"},
+  "termination" : {"flags":0,"code":11,"namespace":"SIGNAL","indicator":"Segmentation fault: 11","byProc":"exc handler","byPid":96570},
+  "vmregioninfo" : "0 is not in any region.  Bytes before following region: 4528599040\n      REGION TYPE                    START - END         [ VSIZE] PRT\/MAX SHRMOD  REGION DETAIL\n      UNUSED SPACE AT START\n--->  \n      __TEXT                      10decf000-10e2e7000    [ 4192K] r-x\/r-x SM=COW  ...\/*\/python3.12",
+  "extMods" : {"caller":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"system":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"targeted":{"thread_create":0,"thread_set_state":0,"task_for_pid":0},"warnings":0},
+  "faultingThread" : 0,
+  "threads" : [{"triggered":true,"id":2814902,"instructionState":{"instructionStream":{"bytes":[41,7,197,252,41,71,32,72,131,199,64,72,131,234,64,119,237,197,252,17,4,23,197,252,17,68,23,32,197,248,119,93,195,72,137,52,23,72,131,234,8,115,246,72,131,194,8,116,11,64,136,116,23,255,72,131,234,1,117,245,93,195,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,144,85,72,137,229,72,137,249,72,137,250,72,131,231,240,102,15,239,192,102,15,116,7,102,15,215,240,72,131,225,15,72,131,200,255,72,211,224,33,198,116,23,15,188,198,72,41,215,72,1,248,93,195,102,46,15,31,132,0,0,0,0,0,102,144,72,131,199,16,102,15,239,192,102,15,116,7,102,15,215,240,133,246,116,236,235,211,101,72,139,12,37,24,0,0,0,65,137,200,49,192,240,76,15,177,7,15,133,122,31,0,0,233,0,0],"offset":96}},"threadState":{"r13":{"value":4534383704,"symbolLocation":55072,"symbol":"_PyRuntime"},"rax":{"value":0},"rflags":{"value":66118},"cpu":{"value":0},"r14":{"value":0},"rsi":{"value":3},"r8":{"value":0},"cr2":{"value":0},"rdx":{"value":0},"r10":{"value":24},"r9":{"value":0},"r15":{"value":4538453952,"symbolLocation":0,"symbol":"rl_complete"},"rbx":{"value":0},"trap":{"value":14,"description":"(no mapping for user data read)"},"err":{"value":4},"r11":{"value":519},"rip":{"value":140703515135762,"matchesCrashFrame":1},"rbp":{"value":140701820186688},"rsp":{"value":140701820186688},"r12":{"value":4538619488,"symbolLocation":0,"symbol":"emacs_meta_keymap"},"rcx":{"value":0},"flavor":"x86_THREAD_STATE","rdi":{"value":0}},"queue":"com.apple.main-thread","frames":[{"imageOffset":3858,"symbol":"_platform_strlen","symbolLocation":18,"imageIndex":5},{"imageOffset":156741,"symbol":"_rl_init_locale","symbolLocation":197,"imageIndex":2},{"imageOffset":156806,"symbol":"_rl_init_eightbit","symbolLocation":22,"imageIndex":2},{"imageOffset":9533,"symbol":"rl_initialize","symbolLocation":221,"imageIndex":2},{"imageOffset":8032,"symbol":"setup_readline","symbolLocation":480,"imageIndex":1},{"imageOffset":7024,"symbol":"PyInit_readline","symbolLocation":192,"imageIndex":1},{"imageOffset":2380133,"symbol":"_PyImport_LoadDynamicModuleWithSpec","symbolLocation":773,"imageIndex":0},{"imageOffset":2376839,"symbol":"_imp_create_dynamic","symbolLocation":167,"imageIndex":0},{"imageOffset":960008,"symbol":"cfunction_vectorcall_FASTCALL","symbolLocation":104,"imageIndex":0},{"imageOffset":2048658,"symbol":"_PyEval_EvalFrameDefault","symbolLocation":240850,"imageIndex":0},{"imageOffset":515929,"symbol":"_PyObject_VectorcallTstate.777","symbolLocation":73,"imageIndex":0},{"imageOffset":536429,"symbol":"object_vacall","symbolLocation":381,"imageIndex":0},{"imageOffset":535962,"symbol":"PyObject_CallMethodObjArgs","symbolLocation":234,"imageIndex":0},{"imageOffset":2368661,"symbol":"PyImport_ImportModuleLevelObject","symbolLocation":3477,"imageIndex":0},{"imageOffset":1985498,"symbol":"_PyEval_EvalFrameDefault","symbolLocation":177690,"imageIndex":0},{"imageOffset":1795950,"symbol":"PyEval_EvalCode","symbolLocation":254,"imageIndex":0},{"imageOffset":2587079,"symbol":"run_mod","symbolLocation":279,"imageIndex":0},{"imageOffset":2596851,"symbol":"PyRun_SimpleStringFlags","symbolLocation":195,"imageIndex":0},{"imageOffset":2777536,"symbol":"pymain_run_command","symbolLocation":160,"imageIndex":0},{"imageOffset":2775609,"symbol":"Py_RunMain","symbolLocation":681,"imageIndex":0},{"imageOffset":8920,"symbol":"main","symbolLocation":56,"imageIndex":0},{"imageOffset":25624,"symbol":"start","symbolLocation":1896,"imageIndex":6}]}],
+  "usedImages" : [
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4528599040,
+    "size" : 4292608,
+    "uuid" : "d5c26400-cafc-317a-a6bb-9786e031e709",
+    "path" : "\/opt\/anaconda3\/*\/python3.12",
+    "name" : "python3.12"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4538081280,
+    "size" : 20480,
+    "uuid" : "9d324d58-bc2a-3f71-8514-32fb7b540005",
+    "path" : "\/opt\/anaconda3\/*\/readline.cpython-312-darwin.so",
+    "name" : "readline.cpython-312-darwin.so"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4538408960,
+    "size" : 200704,
+    "uuid" : "4e627903-bb6c-3b3b-966f-ddce83bdabd7",
+    "path" : "\/opt\/anaconda3\/*\/libreadline.8.2.dylib",
+    "name" : "libreadline.8.2.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4538703872,
+    "size" : 151552,
+    "uuid" : "f59a9373-1c86-3ce4-85c0-570fc7075647",
+    "path" : "\/opt\/anaconda3\/*\/libncursesw.6.dylib",
+    "name" : "libncursesw.6.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 4538896384,
+    "size" : 176128,
+    "uuid" : "95a699fe-31b3-3028-98b3-038db865523b",
+    "path" : "\/opt\/anaconda3\/*\/libtinfow.6.dylib",
+    "name" : "libtinfow.6.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703515131904,
+    "size" : 40944,
+    "uuid" : "9ae2c3dc-b88b-3c82-a0bd-918275fe7661",
+    "path" : "\/usr\/lib\/system\/libsystem_platform.dylib",
+    "name" : "libsystem_platform.dylib"
+  },
+  {
+    "source" : "P",
+    "arch" : "x86_64",
+    "base" : 140703511416832,
+    "size" : 624176,
+    "uuid" : "30314c55-d8f5-398e-b837-1b1760596c7f",
+    "path" : "\/usr\/lib\/dyld",
+    "name" : "dyld"
+  }
+],
+  "sharedCache" : {
+  "base" : 140703510794240,
+  "size" : 21474836480,
+  "uuid" : "8eee6686-4d40-33a3-b07b-b334fd3e3ecc"
+},
+  "legacyInfo" : {
+  "threadTriggered" : {
+    "queue" : "com.apple.main-thread"
+  }
+},
+  "logWritingSignature" : "57f919861d11561c714850b62b2f4ed8fec59b8e",
+  "trialInfo" : {
+  "rollouts" : [
+    {
+      "rolloutId" : "6297d96be2c9387df974efa4",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000032
+    },
+    {
+      "rolloutId" : "639124e81d92412bfb4880b3",
+      "factorPackIds" : {
+
+      },
+      "deploymentId" : 240000012
+    }
+  ],
+  "experiments" : [
+
+  ]
+}
+}

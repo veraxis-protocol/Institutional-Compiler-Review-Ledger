@@ -1,0 +1,1 @@
+/usr/bin/stat -f %N\|%HT\|%Sp\|%z /Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python 

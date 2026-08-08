@@ -1,0 +1,3 @@
+/opt/anaconda3/lib/python3.12/lib-dynload/readline.cpython-312-darwin.so:
+	@rpath/libreadline.8.dylib (compatibility version 8.2.0, current version 8.2.0)
+	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1292.0.0)

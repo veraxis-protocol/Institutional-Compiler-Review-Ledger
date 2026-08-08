@@ -1,0 +1,18 @@
+{
+  "architecture": "x86_64",
+  "document_id": "M1-S2-DIAG-INTERPRETER-VENV-IDENTITY-001",
+  "observed_facts": {
+    "executable_symlink_chain": [
+      "/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python",
+      "/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python3.12",
+      "/opt/anaconda3/bin/python3.12"
+    ],
+    "pointer_bits": 64,
+    "python_build": "3.12.2 | packaged by conda-forge | (main, Feb 16 2024, 21:00:12) [Clang 16.0.6 ]",
+    "sys_base_prefix": "/opt/anaconda3",
+    "sys_executable": "/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python",
+    "sys_prefix": "/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv",
+    "venv_home": "/opt/anaconda3/bin"
+  },
+  "raw_evidence_prefix": "evidence/interpreter/"
+}

@@ -1,0 +1,1 @@
+/usr/bin/otool -L /opt/anaconda3/lib/python3.12/lib-dynload/readline.cpython-312-darwin.so 

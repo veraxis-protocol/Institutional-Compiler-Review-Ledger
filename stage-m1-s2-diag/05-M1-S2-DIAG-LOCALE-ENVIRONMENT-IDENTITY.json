@@ -1,0 +1,21 @@
+{
+  "capture_policy": "CAPTURE_TIME_WHITELIST_ONLY",
+  "document_id": "M1-S2-DIAG-LOCALE-ENVIRONMENT-IDENTITY-001",
+  "full_environment_captured": false,
+  "observed_facts": {
+    "CONDA_DEFAULT_ENV": "base",
+    "CONDA_PREFIX": "/opt/anaconda3",
+    "CONDA_SHLVL": "1",
+    "LANG": "C.UTF-8",
+    "LC_ALL": "C.UTF-8",
+    "LC_CTYPE": "C.UTF-8",
+    "PYTHONHOME": "ABSENT",
+    "PYTHONPATH": "ABSENT",
+    "TERM": "dumb",
+    "VIRTUAL_ENV": "ABSENT",
+    "effective_locale_categories": "C",
+    "locale_a_contains_C": true,
+    "locale_a_contains_C_UTF_8": false
+  },
+  "raw_evidence_prefix": "evidence/environment/"
+}

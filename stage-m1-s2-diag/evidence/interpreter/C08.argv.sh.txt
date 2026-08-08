@@ -1,0 +1,1 @@
+/bin/cat /Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/pyvenv.cfg 

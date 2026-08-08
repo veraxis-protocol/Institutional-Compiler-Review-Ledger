@@ -1,0 +1,21 @@
+{
+  "competing_explanations_not_excluded": [
+    "specific handling of unsupported or differently resolved C.UTF-8 locale names",
+    "a GNU readline 8.2 locale-initialization defect",
+    "an interaction between the Conda-forge CPython readline extension and linked readline/ncurses builds",
+    "which of LANG, LC_ALL, or LC_CTYPE is individually necessary"
+  ],
+  "diagnostic_disposition": "ROOT_CAUSE_NARROWED",
+  "diagnostic_hypothesis": "The inherited locale configuration interacts with readline initialization to trigger the null dereference.",
+  "diagnostic_inference": "Changing only LANG, LC_ALL, and LC_CTYPE from C.UTF-8 to C removed the standalone crash. Locale configuration is therefore a causal condition for the reproduced failure, but the underlying library mechanism and individually necessary variable are not identified.",
+  "document_id": "M1-S2-DIAG-ADJUDICATION-001",
+  "h1": "UNADJUDICATED_DUE_TO_INFRASTRUCTURE_BLOCK",
+  "observed_facts": [
+    "normal standalone import readline reproduced EXC_BAD_ACCESS SIGSEGV exit 139",
+    "Probe 1 stack boundary exactly matched the frozen M1-S2 readline-initialization boundary",
+    "locale-only Probe 2 exited 0 and printed READLINE_IMPORT_OK",
+    "Probe 2 changed only LANG, LC_ALL, and LC_CTYPE to C",
+    "Probe 3 was not run"
+  ],
+  "root_cause_claimed": false
+}

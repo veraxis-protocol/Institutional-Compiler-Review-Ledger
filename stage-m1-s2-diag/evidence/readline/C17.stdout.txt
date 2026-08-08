@@ -1,0 +1,1 @@
+/opt/anaconda3/lib/python3.12/lib-dynload/readline.cpython-312-darwin.so: Mach-O 64-bit bundle x86_64

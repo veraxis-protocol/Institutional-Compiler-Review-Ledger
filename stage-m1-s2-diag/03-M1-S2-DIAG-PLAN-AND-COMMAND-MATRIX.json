@@ -1,0 +1,43 @@
+{
+  "document_id": "M1-S2-DIAG-PLAN-AND-COMMAND-MATRIX-001",
+  "commands": [
+    {"id":"C01","argv":["git","rev-parse","HEAD"],"status":"PASS"},
+    {"id":"C02","argv":["git","-C","/Users/arkadiymiteiko/oam-cdc-wo007-clean","rev-parse","HEAD"],"status":"PASS"},
+    {"id":"C03","argv":["git","-C","/Users/arkadiymiteiko/oam-cdc-wo007-clean","rev-parse","HEAD^{tree}"],"status":"PASS"},
+    {"id":"C04","argv":["git","-C","/Users/arkadiymiteiko/oam-cdc-wo007-clean","status","--porcelain"],"status":"PASS"},
+    {"id":"C05","argv":["/usr/bin/stat","-f","%N|%HT|%Sp|%z","/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python"],"status":"PASS"},
+    {"id":"C06","argv":["/bin/ls","-l","/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python"],"status":"PASS"},
+    {"id":"C07","argv":["/usr/bin/readlink","/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python"],"status":"PASS"},
+    {"id":"C07b","argv":["/usr/bin/readlink","/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python3.12"],"status":"PASS"},
+    {"id":"C07c","argv":["/usr/bin/readlink","/opt/anaconda3/bin/python3.12"],"status":"EXPECTED_NON_SYMLINK_EXIT_1"},
+    {"id":"C08","argv":["/bin/cat","/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/pyvenv.cfg"],"status":"PASS"},
+    {"id":"C09","argv":["/usr/bin/file","/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python"],"status":"PASS"},
+    {"id":"C10","argv":["/usr/bin/otool","-hv","/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python"],"status":"PASS"},
+    {"id":"C11","argv":["/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python","-c","import platform,struct,sys,sysconfig; print('sys.executable='+sys.executable); print('sys.prefix='+sys.prefix); print('sys.base_prefix='+sys.base_prefix); print('sys.version='+sys.version.replace('\\n',' ')); print('machine='+platform.machine()); print('platform='+platform.platform()); print('pointer_bits='+str(struct.calcsize('P')*8)); print('SOABI='+str(sysconfig.get_config_var('SOABI'))); print('EXT_SUFFIX='+str(sysconfig.get_config_var('EXT_SUFFIX'))); print('DESTSHARED='+str(sysconfig.get_config_var('DESTSHARED')))"],"status":"PASS"},
+    {"id":"C12","argv":["/bin/bash","--noprofile","--norc","-c","capture-time whitelist recorded in evidence/environment/C12.argv.sh.txt"],"status":"PASS_WHITELIST_ONLY"},
+    {"id":"C13","argv":["/usr/bin/locale"],"status":"PASS"},
+    {"id":"C14","argv":["/usr/bin/locale","-a"],"status":"PASS"},
+    {"id":"C15","argv":["/usr/bin/find","/opt/anaconda3/lib/python3.12/lib-dynload","-maxdepth","1","-type","f","-name","readline*.so","-print"],"path_source":"C11 DESTSHARED","status":"PASS"},
+    {"id":"C16","argv":["/usr/bin/stat","-f","%N|%HT|%Sp|%z","/opt/anaconda3/lib/python3.12/lib-dynload/readline.cpython-312-darwin.so"],"path_source":"C15","status":"PASS"},
+    {"id":"C17","argv":["/usr/bin/file","/opt/anaconda3/lib/python3.12/lib-dynload/readline.cpython-312-darwin.so"],"path_source":"C15","status":"PASS"},
+    {"id":"C18","argv":["/usr/bin/shasum","-a","256","/opt/anaconda3/lib/python3.12/lib-dynload/readline.cpython-312-darwin.so"],"path_source":"C15","status":"PASS"},
+    {"id":"C19","argv":["/usr/bin/shasum","-a","512","/opt/anaconda3/lib/python3.12/lib-dynload/readline.cpython-312-darwin.so"],"path_source":"C15","status":"PASS"},
+    {"id":"C20","argv":["/usr/bin/otool","-L","/opt/anaconda3/lib/python3.12/lib-dynload/readline.cpython-312-darwin.so"],"path_source":"C15","status":"PASS"},
+    {"id":"C21","argv":["/usr/bin/otool","-l","/opt/anaconda3/lib/python3.12/lib-dynload/readline.cpython-312-darwin.so"],"path_source":"C15","status":"PASS"},
+    {"id":"C22","argv":["/usr/bin/stat","-f","%N|%HT|%Sp|%z","/opt/anaconda3/lib/libreadline.8.dylib"],"path_source":"C20 @rpath plus C21 LC_RPATH","status":"PASS"},
+    {"id":"C22b","argv":["/usr/bin/readlink","/opt/anaconda3/lib/libreadline.8.dylib"],"status":"PASS"},
+    {"id":"C23","argv":["/usr/bin/file","/opt/anaconda3/lib/libreadline.8.dylib"],"path_source":"C20/C21","status":"PASS"},
+    {"id":"C24","argv":["/usr/bin/shasum","-a","256","/opt/anaconda3/lib/libreadline.8.dylib"],"path_source":"C20/C21","status":"PASS"},
+    {"id":"C25","argv":["/usr/bin/shasum","-a","512","/opt/anaconda3/lib/libreadline.8.dylib"],"path_source":"C20/C21","status":"PASS"},
+    {"id":"C26","argv":["/usr/bin/otool","-D","/opt/anaconda3/lib/libreadline.8.dylib"],"path_source":"C20/C21","status":"PASS"},
+    {"id":"C27","argv":["/usr/bin/otool","-L","/opt/anaconda3/lib/libreadline.8.dylib"],"path_source":"C20/C21","status":"PASS"}
+  ],
+  "probes": [
+    {"id":"PROBE_1","status":"SIGSEGV_EXIT_139_SAME_READLINE_INITIALIZATION_BOUNDARY"},
+    {"id":"PROBE_2","status":"PASS_EXIT_0_READLINE_IMPORT_OK"},
+    {"id":"PROBE_3","status":"NOT_RUN_LADDER_STOPPED_AFTER_PROBE_2_SUCCESS"}
+  ],
+  "pytest_runs": 0,
+  "project_test_runs": 0,
+  "m1_s2_measurement_reruns": 0
+}

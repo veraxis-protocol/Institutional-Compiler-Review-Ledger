@@ -1,0 +1,9 @@
+{
+  "bytes": 36456,
+  "document_id": "M1-S2-DIAG-READLINE-EXTENSION-IDENTITY-001",
+  "file_type": "Mach-O 64-bit bundle x86_64",
+  "path": "/opt/anaconda3/lib/python3.12/lib-dynload/readline.cpython-312-darwin.so",
+  "path_binding": "Observed C11 DESTSHARED plus exact C15 result; not assumed",
+  "sha256": "bc6c396b8854fea80680a847f2d0093f579a983166c244708fd1db98e6574431",
+  "sha512": "8f15b1c257d14188fdb6b00020372eae676e5e4e5a51b8e3cc5b6be10c9070abd4726faa853eeadff5d6c02df7d2dfa7a48290284a3026fb37525d20204905ca"
+}

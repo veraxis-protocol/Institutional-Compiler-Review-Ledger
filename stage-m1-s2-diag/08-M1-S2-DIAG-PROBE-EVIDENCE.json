@@ -1,0 +1,25 @@
+{
+  "document_id": "M1-S2-DIAG-PROBE-EVIDENCE-001",
+  "probe_1": {
+    "argv": ["/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python", "-c", "import readline; print('READLINE_IMPORT_OK')"],
+    "environment_delta": {},
+    "exit_code": 139,
+    "result": "SIGSEGV",
+    "stack_boundary_matches_frozen_m1_s2": true,
+    "stderr_bytes": 0,
+    "stdout_bytes": 0
+  },
+  "probe_2": {
+    "argv": ["/usr/bin/env", "LANG=C", "LC_ALL=C", "LC_CTYPE=C", "/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python", "-c", "import readline; print('READLINE_IMPORT_OK')"],
+    "environment_delta": {"set":{"LANG":"C","LC_ALL":"C","LC_CTYPE":"C"},"other_inherited_variables":"UNCHANGED"},
+    "exit_code": 0,
+    "result": "READLINE_IMPORT_OK",
+    "stderr_bytes": 0,
+    "stdout": "READLINE_IMPORT_OK"
+  },
+  "probe_3": {
+    "result": "NOT_RUN",
+    "reason": "PROBE_2_SUCCEEDED_LADDER_STOP_REQUIRED"
+  },
+  "probes_executed": 2
+}

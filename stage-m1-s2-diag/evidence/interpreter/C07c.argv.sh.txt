@@ -1,0 +1,1 @@
+/usr/bin/readlink /opt/anaconda3/bin/python3.12 ''

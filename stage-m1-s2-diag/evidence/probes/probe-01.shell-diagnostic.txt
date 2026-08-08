@@ -1,0 +1,1 @@
+/bin/bash: line 9: 96570 Segmentation fault: 11  /Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python -c "import readline; print('READLINE_IMPORT_OK')" > "$E/probe-01.stdout.txt" 2> "$E/probe-01.stderr.txt"

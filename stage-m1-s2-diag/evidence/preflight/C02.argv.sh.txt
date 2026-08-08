@@ -1,0 +1,1 @@
+git -C /Users/arkadiymiteiko/oam-cdc-wo007-clean rev-parse HEAD 

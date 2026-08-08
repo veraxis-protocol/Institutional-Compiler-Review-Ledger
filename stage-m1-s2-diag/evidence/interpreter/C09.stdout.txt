@@ -1,0 +1,1 @@
+/Users/arkadiymiteiko/oam-cdc-reference-publication-candidate/.venv/bin/python: Mach-O 64-bit executable x86_64
