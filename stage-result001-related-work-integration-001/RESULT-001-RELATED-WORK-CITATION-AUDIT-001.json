@@ -1,474 +1,243 @@
 {
-  "absence_from_search_is_not_proof_of_novelty": true,
+  "record_class": "RELATED_WORK_CITATION_AUDIT",
   "artifact_id": "OIC-ZTL-OAM-DEMO-SLICE-001-RESULT-001-RELATED-WORK-CITATION-AUDIT-001",
   "audited_manuscript": "RESULT-001-RESEARCH-ARTIFACT-RELATED-WORK-INTEGRATED-001.md",
-  "audited_manuscript_sha256": "4bb9df8b07da8c908bc7db85041356da64a7528768fe93a72261b4cd9611358c",
-  "citations": [
-    {
-      "anchor": "Evaluation-gated issuance and preserved history under later revocation are demonstrated in a meas",
-      "assertion": "Evaluation-gated issuance and non-retrospective revocation are demonstrated in a measured system.",
-      "asserts_priority_over_source": false,
-      "citation_kind": "ATTRIBUTION",
-      "manuscript_line": 23,
-      "source_comparison_status": {
-        "RW027": "PARTIAL_PRECEDENT"
-      },
-      "source_evidence_depth": {
-        "RW027": "full_text"
-      },
-      "source_ids": [
-        "RW027"
-      ],
-      "supported_by_recorded_extraction": true
-    },
-    {
-      "anchor": "A separately addressable judgment issued over an evi",
-      "assertion": "A judgment issued over an evidence bundle by an authority distinct from the producer is normative in SLSA VSA.",
-      "asserts_priority_over_source": false,
-      "citation_kind": "ATTRIBUTION",
-      "manuscript_line": 57,
-      "source_comparison_status": {
-        "RW019": "PARTIAL_PRECEDENT"
-      },
-      "source_evidence_depth": {
-        "RW019": "normative_sections"
-      },
-      "source_ids": [
-        "RW019"
-      ],
-      "supported_by_recorded_extraction": true
-    },
-    {
-      "anchor": "Translating authoritative legal text into an executable artifact is the establis",
-      "assertion": "Statute-to-executable translation is an established research area preceding this work.",
-      "asserts_priority_over_source": false,
-      "citation_kind": "ATTRIBUTION",
-      "manuscript_line": 63,
-      "source_comparison_status": {
-        "RW001": "PARTIAL_PRECEDENT",
-        "RW002": "PARTIAL_PRECEDENT",
-        "RW026": "PARTIAL_PRECEDENT"
-      },
-      "source_evidence_depth": {
-        "RW001": "full_text",
-        "RW002": "normative_sections",
-        "RW026": "normative_sections"
-      },
-      "source_ids": [
-        "RW001",
-        "RW002",
-        "RW026"
-      ],
-      "supported_by_recorded_extraction": true
-    },
-    {
-      "anchor": "Supplying a checkable logical argument with a request is proof-carrying authorizatio",
-      "assertion": "Supplying a checkable logical argument with a request is proof-carrying authorization/authentication.",
-      "asserts_priority_over_source": false,
-      "citation_kind": "ATTRIBUTION",
-      "manuscript_line": 71,
-      "source_comparison_status": {
-        "RW006": "ADJACENT",
-        "RW007": "ADJACENT",
-        "RW008": "ADJACENT"
-      },
-      "source_evidence_depth": {
-        "RW006": "FULL_TEXT_UNAVAILABLE",
-        "RW007": "full_text",
-        "RW008": "full_text"
-      },
-      "source_ids": [
-        "RW006",
-        "RW007",
-        "RW008"
-      ],
-      "supported_by_recorded_extraction": true
-    },
-    {
-      "anchor": "Currentness gate** — determines, from separately maintained institutional state",
-      "assertion": "Norm temporality and time-varying authorization are preceded.",
-      "asserts_priority_over_source": false,
-      "citation_kind": "ATTRIBUTION",
-      "manuscript_line": 77,
-      "source_comparison_status": {
-        "RW002": "PARTIAL_PRECEDENT",
-        "RW009": "PARTIAL_PRECEDENT",
-        "RW024": "PARTIAL_PRECEDENT",
-        "RW026": "PARTIAL_PRECEDENT"
-      },
-      "source_evidence_depth": {
-        "RW002": "normative_sections",
-        "RW009": "FULL_TEXT_UNAVAILABLE",
-        "RW024": "FULL_TEXT_UNAVAILABLE",
-        "RW026": "normative_sections"
-      },
-      "source_ids": [
-        "RW002",
-        "RW009",
-        "RW026",
-        "RW024"
-      ],
-      "supported_by_recorded_extraction": true
-    },
-    {
-      "anchor": "Three-valued runtime dispositions including escal",
-      "assertion": "Three-valued runtime dispositions including escalation are argued for in contemporary agent-governance work.",
-      "asserts_priority_over_source": false,
-      "citation_kind": "ATTRIBUTION",
-      "manuscript_line": 83,
-      "source_comparison_status": {
-        "RW029": "PARTIAL_PRECEDENT",
-        "RW030": "PARTIAL_PRECEDENT"
-      },
-      "source_evidence_depth": {
-        "RW029": "full_text",
-        "RW030": "full_text"
-      },
-      "source_ids": [
-        "RW029",
-        "RW030"
-      ],
-      "supported_by_recorded_extraction": true
-    },
-    {
-      "anchor": "gated by a single-use issuance authorization cla",
-      "assertion": "Issuance/verification/reliance role separation is preceded; the evaluate-then-issue ordering is preceded by Proof of Execution.",
-      "asserts_priority_over_source": false,
-      "citation_kind": "ATTRIBUTION",
-      "manuscript_line": 87,
-      "source_comparison_status": {
-        "RW012": "PARTIAL_PRECEDENT",
-        "RW027": "PARTIAL_PRECEDENT"
-      },
-      "source_evidence_depth": {
-        "RW012": "normative_sections",
-        "RW027": "full_text"
-      },
-      "source_ids": [
-        "RW012",
-        "RW027"
-      ],
-      "supported_by_recorded_extraction": true
-    },
-    {
-      "anchor": "the execution writes a six-stage evidence tree with a manifest and digest list",
-      "assertion": "Hash-resolvable chain evidence with a separate verification step is preceded.",
-      "asserts_priority_over_source": false,
-      "citation_kind": "ATTRIBUTION",
-      "manuscript_line": 89,
-      "source_comparison_status": {
-        "RW011": "PARTIAL_PRECEDENT",
-        "RW019": "PARTIAL_PRECEDENT"
-      },
-      "source_evidence_depth": {
-        "RW011": "FULL_TEXT_UNAVAILABLE",
-        "RW019": "normative_sections"
-      },
-      "source_ids": [
-        "RW011",
-        "RW019"
-      ],
-      "supported_by_recorded_extraction": true
-    },
-    {
-      "anchor": "SIGNED produces a true mark; explicitly UNSIGNED or INVALID produces a fa",
-      "assertion": "Distinguishing undefined from false, and unresolved-as-not-false, are preceded.",
-      "asserts_priority_over_source": false,
-      "citation_kind": "ATTRIBUTION",
-      "manuscript_line": 120,
-      "source_comparison_status": {
-        "RW013": "PARTIAL_PRECEDENT",
-        "RW017": "PARTIAL_PRECEDENT",
-        "RW022": "PARTIAL_PRECEDENT"
-      },
-      "source_evidence_depth": {
-        "RW013": "normative_sections",
-        "RW017": "FULL_TEXT_UNAVAILABLE",
-        "RW022": "normative_sections"
-      },
-      "source_ids": [
-        "RW013",
-        "RW017",
-        "RW022"
-      ],
-      "supported_by_recorded_extraction": true
-    },
-    {
-      "anchor": "Rhodes and Kang issue an Execution Attestation Certificate only",
-      "assertion": "Rhodes and Kang issue an attestation certificate only when a measured predicate holds.",
-      "asserts_priority_over_source": false,
-      "citation_kind": "ATTRIBUTION",
-      "manuscript_line": 188,
-      "source_comparison_status": {
-        "RW027": "PARTIAL_PRECEDENT"
-      },
-      "source_evidence_depth": {
-        "RW027": "full_text"
-      },
-      "source_ids": [
-        "RW027"
-      ],
-      "supported_by_recorded_extraction": true
-    },
-    {
-      "anchor": "A SLSA Verification Summary Attestation i",
-      "assertion": "SLSA VSA is a judgment over an evidence bundle a consumer may accept or re-check.",
-      "asserts_priority_over_source": false,
-      "citation_kind": "ATTRIBUTION",
-      "manuscript_line": 253,
-      "source_comparison_status": {
-        "RW019": "PARTIAL_PRECEDENT"
-      },
-      "source_evidence_depth": {
-        "RW019": "normative_sections"
-      },
-      "source_ids": [
-        "RW019"
-      ],
-      "supported_by_recorded_extraction": true
-    },
-    {
-      "anchor": "Rules as code and legal knowledge representation.",
-      "assertion": "Catala proved core; LegalRuleML three temporal dimensions plus Authority/Jurisdiction; OpenFisca dated parameters.",
-      "asserts_priority_over_source": false,
-      "citation_kind": "RELATED_WORK",
-      "manuscript_line": 286,
-      "source_comparison_status": {
-        "RW001": "PARTIAL_PRECEDENT",
-        "RW002": "PARTIAL_PRECEDENT",
-        "RW026": "PARTIAL_PRECEDENT"
-      },
-      "source_evidence_depth": {
-        "RW001": "full_text",
-        "RW002": "normative_sections",
-        "RW026": "normative_sections"
-      },
-      "source_ids": [
-        "RW001",
-        "RW002",
-        "RW026"
-      ],
-      "supported_by_recorded_extraction": true
-    },
-    {
-      "anchor": "Authorization, trust management and policy engines.",
-      "assertion": "XACML Indeterminate arises on evaluation error; KeyNote separates evaluation from enforcement; Rego undefined vs false and OPA decision logs; TRBAC times the role.",
-      "asserts_priority_over_source": false,
-      "citation_kind": "RELATED_WORK",
-      "manuscript_line": 288,
-      "source_comparison_status": {
-        "RW003": "CONTRAST",
-        "RW004": "PARTIAL_PRECEDENT",
-        "RW009": "PARTIAL_PRECEDENT",
-        "RW013": "PARTIAL_PRECEDENT"
-      },
-      "source_evidence_depth": {
-        "RW003": "normative_sections",
-        "RW004": "normative_sections",
-        "RW009": "FULL_TEXT_UNAVAILABLE",
-        "RW013": "normative_sections"
-      },
-      "source_ids": [
-        "RW003",
-        "RW004",
-        "RW013",
-        "RW009"
-      ],
-      "supported_by_recorded_extraction": true
-    },
-    {
-      "anchor": "Warrant and proof-carrying systems.",
-      "assertion": "In PCA/NAL the proof is the authorization argument.",
-      "asserts_priority_over_source": false,
-      "citation_kind": "RELATED_WORK",
-      "manuscript_line": 290,
-      "source_comparison_status": {
-        "RW006": "ADJACENT",
-        "RW007": "ADJACENT",
-        "RW008": "ADJACENT"
-      },
-      "source_evidence_depth": {
-        "RW006": "FULL_TEXT_UNAVAILABLE",
-        "RW007": "full_text",
-        "RW008": "full_text"
-      },
-      "source_ids": [
-        "RW006",
-        "RW007",
-        "RW008"
-      ],
-      "supported_by_recorded_extraction": true
-    },
-    {
-      "anchor": "Provenance, attestation and supply chain.",
-      "assertion": "PROV retrospective without integrity; in-toto authorized functionaries; SLSA VSA; CT append-only with a non-static trusted-log set.",
-      "asserts_priority_over_source": false,
-      "citation_kind": "RELATED_WORK",
-      "manuscript_line": 292,
-      "source_comparison_status": {
-        "RW010": "CONTRAST",
-        "RW011": "PARTIAL_PRECEDENT",
-        "RW019": "PARTIAL_PRECEDENT",
-        "RW021": "PARTIAL_PRECEDENT"
-      },
-      "source_evidence_depth": {
-        "RW010": "normative_sections",
-        "RW011": "FULL_TEXT_UNAVAILABLE",
-        "RW019": "normative_sections",
-        "RW021": "full_text"
-      },
-      "source_ids": [
-        "RW010",
-        "RW011",
-        "RW019",
-        "RW021"
-      ],
-      "supported_by_recorded_extraction": true
-    },
-    {
-      "anchor": "Credentials and reliance.",
-      "assertion": "VC-DM issue/verify/validate/rely with no prescribed issuer evaluation and validation out of scope; evaluate-then-issue preceded by Rhodes and Kang.",
-      "asserts_priority_over_source": false,
-      "citation_kind": "RELATED_WORK",
-      "manuscript_line": 294,
-      "source_comparison_status": {
-        "RW012": "PARTIAL_PRECEDENT",
-        "RW027": "PARTIAL_PRECEDENT"
-      },
-      "source_evidence_depth": {
-        "RW012": "normative_sections",
-        "RW027": "full_text"
-      },
-      "source_ids": [
-        "RW012",
-        "RW027"
-      ],
-      "supported_by_recorded_extraction": true
-    },
-    {
-      "anchor": "Signature validation and unresolved verdicts.",
-      "assertion": "ETSI EN 319 102-1 three-valued verdict with sub-indications naming the cause.",
-      "asserts_priority_over_source": false,
-      "citation_kind": "RELATED_WORK",
-      "manuscript_line": 296,
-      "source_comparison_status": {
-        "RW022": "PARTIAL_PRECEDENT"
-      },
-      "source_evidence_depth": {
-        "RW022": "normative_sections"
-      },
-      "source_ids": [
-        "RW022"
-      ],
-      "supported_by_recorded_extraction": true
-    },
-    {
-      "anchor": "Compliance monitoring.",
-      "assertion": "Ten compliance-monitoring functionalities; none covers non-evaluation due to an earlier terminating gate.",
-      "asserts_priority_over_source": false,
-      "citation_kind": "RELATED_WORK",
-      "manuscript_line": 298,
-      "source_comparison_status": {
-        "RW031": "CONTRAST"
-      },
-      "source_evidence_depth": {
-        "RW031": "full_text"
-      },
-      "source_ids": [
-        "RW031"
-      ],
-      "supported_by_recorded_extraction": true
-    },
-    {
-      "anchor": "Normative conflict.",
-      "assertion": "Defeasible deontic logic: superiority relation and weak permission under unresolved conflict.",
-      "asserts_priority_over_source": false,
-      "citation_kind": "RELATED_WORK",
-      "manuscript_line": 300,
-      "source_comparison_status": {
-        "RW017": "PARTIAL_PRECEDENT"
-      },
-      "source_evidence_depth": {
-        "RW017": "FULL_TEXT_UNAVAILABLE"
-      },
-      "source_ids": [
-        "RW017"
-      ],
-      "supported_by_recorded_extraction": true
-    },
-    {
-      "anchor": "Contemporary agent governance.",
-      "assertion": "Rhodes and Kang; Salfeld-Nebgen check-to-use gap; Tallam against Boolean allow/deny; Racioppi signed mandates read as design.",
-      "asserts_priority_over_source": false,
-      "citation_kind": "RELATED_WORK",
-      "manuscript_line": 302,
-      "source_comparison_status": {
-        "RW027": "PARTIAL_PRECEDENT",
-        "RW028": "PARTIAL_PRECEDENT",
-        "RW029": "PARTIAL_PRECEDENT",
-        "RW030": "PARTIAL_PRECEDENT"
-      },
-      "source_evidence_depth": {
-        "RW027": "full_text",
-        "RW028": "full_text",
-        "RW029": "full_text",
-        "RW030": "full_text"
-      },
-      "source_ids": [
-        "RW027",
-        "RW028",
-        "RW029",
-        "RW030"
-      ],
-      "supported_by_recorded_extraction": true
-    }
-  ],
-  "citations_added_beyond_ledger": 0,
-  "counts": {
-    "citations": 20,
-    "distinct_sources_cited": 23,
-    "quotations": 3
-  },
-  "every_citation_traces_to_ledger_source": true,
-  "fabricated_citations": 0,
-  "novelty_first_unique_unprecedented_claims": "NOT_AUTHORIZED",
-  "prohibited_vocabulary_occurrences": {
-    "\\bno prior work\\b": 0,
-    "\\bnovel\\b": 0,
-    "\\bunique\\b": 0,
-    "\\bunprecedented\\b": 0,
-    "\\bwe are the first\\b": 0,
-    "state of the art": 0
-  },
-  "publication_authorized": false,
-  "quotations": [
-    {
-      "ledger_file": "RESULT-001-RELATED-WORK-SOURCE-LEDGER-003.json",
-      "manuscript_line": 174,
-      "quotation": "have not failed but there is insufficient information to determine",
-      "source_evidence_depth": "normative_sections",
-      "source_id": "RW022",
-      "verbatim_present_in_source_ledger": true
-    },
-    {
-      "ledger_file": "RESULT-001-RELATED-WORK-SOURCE-LEDGER-003.json",
-      "manuscript_line": 288,
-      "quotation": "KeyNote does not directly enforce policy; it only provides advice to the applications that call it",
-      "source_evidence_depth": "normative_sections",
-      "source_id": "RW004",
-      "verbatim_present_in_source_ledger": true
-    },
-    {
-      "ledger_file": "RESULT-001-RELATED-WORK-SOURCE-LEDGER-003.json",
-      "manuscript_line": 292,
-      "quotation": "neither unified nor static",
-      "source_evidence_depth": "full_text",
-      "source_id": "RW021",
-      "verbatim_present_in_source_ledger": true
-    }
-  ],
-  "record_class": "RELATED_WORK_CITATION_AUDIT",
-  "search_completeness_claimed": false,
+  "audited_manuscript_sha256": "eafbb450a9ef37f04e15c9c68f72dfefd371771a033a2b965505357fe0256ece",
+  "source_ledger": "RESULT-001-RELATED-WORK-SOURCE-LEDGER-003.json",
   "source_ledger_sha256": "49bb905028872b79280854056a34716d88eee634d8f28b998a89c2c289f0630f",
-  "sources_available_in_ledger": 31
+  "external_comparison_claims": [
+    {
+      "visible_citation_label": "[2], [4], [14], [16], [19]",
+      "rw_source_ids": ["RW002", "RW004", "RW019", "RW022", "RW027"],
+      "manuscript_location": "Abstract, precedent paragraph",
+      "support_type": "ADJACENT_AND_PARTIAL_PRECEDENT",
+      "evidence_depth": {"RW002": "normative_sections", "RW004": "normative_sections", "RW019": "normative_sections", "RW022": "normative_sections", "RW027": "full_text"}
+    },
+    {
+      "visible_citation_label": "[4], [14], [15], [21]",
+      "rw_source_ids": ["RW004", "RW019", "RW021", "RW029"],
+      "manuscript_location": "§2, contribution paragraph",
+      "support_type": "COMPONENT_AND_REPORTING_PRECEDENT",
+      "evidence_depth": {"RW004": "normative_sections", "RW019": "normative_sections", "RW021": "full_text", "RW029": "full_text"}
+    },
+    {
+      "visible_citation_label": "[14], [15], [19]",
+      "rw_source_ids": ["RW019", "RW021", "RW027"],
+      "manuscript_location": "§2, three-act reporting-boundary paragraph",
+      "support_type": "ADJACENT_PRECEDENT",
+      "evidence_depth": {"RW019": "normative_sections", "RW021": "full_text", "RW027": "full_text"}
+    },
+    {
+      "visible_citation_label": "[1], [2]",
+      "rw_source_ids": ["RW001", "RW002"],
+      "manuscript_location": "§3, OIC paragraph",
+      "support_type": "PARTIAL_PRECEDENT",
+      "evidence_depth": {"RW001": "full_text", "RW002": "normative_sections"}
+    },
+    {
+      "visible_citation_label": "[5–7]",
+      "rw_source_ids": ["RW006", "RW007", "RW008"],
+      "manuscript_location": "§3, logical-warrant paragraph",
+      "support_type": "ADJACENT_PRECEDENT",
+      "evidence_depth": {"RW006": "FULL_TEXT_UNAVAILABLE", "RW007": "full_text", "RW008": "full_text"}
+    },
+    {
+      "visible_citation_label": "[2]",
+      "rw_source_ids": ["RW002"],
+      "manuscript_location": "§3, authority-not-a-ZTL-ground paragraph",
+      "support_type": "PARTIAL_PRECEDENT",
+      "evidence_depth": {"RW002": "normative_sections"}
+    },
+    {
+      "visible_citation_label": "[2], [8], [17], [18]",
+      "rw_source_ids": ["RW002", "RW009", "RW024", "RW026"],
+      "manuscript_location": "§3, currentness-gate paragraph",
+      "support_type": "PARTIAL_PRECEDENT",
+      "evidence_depth": {"RW002": "normative_sections", "RW009": "FULL_TEXT_UNAVAILABLE", "RW024": "FULL_TEXT_UNAVAILABLE", "RW026": "normative_sections"}
+    },
+    {
+      "visible_citation_label": "[21], [22]",
+      "rw_source_ids": ["RW029", "RW030"],
+      "manuscript_location": "§3, bounded-action-gate paragraph",
+      "support_type": "PARTIAL_PRECEDENT",
+      "evidence_depth": {"RW029": "full_text", "RW030": "full_text"}
+    },
+    {
+      "visible_citation_label": "[11], [19]",
+      "rw_source_ids": ["RW012", "RW027"],
+      "manuscript_location": "§3, reliance-issuance paragraph",
+      "support_type": "PARTIAL_PRECEDENT",
+      "evidence_depth": {"RW012": "normative_sections", "RW027": "full_text"}
+    },
+    {
+      "visible_citation_label": "[10], [14]",
+      "rw_source_ids": ["RW011", "RW019"],
+      "manuscript_location": "§3, evidence-closure paragraph",
+      "support_type": "PARTIAL_PRECEDENT",
+      "evidence_depth": {"RW011": "FULL_TEXT_UNAVAILABLE", "RW019": "normative_sections"}
+    },
+    {
+      "visible_citation_label": "[12], [13], [16]",
+      "rw_source_ids": ["RW013", "RW017", "RW022"],
+      "manuscript_location": "§4, absence-is-not-falsity paragraph",
+      "support_type": "PARTIAL_PRECEDENT",
+      "evidence_depth": {"RW013": "normative_sections", "RW017": "FULL_TEXT_UNAVAILABLE", "RW022": "normative_sections"}
+    },
+    {
+      "visible_citation_label": "[3], [16], [19–23]",
+      "rw_source_ids": ["RW003", "RW022", "RW027", "RW028", "RW029", "RW030", "RW031"],
+      "manuscript_location": "§7, Case 2 / X1 comparison paragraph",
+      "support_type": "CONTRAST_AND_BOUNDED_SEARCH_RESULT",
+      "evidence_depth": {"RW003": "normative_sections", "RW022": "normative_sections", "RW027": "full_text", "RW028": "full_text", "RW029": "full_text", "RW030": "full_text", "RW031": "full_text"}
+    },
+    {
+      "visible_citation_label": "[13], [16], [22]",
+      "rw_source_ids": ["RW017", "RW022", "RW030"],
+      "manuscript_location": "§7, Case 4 comparison paragraph",
+      "support_type": "PARTIAL_PRECEDENT",
+      "evidence_depth": {"RW017": "FULL_TEXT_UNAVAILABLE", "RW022": "normative_sections", "RW030": "full_text"}
+    },
+    {
+      "visible_citation_label": "[11], [19]",
+      "rw_source_ids": ["RW012", "RW027"],
+      "manuscript_location": "§7, Case 1 issuance comparison paragraph",
+      "support_type": "PARTIAL_PRECEDENT",
+      "evidence_depth": {"RW012": "normative_sections", "RW027": "full_text"}
+    },
+    {
+      "visible_citation_label": "[14], [15], [19]",
+      "rw_source_ids": ["RW019", "RW021", "RW027"],
+      "manuscript_location": "§10, reporting-boundary precedent paragraph",
+      "support_type": "ADJACENT_PRECEDENT",
+      "evidence_depth": {"RW019": "normative_sections", "RW021": "full_text", "RW027": "full_text"}
+    },
+    {
+      "visible_citation_label": "[1], [2], [18]",
+      "rw_source_ids": ["RW001", "RW002", "RW026"],
+      "manuscript_location": "§13, rules-as-code paragraph",
+      "support_type": "PARTIAL_PRECEDENT",
+      "evidence_depth": {"RW001": "full_text", "RW002": "normative_sections", "RW026": "normative_sections"}
+    },
+    {
+      "visible_citation_label": "[3], [4], [8], [12]",
+      "rw_source_ids": ["RW003", "RW004", "RW009", "RW013"],
+      "manuscript_location": "§13, authorization/policy-engines paragraph",
+      "support_type": "CONTRAST_AND_PARTIAL_PRECEDENT",
+      "evidence_depth": {"RW003": "normative_sections", "RW004": "normative_sections", "RW009": "FULL_TEXT_UNAVAILABLE", "RW013": "normative_sections"}
+    },
+    {
+      "visible_citation_label": "[5–7]",
+      "rw_source_ids": ["RW006", "RW007", "RW008"],
+      "manuscript_location": "§13, warrant/proof-carrying paragraph",
+      "support_type": "ADJACENT_PRECEDENT",
+      "evidence_depth": {"RW006": "FULL_TEXT_UNAVAILABLE", "RW007": "full_text", "RW008": "full_text"}
+    },
+    {
+      "visible_citation_label": "[9], [10], [14], [15]",
+      "rw_source_ids": ["RW010", "RW011", "RW019", "RW021"],
+      "manuscript_location": "§13, provenance/attestation paragraph",
+      "support_type": "CONTRAST_AND_PARTIAL_PRECEDENT",
+      "evidence_depth": {"RW010": "normative_sections", "RW011": "FULL_TEXT_UNAVAILABLE", "RW019": "normative_sections", "RW021": "full_text"}
+    },
+    {
+      "visible_citation_label": "[11], [19]",
+      "rw_source_ids": ["RW012", "RW027"],
+      "manuscript_location": "§13, credentials/reliance paragraph",
+      "support_type": "PARTIAL_PRECEDENT",
+      "evidence_depth": {"RW012": "normative_sections", "RW027": "full_text"}
+    },
+    {
+      "visible_citation_label": "[16]",
+      "rw_source_ids": ["RW022"],
+      "manuscript_location": "§13, signature-validation paragraph",
+      "support_type": "PARTIAL_PRECEDENT",
+      "evidence_depth": {"RW022": "normative_sections"}
+    },
+    {
+      "visible_citation_label": "[23]",
+      "rw_source_ids": ["RW031"],
+      "manuscript_location": "§13, compliance-monitoring paragraph",
+      "support_type": "CONTRAST",
+      "evidence_depth": {"RW031": "full_text"}
+    },
+    {
+      "visible_citation_label": "[13]",
+      "rw_source_ids": ["RW017"],
+      "manuscript_location": "§13, normative-conflict paragraph",
+      "support_type": "PARTIAL_PRECEDENT",
+      "evidence_depth": {"RW017": "FULL_TEXT_UNAVAILABLE"}
+    },
+    {
+      "visible_citation_label": "[19–22]",
+      "rw_source_ids": ["RW027", "RW028", "RW029", "RW030"],
+      "manuscript_location": "§13, contemporary-agent-governance paragraph",
+      "support_type": "PARTIAL_PRECEDENT_AND_DESIGN",
+      "evidence_depth": {"RW027": "full_text", "RW028": "full_text", "RW029": "full_text", "RW030": "full_text"}
+    },
+    {
+      "visible_citation_label": "[11], [19]",
+      "rw_source_ids": ["RW012", "RW027"],
+      "manuscript_location": "§8, evaluation-versus-issuance paragraph",
+      "support_type": "PARTIAL_PRECEDENT",
+      "evidence_depth": {"RW012": "normative_sections", "RW027": "full_text"}
+    },
+    {
+      "visible_citation_label": "[1–23]",
+      "rw_source_ids": ["RW001", "RW002", "RW003", "RW004", "RW006", "RW007", "RW008", "RW009", "RW010", "RW011", "RW012", "RW013", "RW017", "RW019", "RW021", "RW022", "RW024", "RW026", "RW027", "RW028", "RW029", "RW030", "RW031"],
+      "manuscript_location": "§13 and §14, bounded examined-set comparison paragraphs",
+      "support_type": "BOUNDED_SEARCH_RESULT",
+      "evidence_depth": {"RW001": "full_text", "RW002": "normative_sections", "RW003": "normative_sections", "RW004": "normative_sections", "RW006": "FULL_TEXT_UNAVAILABLE", "RW007": "full_text", "RW008": "full_text", "RW009": "FULL_TEXT_UNAVAILABLE", "RW010": "normative_sections", "RW011": "FULL_TEXT_UNAVAILABLE", "RW012": "normative_sections", "RW013": "normative_sections", "RW017": "FULL_TEXT_UNAVAILABLE", "RW019": "normative_sections", "RW021": "full_text", "RW022": "normative_sections", "RW024": "FULL_TEXT_UNAVAILABLE", "RW026": "normative_sections", "RW027": "full_text", "RW028": "full_text", "RW029": "full_text", "RW030": "full_text", "RW031": "full_text"}
+    },
+    {
+      "visible_citation_label": "[2], [4], [10], [14], [16], [19]",
+      "rw_source_ids": ["RW002", "RW004", "RW011", "RW019", "RW022", "RW027"],
+      "manuscript_location": "§14, component-precedent conclusion paragraph",
+      "support_type": "PARTIAL_PRECEDENT",
+      "evidence_depth": {"RW002": "normative_sections", "RW004": "normative_sections", "RW011": "FULL_TEXT_UNAVAILABLE", "RW019": "normative_sections", "RW022": "normative_sections", "RW027": "full_text"}
+    }
+  ],
+  "bibliography_mapping": [
+    {"visible_citation_label": "[1]", "rw_source_id": "RW001"},
+    {"visible_citation_label": "[2]", "rw_source_id": "RW002"},
+    {"visible_citation_label": "[3]", "rw_source_id": "RW003"},
+    {"visible_citation_label": "[4]", "rw_source_id": "RW004"},
+    {"visible_citation_label": "[5]", "rw_source_id": "RW006"},
+    {"visible_citation_label": "[6]", "rw_source_id": "RW007"},
+    {"visible_citation_label": "[7]", "rw_source_id": "RW008"},
+    {"visible_citation_label": "[8]", "rw_source_id": "RW009"},
+    {"visible_citation_label": "[9]", "rw_source_id": "RW010"},
+    {"visible_citation_label": "[10]", "rw_source_id": "RW011"},
+    {"visible_citation_label": "[11]", "rw_source_id": "RW012"},
+    {"visible_citation_label": "[12]", "rw_source_id": "RW013"},
+    {"visible_citation_label": "[13]", "rw_source_id": "RW017"},
+    {"visible_citation_label": "[14]", "rw_source_id": "RW019"},
+    {"visible_citation_label": "[15]", "rw_source_id": "RW021"},
+    {"visible_citation_label": "[16]", "rw_source_id": "RW022"},
+    {"visible_citation_label": "[17]", "rw_source_id": "RW024"},
+    {"visible_citation_label": "[18]", "rw_source_id": "RW026"},
+    {"visible_citation_label": "[19]", "rw_source_id": "RW027"},
+    {"visible_citation_label": "[20]", "rw_source_id": "RW028"},
+    {"visible_citation_label": "[21]", "rw_source_id": "RW029"},
+    {"visible_citation_label": "[22]", "rw_source_id": "RW030"},
+    {"visible_citation_label": "[23]", "rw_source_id": "RW031"}
+  ],
+  "counts": {
+    "external_comparison_claims": 27,
+    "bibliography_entries": 23,
+    "visible_citation_markers_in_body": 72,
+    "distinct_sources_cited": 23,
+    "unsupported_substantive_external_claims": 0,
+    "unmapped_bibliography_entries": 0,
+    "citations_outside_source_ledger": 0,
+    "unresolved_entries": 0
+  },
+  "all_substantive_external_claims_have_visible_citation_markers": true,
+  "every_bibliography_entry_maps_to_source_ledger_003": true,
+  "citations_added_beyond_ledger": 0,
+  "fabricated_citations": 0,
+  "search_completeness_claimed": false,
+  "absence_from_search_is_not_proof_of_novelty": true,
+  "novelty_first_unique_unprecedented_claims": "NOT_AUTHORIZED",
+  "publication_authorized": false,
+  "unresolved_entries": []
 }

@@ -1,28 +1,7 @@
-%% RESULT-001 architecture with related-work precedence annotation
-%% OIC-ZTL-OAM-DEMO-SLICE-001-RESULT-001-RELATED-WORK-INTEGRATION-001
-%%
-%% SUCCESSOR FIGURE. The predecessor RESULT-001-ARCHITECTURE-001.mmd
-%% (sha256 55c667975d131d0dfb971775a1b78524e34347b2c9758bd101743ab4d02b0aba)
-%% is frozen and is NOT modified by this artifact.
-%%
-%% This figure adds ONE thing to the predecessor: for each stage, the examined
-%% prior art that precedes it. It removes nothing. The structure, the ordering
-%% and the semantic separations are unchanged.
-%%
-%% READING RULE. A stage marked PRECEDED is not claimed here. A stage marked
-%% PARTIALLY PRECEDED is claimed only in the narrowed form stated in the
-%% manuscript. Only the three integrated properties in Part 3 are what the
-%% contribution rests on, and the contribution level adjudicated by the owner
-%% is INTEGRATION_RESULT_ONLY.
-%%
-%% Search completeness is NOT claimed. Absence from the examined set is not
-%% evidence of absence, and is never evidence of novelty.
-%% Source ledger: RESULT-001-RELATED-WORK-SOURCE-LEDGER-003.json, 31 sources.
-
-%% ---------------------------------------------------------------------------
-%% PART 1 — measured execution sequence, annotated with examined precedent
-%% ---------------------------------------------------------------------------
 flowchart TD
+
+subgraph A["A. Measured execution sequence"]
+    direction TD
 
     SRC["Synthetic Source<br/><i>policy text, declared synthetic</i>"]
     OIC["OIC Representation / Owner Admission<br/><i>extraction confers nothing</i><br/><b>PRECEDED</b> · Catala, LegalRuleML, OpenFisca"]
@@ -55,17 +34,10 @@ flowchart TD
     PROP --> CONS --> REL --> EVD
     ACT -->|"blocked or escalated:<br/>absence recorded with reason"| EVD
     EVD --> OWN
+end
 
-%% ---------------------------------------------------------------------------
-%% PART 2 — semantic dependency structure of the composition
-%% Unchanged from the predecessor except for precedence annotation.
-%% Sequence above is not dependency. Below, the arrows mean "is an input to".
-%% The composition returns institutional_authorization_status, execution_disposition
-%% and decision_basis TOGETHER from the evaluated component set — execution_disposition
-%% is not computed from institutional_authorization_status. epistemic_status is carried
-%% from the kernel result and preserved as its own OAMDecision field.
-%% ---------------------------------------------------------------------------
-flowchart LR
+subgraph B["B. OAM semantic composition"]
+    direction LR
 
     KRES["Kernel result<br/><i>disposition + warranty grade + raw verdict</i>"]
 
@@ -111,14 +83,10 @@ flowchart LR
     class O_EXEC,O_BASIS execution
     class COMP composition
     class I_CTL,NOTE neutral
+end
 
-%% ---------------------------------------------------------------------------
-%% PART 3 — what the integration rests on, after the examined prior art
-%% These are the three surviving properties the owner adjudicated. They are
-%% stated as "not found in the examined set", NOT as novelty. Remove any one
-%% and the position is weak; remove two and there is no distinction to report.
-%% ---------------------------------------------------------------------------
-flowchart TD
+subgraph C["C. S1/S8/X1 integration distinction"]
+    direction TD
 
     ADJ["OWNER INTELLECTUAL ADJUDICATION<br/><b>component level: PRECEDED</b><br/><b>composition level: SUBSTANTIALLY PRECEDED</b><br/><b>integrated chain: DISTINCTION SURVIVES</b><br/><b>contribution: INTEGRATION_RESULT_ONLY</b>"]
 
@@ -134,3 +102,4 @@ flowchart TD
     S1 --> NOVELTY
     S8 --> NOVELTY
     X1 --> NOVELTY
+end
