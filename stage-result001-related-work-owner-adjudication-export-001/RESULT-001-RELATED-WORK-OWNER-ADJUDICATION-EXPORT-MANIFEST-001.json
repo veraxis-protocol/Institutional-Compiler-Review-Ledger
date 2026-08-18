@@ -1,0 +1,84 @@
+{
+  "$comment": "Lossless export of the DECISIVE-GAP-CLOSURE-003 research package for owner adjudication. Exact bytes; no normalization, no regeneration, no reclassification, no new research.",
+  "accepted_claim_map_sha256": "e37ea2dc907d6ca0d290ac58bebfa99be9b197eaca2c5e4f50c3e4c1c9e02422",
+  "accepted_manuscript_sha256": "88a6df39b20cd3fd4593daae830ba98a242811016d9312ef737100980294080a",
+  "all_members_byte_identical": true,
+  "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+  "consolidated_source_count": 31,
+  "export_id": "OIC-ZTL-OAM-DEMO-SLICE-001-RESULT-001-RELATED-WORK-OWNER-ADJUDICATION-EXPORT-001",
+  "headline_determinations": {
+    "D5": "PRECEDED",
+    "D6": "SURVIVES_AS_INTEGRATION",
+    "D7": "PRECEDED",
+    "D8": "PARTIALLY_PRECEDED",
+    "D9": "SURVIVES_AS_INTEGRATION",
+    "R050_publication_role": "IMPLEMENTATION_INVARIANT",
+    "integrated_chain": "INTEGRATED_CHAIN_DISTINCTION_SURVIVES",
+    "strongest_single_precedent": "Proof of Execution (arXiv:2607.05397), measured implementation",
+    "surviving_properties": [
+      "preserved logical/epistemic state through the chain",
+      "downstream revalidation re-resolving currentness and re-evaluating authority before issuance",
+      "not-evaluated-with-cause record"
+    ]
+  },
+  "historical_implementation_commit": "a2ece68f013c25e6a3874f20a924e95730c175f0",
+  "manuscript_mutation": false,
+  "members": [
+    {
+      "byte_identity": true,
+      "byte_length": 5352,
+      "filename": "RESULT-001-RELATED-WORK-DECISIVE-GAP-CLOSURE-PROTOCOL-003.md",
+      "sha256": "f4b3f70012d85df99f32fffa52df938882c78e3b3413a1a3c8cc371160bef21a",
+      "source_sha256": "f4b3f70012d85df99f32fffa52df938882c78e3b3413a1a3c8cc371160bef21a"
+    },
+    {
+      "byte_identity": true,
+      "byte_length": 70107,
+      "filename": "RESULT-001-RELATED-WORK-SOURCE-LEDGER-003.json",
+      "sha256": "49bb905028872b79280854056a34716d88eee634d8f28b998a89c2c289f0630f",
+      "source_sha256": "49bb905028872b79280854056a34716d88eee634d8f28b998a89c2c289f0630f"
+    },
+    {
+      "byte_identity": true,
+      "byte_length": 5871,
+      "filename": "RESULT-001-RELATED-WORK-CAPABILITY-MATRIX-003.md",
+      "sha256": "6cc6a17940ba9a9f9f3e04578efd99bdac6831e2626f87b64b32119cc352ddd4",
+      "source_sha256": "6cc6a17940ba9a9f9f3e04578efd99bdac6831e2626f87b64b32119cc352ddd4"
+    },
+    {
+      "byte_identity": true,
+      "byte_length": 28972,
+      "filename": "RESULT-001-RELATED-WORK-CLAIM-IMPACT-MAP-003.json",
+      "sha256": "b519ea825cabea21c91a41bbc9cb25ccf1720899ebcda294828540e062c1d571",
+      "source_sha256": "b519ea825cabea21c91a41bbc9cb25ccf1720899ebcda294828540e062c1d571"
+    },
+    {
+      "byte_identity": true,
+      "byte_length": 16158,
+      "filename": "RESULT-001-RELATED-WORK-FINDINGS-003.md",
+      "sha256": "48cf3b4f053d85036bde88f36723bbcd176dcfff9f548c1036b91c48f00729d9",
+      "source_sha256": "48cf3b4f053d85036bde88f36723bbcd176dcfff9f548c1036b91c48f00729d9"
+    }
+  ],
+  "new_research_performed": false,
+  "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+  "package_status": "READY_FOR_OWNER_RELATED_WORK_ADJUDICATION",
+  "predecessor_packages": {
+    "GAP-CLOSURE-002": {
+      "source_ledger_sha256": "c35ea20e71105a8bd74de250c7a931eb77d0010f0fa103c18b533f33ce5287f5",
+      "status": "preserved unmodified"
+    },
+    "LANDSCAPE-001": {
+      "source_ledger_sha256": "59ffd497ae7453c3f9a0ea65b83f85450e144121cde9f3c003c8506e447756f9",
+      "status": "preserved unmodified"
+    }
+  },
+  "publication_authorized": false,
+  "reclassification_performed": false,
+  "record_class": "RELATED_WORK_OWNER_ADJUDICATION_EXPORT_MANIFEST",
+  "related_work_manuscript_integration": "NOT_AUTHORIZED",
+  "repository_mutation": false,
+  "repository_provenance_merge": "ac52dcde01b0db1fdf8ecac6321db7a4e1efd81a",
+  "result_bearing_execution": false,
+  "result_id": "RESULT-001"
+}

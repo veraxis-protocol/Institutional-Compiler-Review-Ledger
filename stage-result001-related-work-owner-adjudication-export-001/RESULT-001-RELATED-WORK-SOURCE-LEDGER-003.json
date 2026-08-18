@@ -1,0 +1,1498 @@
+{
+  "absence_from_search_is_not_proof_of_novelty": true,
+  "accepted_manuscript_sha256": "88a6df39b20cd3fd4593daae830ba98a242811016d9312ef737100980294080a",
+  "counts": {
+    "by_status": {
+      "ADJACENT": 9,
+      "CHALLENGE": 0,
+      "CONTRAST": 3,
+      "NOT_RELEVANT_AFTER_REVIEW": 1,
+      "PARTIAL_PRECEDENT": 18,
+      "PRECEDENT": 0
+    },
+    "by_strength": {
+      "MODERATE": 13,
+      "STRONG": 15,
+      "WEAK": 3
+    },
+    "carried": 27,
+    "full_text": 10,
+    "full_text_unavailable": 11,
+    "newly_admitted": 4,
+    "normative_sections": 10,
+    "total": 31,
+    "upgraded_to_full_text_this_pass": [
+      "RW027"
+    ]
+  },
+  "evidence_gate": "Every source affecting final contribution positioning is full_text or normative_sections. Implementation status is recorded per contemporary source and a PLANNED capability is never compared as measured.",
+  "phase_id": "OIC-ZTL-OAM-DEMO-SLICE-001-RESULT-001-RELATED-WORK-DECISIVE-GAP-CLOSURE-003",
+  "record_class": "RELATED_WORK_SOURCE_LEDGER_CONSOLIDATED_003",
+  "search_completeness_claimed": false,
+  "sources": [
+    {
+      "access_date": "2026-08-18",
+      "authors": [
+        "Denis Merigoux",
+        "Nicolas Chataing",
+        "Jonathan Protzenko"
+      ],
+      "canonical_url": "https://arxiv.org/abs/2103.03198",
+      "capabilities_not_supported": [
+        "temporal currentness/supersession as a runtime gate",
+        "institutional authority to act",
+        "delegation",
+        "revocation",
+        "runtime authorization disposition",
+        "reliance issuance",
+        "persisted hash-resolvable decision evidence"
+      ],
+      "capability_families": [
+        "A"
+      ],
+      "comparison_status": "PARTIAL_PRECEDENT",
+      "evidence_depth": "full_text",
+      "evidence_depth_backfilled_in_pass": "GAP-CLOSURE-002",
+      "evidence_strength": "STRONG",
+      "exact_capabilities_supported": [
+        "machine-operational representation of statutory rules",
+        "systematic translation from authoritative legal text",
+        "compiler correctness proved for core steps in F*",
+        "default-logic handling of general rule plus exceptions"
+      ],
+      "full_text_retrieved": true,
+      "identifier": "DOI 10.1145/3473582; arXiv 10.48550/arXiv.2103.03198",
+      "important_limitations": [
+        "Scope is translation of statute to executable specification. Retrieved text contains no discussion of who is authorized to act, of decision-time evidence, or of downstream reliance."
+      ],
+      "notes": "Closest examined precedent for the source-to-executable-rule stage. It precedes RESULT-001 on rule representation and does not address the institutional or runtime stages. Verified against the arXiv abstract page; the extraction explicitly reports no coverage of currentness, authority, delegation, revocation, runtime authorization, reliance or decision provenance.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R023",
+        "R021",
+        "R040"
+      ],
+      "source_id": "RW001",
+      "source_type": "peer-reviewed paper",
+      "title": "Catala: A Programming Language for the Law",
+      "venue": "Proceedings of the ACM on Programming Languages (ICFP); arXiv:2103.03198",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2021
+    },
+    {
+      "access_date": "2026-08-18",
+      "authors": [
+        "Monica Palmirani",
+        "Guido Governatori",
+        "Tara Athan",
+        "Harold Boley",
+        "Adrian Paschke",
+        "Adam Wyner"
+      ],
+      "canonical_url": "https://docs.oasis-open.org/legalruleml/legalruleml-core-spec/v1.0/legalruleml-core-spec-v1.0.html",
+      "capabilities_not_supported": [
+        "runtime authorization decision",
+        "execution disposition",
+        "reliance issuance",
+        "executed decision record",
+        "persisted hash-resolvable evidence"
+      ],
+      "capability_families": [
+        "A",
+        "D",
+        "I"
+      ],
+      "change_reason": "§10 authority-boundary adjudication.",
+      "comparison_status": "PARTIAL_PRECEDENT",
+      "evidence_depth": "normative_sections",
+      "evidence_depth_backfilled_in_pass": "GAP-CLOSURE-002",
+      "evidence_strength": "STRONG",
+      "exact_capabilities_supported": [
+        "temporal characteristics distinguishing in-force, efficacy and applicability of a norm",
+        "Authority as first-class metadata: 'a person or organization with the power to create, endorse, or enforce Legal Norms'",
+        "Jurisdiction as the scope over which an Authority applies legal power",
+        "deontic operators, defeasibility, isomorphism to source provisions"
+      ],
+      "full_text_retrieved": true,
+      "identifier": "legalruleml-core-spec-v1.0-os",
+      "important_limitations": [
+        "Representation standard only; runtime reasoning, decision adjudication and evidence management are out of scope per the specification.",
+        "AUTHORITY BOUNDARY: lrml:Authority is 'a person or organization with the power to create, endorse, or enforce Legal Norms' — provenance of the NORM. It is not a determination that a particular actor may perform a particular action at a particular instant. It does not precede A1/A6/A10 semantics."
+      ],
+      "new_supporting_sections": "LegalRuleML v1.0 §Authority, §Jurisdiction, §TemporalCharacteristic",
+      "notes": "Precedes RESULT-001 on norm temporality (in-force / efficacious / applicable) and on authority-as-norm-provenance. Does NOT precede present-authority-to-act evaluation.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R021",
+        "R040",
+        "R023",
+        "R004",
+        "R042"
+      ],
+      "revised_in_pass": "GAP-CLOSURE-002",
+      "source_id": "RW002",
+      "source_type": "official standard",
+      "title": "LegalRuleML Core Specification Version 1.0",
+      "venue": "OASIS Standard, 30 August 2021",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2021
+    },
+    {
+      "access_date": "2026-08-18",
+      "authors": [
+        "OASIS XACML Technical Committee"
+      ],
+      "canonical_url": "https://docs.oasis-open.org/xacml/3.0/xacml-3.0-core-spec-os-en.html",
+      "capabilities_not_supported": [
+        "epistemic/logical truth value represented separately from the access decision",
+        "rule versioning, effective dates or supersession semantics",
+        "reliance artifact distinct from the decision",
+        "persisted hash-resolvable decision evidence"
+      ],
+      "capability_families": [
+        "B"
+      ],
+      "comparison_status": "CONTRAST",
+      "evidence_depth": "normative_sections",
+      "evidence_depth_backfilled_in_pass": "GAP-CLOSURE-002",
+      "evidence_strength": "STRONG",
+      "exact_capabilities_supported": [
+        "four-valued decision result Permit/Deny/NotApplicable/Indeterminate",
+        "policy combining algorithms",
+        "obligations and advice returned with a decision",
+        "separation of PDP from PEP"
+      ],
+      "full_text_retrieved": true,
+      "identifier": "xacml-3.0-core-spec-os-en",
+      "important_limitations": [
+        "Retrieved specification defines Indeterminate as arising when 'an error occurs when evaluating the rule' — an evaluation-error state, not an unresolved-authority state. NotApplicable denotes inapplicability. The Version attribute carries no supersession semantics."
+      ],
+      "notes": "Directly relevant to D3 and D10. XACML has a four-valued result but the non-decisive values are error and inapplicability, not institutional non-resolution, and the retrieved text states the specification does not carry a truth value separate from the decision.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R019",
+        "R020",
+        "R039",
+        "R046"
+      ],
+      "source_id": "RW003",
+      "source_type": "official standard",
+      "title": "eXtensible Access Control Markup Language (XACML) Version 3.0",
+      "venue": "OASIS Standard, 22 January 2013",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2013
+    },
+    {
+      "access_date": "2026-08-18",
+      "authors": [
+        "M. Blaze",
+        "J. Feigenbaum",
+        "J. Ioannidis",
+        "A. Keromytis"
+      ],
+      "canonical_url": "https://www.rfc-editor.org/rfc/rfc2704.txt",
+      "capabilities_not_supported": [
+        "undetermined state distinct from the lowest-ranked compliance value",
+        "native expiry or revocation services",
+        "reliance artifact",
+        "persisted decision evidence"
+      ],
+      "capability_families": [
+        "B",
+        "C"
+      ],
+      "comparison_status": "PARTIAL_PRECEDENT",
+      "evidence_depth": "normative_sections",
+      "evidence_depth_backfilled_in_pass": "GAP-CLOSURE-002",
+      "evidence_strength": "STRONG",
+      "exact_capabilities_supported": [
+        "compliance value returned as advice, explicitly separated from enforcement: 'KeyNote does not directly enforce policy; it only provides advice to the applications that call it'",
+        "delegation through credential assertions",
+        "application-defined ordered compliance values"
+      ],
+      "full_text_retrieved": true,
+      "identifier": "RFC 2704",
+      "important_limitations": [
+        "Retrieved RFC states credentials may embed a date test but 'KeyNote does not itself provide credential revocation services'. All queries resolve onto a linearly ordered compliance set with no separate unknown state."
+      ],
+      "notes": "The strongest examined precedent for D4. The advice/enforcement split is a genuine separation of the evaluation result from the acting system's disposition, established in 1999. It does not separate an epistemic result, and it has no unresolved value.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R019",
+        "R039",
+        "R046",
+        "R055"
+      ],
+      "source_id": "RW004",
+      "source_type": "official technical specification",
+      "title": "The KeyNote Trust-Management System Version 2",
+      "venue": "IETF RFC 2704 (Informational), September 1999",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 1999
+    },
+    {
+      "access_date": "2026-08-18",
+      "authors": [
+        "Matt Blaze",
+        "Joan Feigenbaum",
+        "Jack Lacy"
+      ],
+      "canonical_url": "https://www.semanticscholar.org/paper/Decentralized-trust-management-Blaze-Feigenbaum/2f5768c969b323cbc002e84f625ecf4b585b9419",
+      "capabilities_not_supported": [
+        "temporal currentness",
+        "unresolved authority",
+        "reliance issuance",
+        "decision evidence"
+      ],
+      "capability_families": [
+        "B"
+      ],
+      "comparison_status": "ADJACENT",
+      "evidence_depth": "FULL_TEXT_UNAVAILABLE",
+      "evidence_depth_backfilled_in_pass": "GAP-CLOSURE-002",
+      "evidence_strength": "MODERATE",
+      "exact_capabilities_supported": [
+        "introduces trust management as a distinct problem separate from authentication and from application logic"
+      ],
+      "full_text_retrieved": false,
+      "identifier": "IEEE S&P 1996",
+      "important_limitations": [
+        "Located via discovery layer; full text not retrieved in this environment. Recorded on the strength of the successor RFC 2704, which is retrieved in full."
+      ],
+      "notes": "Included for lineage of the trust-management framing that RW004 specifies. Bounded reading: full text not retrieved.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R039"
+      ],
+      "source_id": "RW005",
+      "source_type": "peer-reviewed paper",
+      "title": "Decentralized Trust Management",
+      "venue": "Proceedings of the 17th IEEE Symposium on Security and Privacy",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 1996
+    },
+    {
+      "access_date": "2026-08-18",
+      "authors": [
+        "Andrew W. Appel",
+        "Edward W. Felten"
+      ],
+      "canonical_url": "https://dl.acm.org/doi/10.1145/319709.319718",
+      "capabilities_not_supported": [
+        "institutional authority modelled separately from the logical derivation",
+        "temporal currentness of the governing rule",
+        "unresolved authority state",
+        "reliance issuance distinct from evaluation",
+        "persisted decision evidence for later adjudication"
+      ],
+      "capability_families": [
+        "C"
+      ],
+      "comparison_status": "ADJACENT",
+      "evidence_depth": "FULL_TEXT_UNAVAILABLE",
+      "evidence_depth_backfilled_in_pass": "GAP-CLOSURE-002",
+      "evidence_strength": "MODERATE",
+      "exact_capabilities_supported": [
+        "authorization decided by checking an explicit logical proof supplied with the request",
+        "framework in which several authentication systems are expressed in one logic"
+      ],
+      "full_text_retrieved": false,
+      "identifier": "DOI 10.1145/319709.319718",
+      "important_limitations": [
+        "Full text is PDF-only in this environment and was not extracted; recorded from the retrieved publisher listing and the discovery-layer description. Reading is bounded accordingly."
+      ],
+      "notes": "The closest examined analogue to a checkable warrant accompanying a request. Crucially, in PCA the proof IS the authorization argument, whereas RESULT-001 keeps the logical warrant and the institutional authority in separate layers with separate outcomes. Bounded reading: full text not retrieved.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R039",
+        "R024",
+        "R041"
+      ],
+      "source_id": "RW006",
+      "source_type": "peer-reviewed paper",
+      "title": "Proof-Carrying Authentication",
+      "venue": "Proceedings of the 6th ACM Conference on Computer and Communications Security",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 1999
+    },
+    {
+      "access_date": "2026-08-18",
+      "authors": [
+        "Lujo Bauer",
+        "Michael A. Schneider",
+        "Edward W. Felten",
+        "Andrew W. Appel"
+      ],
+      "canonical_url": "https://www.cs.princeton.edu/research/techreps/337",
+      "capabilities_not_supported": [
+        "revocation (term absent from the full text)",
+        "audit/evidence log of the decision (terms absent)",
+        "unresolved authority state — the paper's use of 'undecidable' concerns the logic, not an institutional state",
+        "reliance issuance"
+      ],
+      "capability_families": [
+        "C"
+      ],
+      "change_reason": "Full text now extractable; bounded reading replaced by a full read.",
+      "comparison_status": "ADJACENT",
+      "evidence_depth": "full_text",
+      "evidence_strength": "MODERATE",
+      "exact_capabilities_supported": [
+        "implemented proof-carrying authorization prototype for web access control",
+        "arbitrarily complex delegation, local name spaces, and expiration via before axioms describing current time"
+      ],
+      "full_text_retrieved": true,
+      "identifier": "Princeton TR-638-01",
+      "important_limitations": [
+        "Full text read (16pp). Expiration is modelled; revocation is not mentioned; no decision-evidence record."
+      ],
+      "new_supporting_sections": "Princeton TR-638-01, full text pp.1-16",
+      "notes": "Full text confirms delegation and expiration but no revocation, no decision evidence, and no unresolved institutional state. The logical warrant IS the authorization argument, unlike RESULT-001 where warrant and authority are separate layers with separate outcomes.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R039",
+        "R024"
+      ],
+      "revised_in_pass": "GAP-CLOSURE-002",
+      "source_id": "RW007",
+      "source_type": "technical report",
+      "title": "A Proof-Carrying Authorization System",
+      "venue": "Princeton University Computer Science Technical Report TR-638-01",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2001
+    },
+    {
+      "access_date": "2026-08-18",
+      "authors": [
+        "Fred B. Schneider",
+        "Kevin Walsh",
+        "Emin Gün Sirer"
+      ],
+      "canonical_url": "https://www.cs.cornell.edu/fbs/publications/NexusNalRationale.pdf",
+      "capabilities_not_supported": [
+        "unresolved / undetermined institutional state (terms absent from full text)",
+        "reliance issuance",
+        "currentness of the governing rule as a separate gate"
+      ],
+      "capability_families": [
+        "C",
+        "B"
+      ],
+      "change_reason": "Full text now extractable.",
+      "comparison_status": "ADJACENT",
+      "evidence_depth": "full_text",
+      "evidence_strength": "MODERATE",
+      "exact_capabilities_supported": [
+        "says / speaks-for authorization logic over principals",
+        "explicit treatment of credential revocation, described as generally infeasible when credentials propagate freely",
+        "constructive proofs retain the evidence used to reach a conclusion, so accountability information is not lost"
+      ],
+      "full_text_retrieved": true,
+      "identifier": "Cornell CS publication",
+      "important_limitations": [
+        "Full text read (30pp). Its accountability property is proof-internal, not a persisted decision package."
+      ],
+      "new_supporting_sections": "NAL, full text; revocation discussion and constructive-proof accountability passage",
+      "notes": "Notable near-miss: NAL explicitly values constructive proofs because they retain the evidence for the conclusion. That is proof-carried accountability, not a persisted, separately adjudicated evidence package.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R039",
+        "R024"
+      ],
+      "revised_in_pass": "GAP-CLOSURE-002",
+      "source_id": "RW008",
+      "source_type": "peer-reviewed paper",
+      "title": "Nexus Authorization Logic (NAL): Design Rationale and Applications",
+      "venue": "ACM Transactions on Information and System Security (TISSEC)",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2011
+    },
+    {
+      "access_date": "2026-08-18",
+      "authors": [
+        "Elisa Bertino",
+        "Piero Andrea Bonatti",
+        "Elena Ferrari"
+      ],
+      "canonical_url": "https://dl.acm.org/doi/abs/10.1145/501978.501979",
+      "capabilities_not_supported": [
+        "currentness of the RULE/policy version as distinct from the validity of the actor's role",
+        "epistemic result separate from the access decision",
+        "unresolved authority",
+        "reliance issuance",
+        "decision evidence"
+      ],
+      "capability_families": [
+        "D",
+        "B"
+      ],
+      "comparison_status": "PARTIAL_PRECEDENT",
+      "evidence_depth": "FULL_TEXT_UNAVAILABLE",
+      "evidence_depth_backfilled_in_pass": "GAP-CLOSURE-002",
+      "evidence_strength": "MODERATE",
+      "exact_capabilities_supported": [
+        "periodic enabling and disabling of roles over time",
+        "temporal dependencies via role triggers",
+        "priorities resolving conflicting enable/disable actions",
+        "formal semantics plus a safeness check"
+      ],
+      "full_text_retrieved": false,
+      "identifier": "DOI 10.1145/501978.501979",
+      "important_limitations": [
+        "Temporality attaches to role activation, not to supersession of the governing policy version. Recorded from the ACM listing and discovery description; full text PDF not extracted."
+      ],
+      "notes": "Establishes that time-varying authorization is long-standing prior art. It bears on D2 only partially: TRBAC times the actor's role, RESULT-001 times the governing control version. Bounded reading.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R004",
+        "R045",
+        "R042"
+      ],
+      "source_id": "RW009",
+      "source_type": "peer-reviewed paper",
+      "title": "TRBAC: A Temporal Role-Based Access Control Model",
+      "venue": "ACM Transactions on Information and System Security 4(3)",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2001
+    },
+    {
+      "access_date": "2026-08-18",
+      "authors": [
+        "Luc Moreau",
+        "Paolo Missier"
+      ],
+      "canonical_url": "https://www.w3.org/TR/prov-dm/",
+      "capabilities_not_supported": [
+        "prospective authorization at decision time",
+        "authorization decision, unresolved state or reliance issuance",
+        "cryptographic or hash-resolvable integrity"
+      ],
+      "capability_families": [
+        "G"
+      ],
+      "comparison_status": "CONTRAST",
+      "evidence_depth": "normative_sections",
+      "evidence_depth_backfilled_in_pass": "GAP-CLOSURE-002",
+      "evidence_strength": "STRONG",
+      "exact_capabilities_supported": [
+        "entity/activity/agent provenance model",
+        "wasAttributedTo ascribing responsibility",
+        "actedOnBehalfOf recording delegation of authority and responsibility for an activity"
+      ],
+      "full_text_retrieved": true,
+      "identifier": "W3C REC-prov-dm-20130430",
+      "important_limitations": [
+        "Retrieved specification is explicitly retrospective — 'information about entities, activities, and people involved in producing a piece of data or thing', expressed in past-tense relations. The extraction found no signature, hash-resolution or tamper-evidence provisions."
+      ],
+      "notes": "Directly relevant to R047 and to D8. PROV records what happened; it does not preserve decision-time state distinctions, and it is not hash-resolvable by itself. actedOnBehalfOf is retrospective accountability, not prospective institutional authority.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R041",
+        "R044",
+        "R047",
+        "R053"
+      ],
+      "source_id": "RW010",
+      "source_type": "official standard",
+      "title": "PROV-DM: The PROV Data Model",
+      "venue": "W3C Recommendation, 30 April 2013",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2013
+    },
+    {
+      "access_date": "2026-08-18",
+      "authors": [
+        "Santiago Torres-Arias",
+        "Hammad Afzali",
+        "Trishank Karthik Kuppusamy",
+        "Reza Curtmola",
+        "Justin Cappos"
+      ],
+      "canonical_url": "https://www.usenix.org/conference/usenixsecurity19/presentation/torres-arias",
+      "capabilities_not_supported": [
+        "epistemic result separate from the authorization result",
+        "unresolved state distinct from verification failure",
+        "reliance issuance distinct from verification",
+        "supersession semantics for the layout beyond expiry"
+      ],
+      "capability_families": [
+        "G",
+        "H"
+      ],
+      "change_reason": "§9 wording audit: 'independent downstream verifier' downgraded to 'separate verifier'.",
+      "comparison_status": "PARTIAL_PRECEDENT",
+      "evidence_depth": "FULL_TEXT_UNAVAILABLE",
+      "evidence_depth_backfilled_in_pass": "GAP-CLOSURE-002",
+      "evidence_strength": "MODERATE",
+      "exact_capabilities_supported": [
+        "layout naming the authorized functionaries for each step — an authority check, not only an integrity check",
+        "signed link metadata forming a verifiable chain",
+        "verification that each step was performed and signed by the authorized functionary",
+        "layout expiration"
+      ],
+      "full_text_retrieved": false,
+      "identifier": "USENIX Security 2019",
+      "important_limitations": [
+        "USENIX page returned HTTP 403; capability reading from the authoritative project repository.",
+        "INDEPENDENCE AUDIT: the retrieved material establishes a SEPARATE verification step performed by a client against a layout. It does not establish organizational or principal independence of the verifier from the producer. Wording corrected to SEPARATE_VERIFIER."
+      ],
+      "new_classification": "PARTIAL_PRECEDENT — wording corrected from INDEPENDENT_VERIFIER to SEPARATE_VERIFIER",
+      "new_supporting_sections": "in-toto project documentation, verification workflow",
+      "notes": "Strongest examined precedent for hash-resolvable evidence that authorized functionaries performed each step. Verification is a separate step, not an independent assurance party.",
+      "previous_classification": "PARTIAL_PRECEDENT (status unchanged)",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R018",
+        "R024",
+        "R052",
+        "R044"
+      ],
+      "revised_in_pass": "GAP-CLOSURE-002",
+      "source_id": "RW011",
+      "source_type": "peer-reviewed paper",
+      "title": "in-toto: Providing farm-to-table guarantees for bits and bytes",
+      "venue": "28th USENIX Security Symposium",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2019
+    },
+    {
+      "access_date": "2026-08-18",
+      "authors": [
+        "Manu Sporny",
+        "Ted Thibodeau Jr",
+        "Ivan Herman",
+        "Gabe Cohen",
+        "Michael B. Jones"
+      ],
+      "canonical_url": "https://www.w3.org/TR/vc-data-model-2.0/",
+      "capabilities_not_supported": [
+        "a requirement that the issuer evaluate any property before issuing — 'the specification does not require issuers to evaluate claims before issuance'",
+        "validation, which is where reliance attaches, is explicitly OUTSIDE the scope of the specification",
+        "currentness of the RULE that authorized issuance",
+        "runtime execution disposition",
+        "unresolved state distinct from invalid"
+      ],
+      "capability_families": [
+        "H",
+        "B"
+      ],
+      "change_reason": "Targeted re-read of the verification/validation definitions and the issuer role changed the D5 reading from exact precedent to partial precedent with a contrasting lifecycle.",
+      "comparison_status": "PARTIAL_PRECEDENT",
+      "evidence_depth": "normative_sections",
+      "evidence_strength": "STRONG",
+      "exact_capabilities_supported": [
+        "issuer and verifier as distinct roles",
+        "verification defined as 'evaluation of whether a verifiable credential ... is an authentic and current statement of the issuer'",
+        "explicit statement that verification does not imply evaluation of the truth of the claims",
+        "validFrom / validUntil; credential status and revocation"
+      ],
+      "full_text_retrieved": true,
+      "identifier": "W3C vc-data-model-2.0",
+      "important_limitations": [
+        "D5 RE-ADJUDICATION: in VC-DM the lifecycle is issue (unevaluated assertion) -> verify (authenticity/currency) -> validate (business rules, out of scope) -> rely. RESULT-001's order is evaluate (establishes the property) -> issue (creates the reliance). The reliance-bearing act sits on opposite sides of the evaluation in the two models."
+      ],
+      "new_classification": "PARTIAL_PRECEDENT — but the D5 DISPOSITION it supported changed from PRECEDED to PARTIALLY_PRECEDED",
+      "new_supporting_sections": "VC-DM 2.0 §Terminology (verification, validation), §Issuer role, §Validity Period, §Status",
+      "notes": "Still a strong precedent for role separation and for the verification-is-not-truth-evaluation point. No longer read as the same distinction as RESULT-001's evaluation-then-issuance ordering.",
+      "previous_classification": "PARTIAL_PRECEDENT (status unchanged)",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R010",
+        "R012",
+        "R052",
+        "R053"
+      ],
+      "revised_in_pass": "GAP-CLOSURE-002",
+      "source_id": "RW012",
+      "source_type": "official standard",
+      "title": "Verifiable Credentials Data Model v2.0",
+      "venue": "W3C Recommendation, 15 May 2025",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2025
+    },
+    {
+      "access_date": "2026-08-18",
+      "authors": [
+        "Open Policy Agent project (CNCF)"
+      ],
+      "canonical_url": "https://www.openpolicyagent.org/docs/management-decision-logs",
+      "capabilities_not_supported": [
+        "tamper-evident or hash-chained decision records",
+        "distinction between epistemic result, authorization result and execution disposition in the logged structure",
+        "reliance issuance"
+      ],
+      "capability_families": [
+        "B",
+        "E",
+        "G"
+      ],
+      "comparison_status": "PARTIAL_PRECEDENT",
+      "evidence_depth": "normative_sections",
+      "evidence_depth_backfilled_in_pass": "GAP-CLOSURE-002",
+      "evidence_strength": "STRONG",
+      "exact_capabilities_supported": [
+        "every policy decision is logged with decision_id, input, result, bundle metadata and timestamp",
+        "policy decisions decoupled from enforcement points",
+        "undefined is distinguished from false in Rego evaluation"
+      ],
+      "full_text_retrieved": true,
+      "identifier": "openpolicyagent.org/docs",
+      "important_limitations": [
+        "Retrieved documentation shows transmitted event logs with optional compression; the extraction found no tamper-evidence. The undefined/false distinction is a language-level evaluation property, not a recorded institutional state."
+      ],
+      "notes": "Widely deployed decision logging, and the undefined-is-not-false property is a real analogue of fail-closed-on-unknown. The logs are event records rather than hash-resolvable evidence, and carry no separated reason categories.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R019",
+        "R039",
+        "R044",
+        "R047"
+      ],
+      "source_id": "RW013",
+      "source_type": "project documentation",
+      "title": "Open Policy Agent — Decision Logs and Policy Language documentation",
+      "venue": "Authoritative project documentation",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2026
+    },
+    {
+      "access_date": "2026-08-18",
+      "authors": [
+        "Jennifer Cobbe",
+        "Michelle Seng Ah Lee",
+        "Jatinder Singh"
+      ],
+      "canonical_url": "https://arxiv.org/abs/2102.04201",
+      "capabilities_not_supported": [
+        "machine-operational separation of epistemic, institutional and execution state at decision time",
+        "reliance issuance as a distinct act",
+        "hash-resolvable evidence"
+      ],
+      "capability_families": [
+        "G",
+        "E"
+      ],
+      "change_reason": "Full text now extractable; the retrospective-versus-contemporaneous characterisation is now evidenced by term-level absence rather than inferred from the abstract.",
+      "comparison_status": "ADJACENT",
+      "evidence_depth": "full_text",
+      "evidence_strength": "MODERATE",
+      "exact_capabilities_supported": [
+        "decomposition of automated decision-making into technical and organisational elements",
+        "contextually appropriate record-keeping to enable meaningful review of individual decisions and of the process",
+        "framing drawn from administrative law's review of human decision-making"
+      ],
+      "full_text_retrieved": true,
+      "identifier": "DOI 10.48550/arXiv.2102.04201",
+      "important_limitations": [
+        "Full text read (12pp). 18 occurrences of record-keeping; no occurrence of 'retrospective', 'after the fact', 'at the time' or 'contemporaneous'. The framework prescribes what to record so that review is possible; it does not prescribe machine-operational state separation at decision time."
+      ],
+      "new_supporting_sections": "FAccT '21 full text",
+      "notes": "Supports R047 as prior framing for 'un-preserved distinctions must be reconstructed later', and does not itself preserve decision-time state distinctions.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R047",
+        "R053",
+        "R031"
+      ],
+      "revised_in_pass": "GAP-CLOSURE-002",
+      "source_id": "RW014",
+      "source_type": "peer-reviewed paper",
+      "title": "Reviewable Automated Decision-Making: A Framework for Accountable Algorithmic Systems",
+      "venue": "ACM Conference on Fairness, Accountability, and Transparency (FAccT '21)",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2021
+    },
+    {
+      "access_date": "2026-08-18",
+      "authors": [
+        "Jatinder Singh",
+        "Jennifer Cobbe",
+        "Chris Norval"
+      ],
+      "canonical_url": "https://www.semanticscholar.org/paper/Decision-Provenance:-Capturing-data-flow-for-Singh-Cobbe/f462c6f86ffe3254e7bfee1115dd0e7cf802a963",
+      "capabilities_not_supported": [
+        "separated institutional/epistemic/execution states",
+        "reliance issuance",
+        "unresolved authority"
+      ],
+      "capability_families": [
+        "G",
+        "E"
+      ],
+      "comparison_status": "ADJACENT",
+      "evidence_depth": "FULL_TEXT_UNAVAILABLE",
+      "evidence_depth_backfilled_in_pass": "GAP-CLOSURE-002",
+      "evidence_strength": "WEAK",
+      "exact_capabilities_supported": [
+        "provenance methods applied to decision pipelines: inputs to, nature of, and flow-on effects from decisions taken at design and run time"
+      ],
+      "full_text_retrieved": false,
+      "identifier": "IEEE Access 2019",
+      "important_limitations": [
+        "Located via discovery layer; full text not retrieved. Bounded reading."
+      ],
+      "notes": "Recorded as the decision-provenance framing closest to RESULT-001's evidence posture. Not relied upon for any disposition.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R047",
+        "R053"
+      ],
+      "source_id": "RW015",
+      "source_type": "peer-reviewed paper",
+      "title": "Decision Provenance: Harnessing Data Flow for Accountable Systems",
+      "venue": "IEEE Access",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2019
+    },
+    {
+      "access_date": "2026-08-18",
+      "authors": [
+        "Ewen Denney",
+        "Ganesh Pai",
+        "Ibrahim Habli"
+      ],
+      "canonical_url": "https://www.semanticscholar.org/paper/Dynamic-Safety-Cases-for-Through-Life-Safety-Denney-Pai/70b371ea0841f93efdc68dffcb571bc71c691cd5",
+      "capabilities_not_supported": [
+        "machine-operational authorization of an individual action",
+        "epistemic/institutional/execution separation",
+        "reliance issuance",
+        "unresolved authority"
+      ],
+      "capability_families": [
+        "F"
+      ],
+      "comparison_status": "ADJACENT",
+      "evidence_depth": "FULL_TEXT_UNAVAILABLE",
+      "evidence_depth_backfilled_in_pass": "GAP-CLOSURE-002",
+      "evidence_strength": "MODERATE",
+      "exact_capabilities_supported": [
+        "through-life assurance in which evidence is gathered continuously and updates the safety argument",
+        "proactive rather than point-in-time safety management"
+      ],
+      "full_text_retrieved": false,
+      "identifier": "ICSE 2015 NIER",
+      "important_limitations": [
+        "Located via discovery layer; full text not retrieved. Bounded reading."
+      ],
+      "notes": "The assurance-case family is the closest examined analogue to binding operational evidence to a standing claim. It argues about system safety over a lifetime, not about whether one proposed action is authorized now.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R044",
+        "R053",
+        "R031"
+      ],
+      "source_id": "RW016",
+      "source_type": "peer-reviewed paper",
+      "title": "Dynamic Safety Cases for Through-Life Safety Assurance",
+      "venue": "IEEE/ACM 37th International Conference on Software Engineering (ICSE) — NIER track",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2015
+    },
+    {
+      "access_date": "2026-08-18",
+      "authors": [
+        "Guido Governatori",
+        "Antonino Rotolo",
+        "and collaborators"
+      ],
+      "canonical_url": "https://ceur-ws.org/Vol-4071/paper8.pdf",
+      "capabilities_not_supported": [
+        "machine-operational runtime disposition",
+        "reliance issuance",
+        "persisted hash-resolvable execution evidence"
+      ],
+      "capability_families": [
+        "I",
+        "A"
+      ],
+      "comparison_status": "PARTIAL_PRECEDENT",
+      "evidence_depth": "FULL_TEXT_UNAVAILABLE",
+      "evidence_depth_backfilled_in_pass": "GAP-CLOSURE-002",
+      "evidence_strength": "MODERATE",
+      "exact_capabilities_supported": [
+        "superiority relation over conflicting rules",
+        "strict, defeasible and defeating rule types",
+        "characterisation of weak permission where conflicts remain unresolved",
+        "temporalised deontic outcomes"
+      ],
+      "full_text_retrieved": false,
+      "identifier": "programme-level entry",
+      "important_limitations": [
+        "Recorded as a programme rather than a single artifact because the retrieved discovery material spans several venues. Full text of individual papers not extracted; bounded reading."
+      ],
+      "notes": "Directly relevant to D10. Formal treatment of unresolved normative conflict, including weak permission under unresolved conflict, is established prior art at the logic layer. RESULT-001's contribution at this point can only be the carriage of an unresolved institutional state into a runtime disposition and persisted evidence, not the idea that conflicts may remain unresolved.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R007",
+        "R028",
+        "R046",
+        "R042"
+      ],
+      "source_id": "RW017",
+      "source_type": "peer-reviewed paper",
+      "title": "Defeasible Deontic Logic and normative conflict (Governatori et al., programme)",
+      "venue": "Programme spanning DEON, ICAIL and journal venues",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2018
+    },
+    {
+      "access_date": "2026-08-18",
+      "authors": [
+        "Juhee Kim",
+        "Xiaoyuan Liu",
+        "Zhun Wang",
+        "Shi Qiu",
+        "Bo Li",
+        "Wenbo Guo",
+        "Dawn Song"
+      ],
+      "canonical_url": "https://arxiv.org/abs/2603.11088",
+      "capabilities_not_supported": [
+        "could not be established from the retrieved abstract whether authorization architectures separating epistemic, authorization and execution state are covered"
+      ],
+      "capability_families": [
+        "E"
+      ],
+      "comparison_status": "NOT_RELEVANT_AFTER_REVIEW",
+      "evidence_depth": "FULL_TEXT_UNAVAILABLE",
+      "evidence_depth_backfilled_in_pass": "GAP-CLOSURE-002",
+      "evidence_strength": "WEAK",
+      "exact_capabilities_supported": [
+        "systematic framing of agentic AI security risks and defences"
+      ],
+      "full_text_retrieved": false,
+      "identifier": "arXiv:2603.11088",
+      "important_limitations": [
+        "Only the abstract was retrievable; the extraction explicitly could not confirm coverage of the architectural patterns at issue."
+      ],
+      "notes": "Retained in the ledger to record that the family-E academic search was attempted and did not yield an admitted comparison source. Counts toward the declared search gap, not toward any disposition.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R039"
+      ],
+      "source_id": "RW018",
+      "source_type": "arXiv manuscript",
+      "title": "The Attack and Defense Landscape of Agentic AI: A Comprehensive Survey",
+      "venue": "arXiv preprint",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2026
+    },
+    {
+      "access_date": "2026-08-18",
+      "admitted_in_pass": "GAP-CLOSURE-002",
+      "authors": [
+        "SLSA project / OpenSSF"
+      ],
+      "canonical_url": "https://slsa.dev/spec/v1.2/verification_summary",
+      "capabilities_not_supported": [
+        "preservation of epistemic / authorization / execution distinctions — verificationResult is PASSED or FAILED",
+        "unresolved or third verification state",
+        "currentness or supersession of the verification POLICY",
+        "not-evaluated-with-cause recording"
+      ],
+      "capability_families": [
+        "G",
+        "H"
+      ],
+      "comparison_status": "PARTIAL_PRECEDENT",
+      "evidence_depth": "normative_sections",
+      "evidence_strength": "STRONG",
+      "exact_capabilities_supported": [
+        "a verifier entity evaluates an artifact and a bundle of attestations against a policy and issues a VSA",
+        "the VSA is a separately addressable judgment ABOUT evidence, layered over raw provenance",
+        "verifier.id, resourceUri, policy URI+digest, verificationResult, verifiedLevels, dependencyLevels",
+        "downstream consumers may decide without access to all attestations, yet may audit inputAttestations"
+      ],
+      "full_text_retrieved": true,
+      "identifier": "slsa.dev/spec/v1.2/verification_summary",
+      "important_limitations": [
+        "Normative sections read. The VSA collapses to a binary disposition plus a level."
+      ],
+      "notes": "THE decisive new source for the owner-adjudication comparison. An authority distinct from the producer issues a summary judgment over evidence, which consumers may accept or re-check. This defeats any claim that a separately addressable judgment over an evidence package is without precedent. What it does not do is preserve the four state families or admit an unresolved outcome.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R025",
+        "R053",
+        "R031",
+        "R044"
+      ],
+      "source_id": "RW019",
+      "source_type": "official technical specification",
+      "title": "SLSA Specification v1.2 — Verification Summary Attestation (VSA)",
+      "venue": "SLSA v1.2, Approved",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2026
+    },
+    {
+      "access_date": "2026-08-18",
+      "admitted_in_pass": "GAP-CLOSURE-002",
+      "authors": [
+        "SLSA project / OpenSSF"
+      ],
+      "canonical_url": "https://slsa.dev/spec/v1.2/source-requirements",
+      "capabilities_not_supported": [
+        "policy version supersession",
+        "not-evaluated state with cause",
+        "unresolved verification state — only PASSED is documented"
+      ],
+      "capability_families": [
+        "G"
+      ],
+      "comparison_status": "PARTIAL_PRECEDENT",
+      "evidence_depth": "normative_sections",
+      "evidence_strength": "STRONG",
+      "exact_capabilities_supported": [
+        "source provenance attestations distinct from build provenance",
+        "'Trusted person: A human who is authorized by the organization to propose and approve changes to the source'",
+        "'Source VSAs are issued by some authority that has sufficient evidence to make the determination'"
+      ],
+      "full_text_retrieved": true,
+      "identifier": "slsa.dev/spec/v1.2/source-requirements",
+      "important_limitations": [
+        "Normative sections read."
+      ],
+      "notes": "Confirms the producer/verifying-authority separation is normative in SLSA, not incidental.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R053",
+        "R026"
+      ],
+      "source_id": "RW020",
+      "source_type": "official technical specification",
+      "title": "SLSA Specification v1.2 — Source Track requirements",
+      "venue": "SLSA v1.2, Approved",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2026
+    },
+    {
+      "access_date": "2026-08-18",
+      "admitted_in_pass": "GAP-CLOSURE-002",
+      "authors": [
+        "B. Laurie",
+        "E. Messeri",
+        "R. Stradling"
+      ],
+      "canonical_url": "https://www.rfc-editor.org/rfc/rfc9162.html",
+      "capabilities_not_supported": [
+        "institutional response to misissuance — explicitly 'beyond the scope of this document'",
+        "an unresolved state",
+        "epistemic / authorization / execution separation",
+        "currentness of an authorizing rule"
+      ],
+      "capability_families": [
+        "G",
+        "H"
+      ],
+      "comparison_status": "PARTIAL_PRECEDENT",
+      "evidence_depth": "full_text",
+      "evidence_strength": "STRONG",
+      "exact_capabilities_supported": [
+        "SCT as 'the log's promise to append to its Merkle Tree an entry for the accepted submission' — a commitment distinct from proven inclusion",
+        "append-only Merkle tree with inclusion and consistency proofs; consistency proofs prove the append-only property",
+        "monitors as a separate later-judgment role watching logs for correct behaviour and certificates of interest",
+        "immutable historical entries while the set of trusted logs is 'neither unified nor static' — reliance may change over preserved history"
+      ],
+      "full_text_retrieved": true,
+      "identifier": "RFC 9162",
+      "important_limitations": [
+        "Full normative reading. The separation of evidence from response is real but the response side is deliberately out of scope."
+      ],
+      "notes": "The strongest examined precedent for D7 and a strong one for D8: history is preserved immutably while later judgment changes what should be relied upon, and a separate role performs that later judgment. The contrast that survives is that CT places the institutional response outside the protocol, whereas RESULT-001 records the adjudication as an artifact bound to the evidence by digest.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R044",
+        "R047",
+        "R053",
+        "R025"
+      ],
+      "source_id": "RW021",
+      "source_type": "official technical specification",
+      "title": "Certificate Transparency Version 2.0",
+      "venue": "IETF RFC 9162 (Experimental), December 2021",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2021
+    },
+    {
+      "access_date": "2026-08-18",
+      "admitted_in_pass": "GAP-CLOSURE-002",
+      "authors": [
+        "ETSI ESI Technical Committee"
+      ],
+      "canonical_url": "https://ec.europa.eu/digital-building-blocks/DSS/webapp-demo/doc/dss-documentation.html",
+      "capabilities_not_supported": [
+        "separation of the validation result from the relying party's decision to rely — not explicitly drawn in the retrieved documentation",
+        "epistemic / institutional / execution field separation",
+        "runtime execution disposition"
+      ],
+      "capability_families": [
+        "I",
+        "B"
+      ],
+      "comparison_status": "PARTIAL_PRECEDENT",
+      "evidence_depth": "normative_sections",
+      "evidence_strength": "STRONG",
+      "exact_capabilities_supported": [
+        "three status indications: TOTAL-PASSED, TOTAL-FAILED and INDETERMINATE",
+        "INDETERMINATE defined as 'the format and digital signature verifications have not failed but there is insufficient information to determine if the electronic signature is valid' — a genuine third value that is not a negative finding",
+        "SubIndications recording the CAUSE (NO_CERTIFICATE_CHAIN_FOUND, REVOKED_NO_POE, SIGNATURE_POLICY_NOT_AVAILABLE and others)",
+        "'For each of the validation checks/constraint the validation process must provide information justifying the reasons for the resulting status indication'"
+      ],
+      "full_text_retrieved": true,
+      "identifier": "ETSI EN 319 102-1",
+      "important_limitations": [
+        "Read via the European Commission's DSS normative documentation; the ETSI PDF itself returned HTTP 403. Recorded as normative_sections, not full_text of the EN."
+      ],
+      "notes": "The decisive new source for D3, D9 and D10. A widely deployed European standard already has an insufficient-information verdict distinct from failure, with recorded causes and per-constraint justification. Any claim that an unresolved verdict with a preserved cause is without precedent is defeated.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R007",
+        "R028",
+        "R046",
+        "R005",
+        "R045",
+        "R030"
+      ],
+      "source_id": "RW022",
+      "source_type": "official standard (via implementing-body normative documentation)",
+      "title": "ETSI EN 319 102-1 — Procedures for Creation and Validation of AdES Digital Signatures (as documented by the European Commission DSS)",
+      "venue": "ETSI EN 319 102-1 V1.4.1 (2024-06); EC DSS documentation",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2024
+    },
+    {
+      "access_date": "2026-08-18",
+      "admitted_in_pass": "GAP-CLOSURE-002",
+      "authors": [
+        "Guido Governatori",
+        "Shazia Sadiq",
+        "and collaborators"
+      ],
+      "canonical_url": "https://dl.acm.org/doi/10.1145/2695664.2699488",
+      "capabilities_not_supported": [
+        "a recorded not-evaluated-with-cause state for a gate never reached",
+        "reliance issuance",
+        "hash-resolvable execution evidence"
+      ],
+      "capability_families": [
+        "G",
+        "A",
+        "I"
+      ],
+      "comparison_status": "ADJACENT",
+      "evidence_depth": "FULL_TEXT_UNAVAILABLE",
+      "evidence_strength": "MODERATE",
+      "exact_capabilities_supported": [
+        "non-monotonic deontic logic of violations as a faithful representation of regulatory obligations",
+        "semantic annotation of processes enabling detection of compliance gaps",
+        "runtime detection of compliance violations during process execution"
+      ],
+      "full_text_retrieved": false,
+      "identifier": "programme-level entry",
+      "important_limitations": [
+        "Programme-level entry; individual full texts not extracted. FULL_TEXT_UNAVAILABLE for the purpose of any strong finding."
+      ],
+      "notes": "Mature prior art for runtime compliance and for violation semantics. Recorded, and deliberately not used to settle any disposition, because the full texts were not read.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R005",
+        "R045",
+        "R029",
+        "R004"
+      ],
+      "source_id": "RW023",
+      "source_type": "peer-reviewed paper",
+      "title": "Regulatory compliance of business processes: design-time checking and runtime violation detection (Governatori / Sadiq programme, incl. Regorous)",
+      "venue": "Programme spanning BPM, ACM SAC and journal venues",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2015
+    },
+    {
+      "access_date": "2026-08-18",
+      "admitted_in_pass": "GAP-CLOSURE-002",
+      "authors": [
+        "Richard T. Snodgrass",
+        "Christian S. Jensen",
+        "and the temporal-database literature"
+      ],
+      "canonical_url": "https://people.cs.aau.dk/~csj/Thesis/pdf/chapter12.pdf",
+      "capabilities_not_supported": [
+        "authorization",
+        "institutional authority",
+        "reliance issuance",
+        "cryptographic evidence"
+      ],
+      "capability_families": [
+        "H"
+      ],
+      "comparison_status": "PARTIAL_PRECEDENT",
+      "evidence_depth": "FULL_TEXT_UNAVAILABLE",
+      "evidence_strength": "MODERATE",
+      "exact_capabilities_supported": [
+        "valid time versus transaction time as distinct temporal dimensions",
+        "transaction time 'may be added to the database, but is never allowed to be changed after the fact', while valid time is subject to correction"
+      ],
+      "full_text_retrieved": false,
+      "identifier": "bitemporal literature",
+      "important_limitations": [
+        "Located and read at summary level; chapter PDF not extracted. FULL_TEXT_UNAVAILABLE for strong findings."
+      ],
+      "notes": "Directly relevant to D7: correcting the record of what was believed without rewriting the record of what was stored is the defining bitemporal property, established decades ago. RESULT-001's preservation of historical reliance bytes under later supersession is an instance of a long-standing data-management pattern.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R047",
+        "R053"
+      ],
+      "source_id": "RW024",
+      "source_type": "peer-reviewed paper",
+      "title": "Bitemporal data models: valid time and transaction time",
+      "venue": "Temporal database literature; terminology adopted in SQL:2011",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 1995
+    },
+    {
+      "access_date": "2026-08-18",
+      "admitted_in_pass": "GAP-CLOSURE-002",
+      "authors": [
+        "Object Management Group"
+      ],
+      "canonical_url": "https://www.omg.org/spec/DMN/",
+      "capabilities_not_supported": [
+        "institutional authority to act as distinct from decision logic",
+        "temporal currentness of the decision model",
+        "unresolved outcome distinct from a null result",
+        "reliance issuance",
+        "persisted hash-resolvable decision evidence"
+      ],
+      "capability_families": [
+        "A"
+      ],
+      "comparison_status": "ADJACENT",
+      "evidence_depth": "FULL_TEXT_UNAVAILABLE",
+      "evidence_strength": "WEAK",
+      "exact_capabilities_supported": [
+        "decision requirements graph and diagram",
+        "decision services with well-defined inputs published for invocation",
+        "FEEL expression language assigning semantics to decision constructs"
+      ],
+      "full_text_retrieved": false,
+      "identifier": "OMG DMN",
+      "important_limitations": [
+        "The OMG specification PDF exceeded the retrieval size limit; capability reading taken from implementer documentation. FULL_TEXT_UNAVAILABLE for the normative text."
+      ],
+      "notes": "Decision modelling with dependency structure and invocable services, without any of the institutional layers. Not used to settle a disposition.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R019",
+        "R023"
+      ],
+      "source_id": "RW025",
+      "source_type": "official standard",
+      "title": "OMG Decision Model and Notation (DMN)",
+      "venue": "OMG specification",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2024
+    },
+    {
+      "access_date": "2026-08-18",
+      "admitted_in_pass": "GAP-CLOSURE-002",
+      "authors": [
+        "OpenFisca project"
+      ],
+      "canonical_url": "https://openfisca.org/doc/key-concepts/parameters.html",
+      "capabilities_not_supported": [
+        "institutional authority, delegation, revocation, reliance issuance",
+        "unresolved result distinct from a computed one",
+        "decision evidence"
+      ],
+      "capability_families": [
+        "A",
+        "D"
+      ],
+      "comparison_status": "PARTIAL_PRECEDENT",
+      "evidence_depth": "normative_sections",
+      "evidence_strength": "MODERATE",
+      "exact_capabilities_supported": [
+        "'A parameter is a property of the legislation that changes over time'",
+        "automatic retrieval of the right parameter value for the calculation period"
+      ],
+      "full_text_retrieved": true,
+      "identifier": "openfisca.org/doc",
+      "important_limitations": [
+        "Documentation page read; calculation-trace and provenance behaviour not established from the retrieved page."
+      ],
+      "notes": "A deployed instance of dated legislative rules evaluated at an instant. Relevant to D2 as further evidence that time-varying rule values are ordinary practice.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R004",
+        "R023"
+      ],
+      "source_id": "RW026",
+      "source_type": "project documentation",
+      "title": "OpenFisca — dated legislative parameters",
+      "venue": "Authoritative project documentation",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2026
+    },
+    {
+      "access_date": "2026-08-18",
+      "admitted_in_pass": "GAP-CLOSURE-002",
+      "authors": [
+        "James Rhodes",
+        "George Kang"
+      ],
+      "canonical_url": "https://arxiv.org/abs/2607.05397",
+      "capabilities_not_supported": [
+        "epistemic / logical-warrant layer — regex over the full text returns ZERO hits for epistemic, truth, logical warrant, belief",
+        "downstream re-resolution or re-evaluation — ZERO hits for re-verify / re-evaluate / re-resolve / independently",
+        "not-evaluated-with-cause — ZERO hits for not-evaluated / skipped / short-circuit",
+        "unresolved authorization value — event decision is {allow, deny, ⊥}, where ⊥ marks non-Gateway events, not institutional non-resolution",
+        "competing-authority semantics"
+      ],
+      "capability_families": [
+        "E",
+        "G"
+      ],
+      "change_reason": "Full text resolved and read (12pp). Identity and affiliation verified. Several capabilities that GAP-CLOSURE-002 could not assess are now established, and two RESULT-001 distinctions are preceded by it.",
+      "comparison_status": "PARTIAL_PRECEDENT",
+      "evidence_depth": "full_text",
+      "evidence_strength": "STRONG",
+      "exact_capabilities_supported": [
+        "execution as a triple (contract C, Execution Causal Event Stream T, replay context R) with a validity predicate PoE(C,T,R)=1",
+        "contract fixes principal, authorized capability set, applicable POLICY SNAPSHOT, validity window, revocation reference",
+        "append-only tamper-evident contract registry and revocation log; contract freshness as invariant I1",
+        "point-in-time validity: 'revocation at t=5 does not retrospectively invalidate an execution that was valid at t=3'",
+        "'Historical PoE validity is not rewritten; only current EAC acceptability changes' — preserved history under governing-state change",
+        "Execution Attestation Certificate issued ONLY when PoE=1 — issuance strictly downstream of evaluation",
+        "Prime Execution Model separating planning, enforcement, effect and recordkeeping into distinct authority planes",
+        "deny-side null effect as an invariant; deterministic replay; measured TypeScript prototype (~2.7ms, 4.4% batch overhead)"
+      ],
+      "full_text_retrieved": true,
+      "identifier": "arXiv:2607.05397",
+      "implementation_status": "MEASURED_IMPLEMENTATION",
+      "important_limitations": [
+        "arXiv preprint, not peer-reviewed. Affiliation now established (AlphaBitCore, Inc.). Prototype is single-node and described as preliminary."
+      ],
+      "new_classification": "PARTIAL_PRECEDENT / STRONG / full_text",
+      "new_supporting_sections": "§2 proof atom and event tuple; §5 invariants I1-I5a; §7 PEM and EAC issuance; §7.2 EAC lifecycle; §9 empirical evaluation",
+      "notes": "THE decisive source of this pass. It precedes RESULT-001 on evaluation-then-issuance ordering (D5) and on preserved history under later revocation (D7), and it substantially challenges D8. It does not have an epistemic layer, downstream re-resolution, an unresolved value, or not-evaluated-with-cause.",
+      "previous_classification": "CHALLENGE / WEAK / FULL_TEXT_UNAVAILABLE",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R018",
+        "R044",
+        "R053",
+        "R013"
+      ],
+      "source_id": "RW027",
+      "source_type": "arXiv manuscript",
+      "title": "Proof of Execution: Runtime Verification for Governed AI Agent Actions",
+      "venue": "arXiv preprint, April 2026; AlphaBitCore, Inc.",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2026
+    },
+    {
+      "access_date": "2026-08-18",
+      "admitted_in_pass": "DECISIVE-GAP-CLOSURE-003",
+      "authors": [
+        "Jakob Salfeld-Nebgen"
+      ],
+      "canonical_url": "https://arxiv.org/abs/2606.26298",
+      "capabilities_not_supported": [
+        "epistemic / logical-warrant layer — ZERO hits for epistemic, truth, logical warrant",
+        "not-evaluated-with-cause — ZERO hits",
+        "unresolved authorization value distinct from deny",
+        "re-resolution of rule currentness by a downstream consumer before issuing — its re-verification is later third-party inspection of the log"
+      ],
+      "capability_families": [
+        "E",
+        "H",
+        "I"
+      ],
+      "comparison_status": "PARTIAL_PRECEDENT",
+      "evidence_depth": "full_text",
+      "evidence_strength": "STRONG",
+      "exact_capabilities_supported": [
+        "governance hub issues an intent identifier; required attestations must bind to it",
+        "attestations from independent oracles which the agent cannot fabricate; deny-by-default posture",
+        "deterministic Cedar policy evaluation over signed attestations",
+        "decision, underlying evidence and rule applied recorded so 'any authorised third party can later inspect and re-verify the decision'",
+        "explicitly names the check-to-use gap: 'a licence may be revoked, a build superseded, a drug interaction newly identified', bounded by attestation expiry"
+      ],
+      "full_text_retrieved": true,
+      "identifier": "arXiv:2606.26298",
+      "implementation_status": "PROOF_OF_CONCEPT",
+      "important_limitations": [
+        "Proof-of-concept implementation (github zta-hub); not peer-reviewed.",
+        "Its 'independent re-verification' is retrospective audit of a decision, not pre-issuance revalidation."
+      ],
+      "notes": "The closest examined statement of the currentness PROBLEM — it names the attested-then-executed gap explicitly and bounds it by expiry rather than by re-resolution. Strong precedent for evidence-bound authorization with later independent inspection; not for D6.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R013",
+        "R019",
+        "R025",
+        "R041",
+        "R053"
+      ],
+      "source_id": "RW028",
+      "source_type": "arXiv manuscript",
+      "title": "Governing Actions, Not Agents: Institutional Attestation as a Governance Model for Autonomous AI Systems",
+      "venue": "arXiv:2606.26298; metaphora.ai",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2026
+    },
+    {
+      "access_date": "2026-08-18",
+      "admitted_in_pass": "DECISIVE-GAP-CLOSURE-003",
+      "authors": [
+        "Krti Tallam"
+      ],
+      "canonical_url": "https://arxiv.org/abs/2606.12320",
+      "capabilities_not_supported": [
+        "epistemic / logical-warrant layer — ZERO hits",
+        "not-evaluated-with-cause — ZERO hits",
+        "rule currentness or supersession — ZERO hits for revocation/supersede/currentness",
+        "reliance issuance separate from evaluation"
+      ],
+      "capability_families": [
+        "E"
+      ],
+      "comparison_status": "PARTIAL_PRECEDENT",
+      "evidence_depth": "full_text",
+      "evidence_strength": "STRONG",
+      "exact_capabilities_supported": [
+        "explicit critique of Boolean allow/deny: 'Production-agent governance requires richer outcomes — modify the arguments, narrow the capability set, escalate to a human, defer pending a condition, roll back a committed effect — that a Boolean evaluator cannot express'",
+        "capability attenuation, composite principals, delegated authority, session-stateful decisions",
+        "structured evidence substrate; reference implementation with measured attenuation correctness and evidence reconstructability, adjudication in single-digit microseconds"
+      ],
+      "full_text_retrieved": true,
+      "identifier": "arXiv:2606.12320",
+      "implementation_status": "MEASURED_IMPLEMENTATION (policy-engine core)",
+      "important_limitations": [
+        "arXiv preprint, not peer-reviewed. Reference implementation covers the policy-engine core, not a full institutional chain."
+      ],
+      "notes": "Directly relevant to R019 and R046: it argues, with a measured core, that a two-valued disposition is structurally insufficient and that escalate and defer are required outcomes. This narrows RESULT-001's disposition-richness framing considerably.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R019",
+        "R051",
+        "R039",
+        "R046"
+      ],
+      "source_id": "RW029",
+      "source_type": "arXiv manuscript",
+      "title": "A Five-Plane Reference Architecture for Runtime Governance of Production AI Agents",
+      "venue": "arXiv:2606.12320; kamiwaza.ai",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2026
+    },
+    {
+      "access_date": "2026-08-18",
+      "admitted_in_pass": "DECISIVE-GAP-CLOSURE-003",
+      "authors": [
+        "Giovanni Racioppi"
+      ],
+      "canonical_url": "https://arxiv.org/abs/2608.14074",
+      "capabilities_not_supported": [
+        "measured results — the paper states 'empirical results are defined as a falsifiable plan rather than reported'",
+        "epistemic / logical-warrant layer",
+        "not-evaluated-with-cause — ZERO hits",
+        "downstream re-resolution of currentness before issuance"
+      ],
+      "capability_families": [
+        "E",
+        "I",
+        "H"
+      ],
+      "comparison_status": "PARTIAL_PRECEDENT",
+      "evidence_depth": "full_text",
+      "evidence_strength": "MODERATE",
+      "exact_capabilities_supported": [
+        "three-valued decision procedure: PERMIT / ESCALATE / DENY, deny-by-default, with escalate tied to an oversight class",
+        "signed mandates with explicit scope over tools and parameters, bounded validity, chained delegation with monotone attenuation, revocation semantics",
+        "governance proxy separating policy decision from policy enforcement",
+        "append-only hash-chained audit trail; 'history is corrected by appending, never by editing'",
+        "ratification: a principal may retroactively approve a logged denied-or-escalated action, 'changing the action's legal posture without ever rewriting the log'",
+        "explicit alignment to civil-law agency (mandato) and to eIDAS 2 / EU AI Act Arts 12 and 14"
+      ],
+      "full_text_retrieved": true,
+      "identifier": "arXiv:2608.14074",
+      "implementation_status": "ARCHITECTURE_PROPOSAL / PLANNED — self-declared 'system under construction'",
+      "important_limitations": [
+        "SELF-DECLARED PLANNED STATUS. Per §13 its capabilities are compared as DESIGNED, not measured.",
+        "ESCALATE is an oversight class (human confirmation required), not an unresolved-authority finding."
+      ],
+      "notes": "Design-level precedent for a three-valued runtime disposition, append-only correction and ratification, and institutional framing. Because it is explicitly unimplemented, it cannot preceded a MEASURED demonstration, and its ESCALATE is oversight routing rather than an unresolved institutional status.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R013",
+        "R019",
+        "R025",
+        "R051",
+        "R053",
+        "R007"
+      ],
+      "source_id": "RW030",
+      "source_type": "arXiv manuscript",
+      "title": "Mandato: Protocol-Level Enforcement of Digitally Signed Mandates on AI Agent Actions with Cryptographically Chained Audit Trails",
+      "venue": "arXiv:2608.14074; Hyperlabs, Italy",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2026
+    },
+    {
+      "access_date": "2026-08-18",
+      "admitted_in_pass": "DECISIVE-GAP-CLOSURE-003",
+      "authors": [
+        "Linh Thao Ly",
+        "Fabrizio Maria Maggi",
+        "Marco Montali",
+        "Stefanie Rinderle-Ma",
+        "Wil M.P. van der Aalst"
+      ],
+      "canonical_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4581012/",
+      "capabilities_not_supported": [
+        "a rule NOT REACHED because an earlier constraint terminated the path, recorded with that cause — no CMF covers it",
+        "temporal validity of the compliance RULE itself — CMF1 covers time WITHIN rules, not rule lifecycle",
+        "a third compliance state that is neither satisfied nor violated — none; degrees only",
+        "reliance issuance",
+        "hash-resolvable execution evidence"
+      ],
+      "capability_families": [
+        "G",
+        "A",
+        "I"
+      ],
+      "comparison_status": "CONTRAST",
+      "evidence_depth": "full_text",
+      "evidence_strength": "STRONG",
+      "exact_capabilities_supported": [
+        "the ten Compliance Monitoring Functionalities: CMF1 time, CMF2 data, CMF3 resources, CMF4 non-atomic activities, CMF5 activity lifecycles, CMF6 multiple-instance constraints, CMF7 reactive detection and management, CMF8 pro-active detection, CMF9 root-cause explanation, CMF10 degree of compliance",
+        "CMF9: 'Root-cause analysis enables to diagnose the root cause of a compliance violation, e.g., by isolating the responsible event occurrences or the involved compliance rules'",
+        "CMF10 admits fuzzy degrees between 0 (violation) and 1 (satisfaction)"
+      ],
+      "full_text_retrieved": true,
+      "identifier": "DOI 10.1016/j.is.2015.02.007",
+      "implementation_status": "PEER_REVIEWED_FRAMEWORK",
+      "important_limitations": [
+        "Full text read via the open-access PMC version. This is the authoritative taxonomy of the family GAP-CLOSURE-002 flagged as its highest-priority gap."
+      ],
+      "notes": "CLOSES the business-process compliance gap decisively and in RESULT-001's favour on the narrow point. The definitive ten-functionality taxonomy of this family has root-cause analysis for VIOLATIONS (CMF9) but no functionality for a rule left unevaluated because an upstream gate stopped the path, and no rule-lifecycle currentness.",
+      "primary_source": true,
+      "relevant_result001_claim_ids": [
+        "R005",
+        "R045",
+        "R030",
+        "R029",
+        "R004",
+        "R011"
+      ],
+      "source_id": "RW031",
+      "source_type": "peer-reviewed paper",
+      "title": "Compliance monitoring in business processes: Functionalities, application, and tool-support",
+      "venue": "Information Systems 54, pp. 209-234",
+      "version_or_date_inspected": "2026-08-18",
+      "year": 2015
+    }
+  ],
+  "supersedes": "RESULT-001-RELATED-WORK-SOURCE-LEDGER-002.json (sha256 c35ea20e71105a8bd74de250c7a931eb77d0010f0fa103c18b533f33ce5287f5), preserved unmodified"
+}

@@ -1,0 +1,828 @@
+{
+  "changed_count": 6,
+  "changed_decisions": [
+    "R005",
+    "R010",
+    "R030",
+    "R045",
+    "R046",
+    "R055"
+  ],
+  "counts": {
+    "CHALLENGED": 0,
+    "PARTIALLY_PRECEDED": 22,
+    "POTENTIALLY_DISTINCTIVE": 5,
+    "REQUIRES_CONTEXT": 4,
+    "REQUIRES_NARROWING": 4,
+    "SUPPORTED_BY_PRECEDENT": 2,
+    "UNAFFECTED": 20
+  },
+  "entries": [
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "ESTABLISHED_OWNER_CLAIM",
+      "gap_closure_002_impact": "UNAFFECTED",
+      "impact": "UNAFFECTED",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "An owner-established claim about this execution.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [],
+      "result001_claim_id": "R001"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "ESTABLISHED_OWNER_CLAIM",
+      "gap_closure_002_impact": "UNAFFECTED",
+      "impact": "UNAFFECTED",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "The owner-established measured claim.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [],
+      "result001_claim_id": "R002"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "UNAFFECTED",
+      "impact": "UNAFFECTED",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "A measured observation.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [],
+      "result001_claim_id": "R003"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "REQUIRES_NARROWING",
+      "impact": "REQUIRES_NARROWING",
+      "landscape_001_impact": "REQUIRES_NARROWING",
+      "reason": "Reinforced against the manuscript on one side and for it on another: RW031 shows the compliance family does NOT model rule lifecycle, while RW027 pins a policy snapshot and RW028 names the check-to-use gap. Narrow to the gate-ordering property.",
+      "recommended_manuscript_action": "NARROW",
+      "related_source_ids": [
+        "RW002",
+        "RW031",
+        "RW027",
+        "RW026"
+      ],
+      "result001_claim_id": "R004"
+    },
+    {
+      "changed_this_pass": true,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "REQUIRES_NARROWING",
+      "impact": "POTENTIALLY_DISTINCTIVE",
+      "landscape_001_impact": "POTENTIALLY_DISTINCTIVE",
+      "reason": "SURVIVES and is now strengthened. The authoritative CMF taxonomy of business-process compliance has no functionality for a rule left unevaluated because an upstream gate stopped the path; CMF9 gives root cause of a VIOLATION. All four contemporary agent-governance sources return zero hits for not-evaluated/skipped/short-circuit.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [
+        "RW031",
+        "RW027",
+        "RW029",
+        "RW030",
+        "RW022"
+      ],
+      "result001_claim_id": "R005"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "SUPPORTED_BY_PRECEDENT",
+      "impact": "SUPPORTED_BY_PRECEDENT",
+      "landscape_001_impact": "SUPPORTED_BY_PRECEDENT",
+      "reason": "Unchanged; CT adds revocation context.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW004",
+        "RW012",
+        "RW021"
+      ],
+      "result001_claim_id": "R006"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "PARTIALLY_PRECEDED",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "REQUIRES_NARROWING",
+      "reason": "Mandato's PERMIT/ESCALATE/DENY and Five-Plane's argument for richer outcomes both narrow this further, though Mandato is planned and its ESCALATE is oversight routing.",
+      "recommended_manuscript_action": "NARROW",
+      "related_source_ids": [
+        "RW022",
+        "RW030",
+        "RW029",
+        "RW017"
+      ],
+      "result001_claim_id": "R007"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "UNAFFECTED",
+      "impact": "UNAFFECTED",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "A measured observation about case 5.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [
+        "RW017"
+      ],
+      "result001_claim_id": "R008"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "UNAFFECTED",
+      "impact": "UNAFFECTED",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "A measured observation about case 5.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [],
+      "result001_claim_id": "R009"
+    },
+    {
+      "changed_this_pass": true,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "REQUIRES_NARROWING",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "REQUIRES_NARROWING",
+      "reason": "Proof of Execution issues an Execution Attestation Certificate ONLY when PoE=1 — evaluation strictly gating issuance, in a measured implementation. That is the RESULT-001 ordering, and it moves R010 from a narrowing recommendation to explicit precedent. Cite RW027 alongside RW012.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW027",
+        "RW012",
+        "RW019"
+      ],
+      "result001_claim_id": "R010"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "REQUIRES_CONTEXT",
+      "impact": "REQUIRES_CONTEXT",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "Recording a reason for a non-produced outcome has an analogue in ETSI sub-indications.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW022"
+      ],
+      "result001_claim_id": "R011"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "PARTIALLY_PRECEDED",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "PARTIALLY_PRECEDED",
+      "reason": "Separate downstream checking is preceded many times over; the term remains SEPARATE, not independent.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW011",
+        "RW012",
+        "RW019",
+        "RW028"
+      ],
+      "result001_claim_id": "R012"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "POTENTIALLY_DISTINCTIVE",
+      "impact": "POTENTIALLY_DISTINCTIVE",
+      "landscape_001_impact": "POTENTIALLY_DISTINCTIVE",
+      "reason": "SURVIVES the decisive test. PoE full text has zero hits for re-verify/re-evaluate/re-resolve. RW028's re-verification is retrospective third-party inspection of the log. Mandato's independent verifier checks log integrity. None re-resolves rule currentness AND re-evaluates authority before issuing a reliance-bearing artifact.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [
+        "RW027",
+        "RW028",
+        "RW030",
+        "RW012",
+        "RW019"
+      ],
+      "result001_claim_id": "R013"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "UNAFFECTED",
+      "impact": "UNAFFECTED",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "A measured observation.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [],
+      "result001_claim_id": "R014"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "PARTIALLY_PRECEDED",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "PARTIALLY_PRECEDED",
+      "reason": "Same basis as R016.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW021",
+        "RW011"
+      ],
+      "result001_claim_id": "R015"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "PARTIALLY_PRECEDED",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "PARTIALLY_PRECEDED",
+      "reason": "Package-versus-checksum-list verification is preceded by CT's inclusion and consistency proofs.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW021",
+        "RW011"
+      ],
+      "result001_claim_id": "R016"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "PARTIALLY_PRECEDED",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "PARTIALLY_PRECEDED",
+      "reason": "Same basis as R016.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW021",
+        "RW011"
+      ],
+      "result001_claim_id": "R017"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "gap_closure_002_impact": "PARTIALLY_PRECEDED",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "PARTIALLY_PRECEDED",
+      "reason": "Byte-resolvable evidence with recomputation is standard; PoE adds envelope and event hashing.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW027",
+        "RW011",
+        "RW019"
+      ],
+      "result001_claim_id": "R018"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "gap_closure_002_impact": "REQUIRES_NARROWING",
+      "impact": "REQUIRES_NARROWING",
+      "landscape_001_impact": "REQUIRES_NARROWING",
+      "reason": "Five-Plane argues with a measured core that Boolean allow/deny is structurally insufficient and enumerates richer outcomes. The four-field claim must be narrowed to the specific set including a typed decision_basis and a preserved epistemic field.",
+      "recommended_manuscript_action": "NARROW",
+      "related_source_ids": [
+        "RW029",
+        "RW030",
+        "RW022",
+        "RW003"
+      ],
+      "result001_claim_id": "R019"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "gap_closure_002_impact": "PARTIALLY_PRECEDED",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "PARTIALLY_PRECEDED",
+      "reason": "KeyNote's advice/enforcement split remains the precedent; ETSI adds a structured status upstream of the relying decision.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW004",
+        "RW022"
+      ],
+      "result001_claim_id": "R020"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "gap_closure_002_impact": "SUPPORTED_BY_PRECEDENT",
+      "impact": "SUPPORTED_BY_PRECEDENT",
+      "landscape_001_impact": "SUPPORTED_BY_PRECEDENT",
+      "reason": "Unchanged.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW001",
+        "RW002"
+      ],
+      "result001_claim_id": "R021"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "gap_closure_002_impact": "PARTIALLY_PRECEDED",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "PARTIALLY_PRECEDED",
+      "reason": "Reinforced: ETSI's insufficient-information verdict is the same instinct at the validation layer.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW003",
+        "RW013",
+        "RW022"
+      ],
+      "result001_claim_id": "R022"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "gap_closure_002_impact": "PARTIALLY_PRECEDED",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "PARTIALLY_PRECEDED",
+      "reason": "Unchanged in substance; OpenFisca added as a deployed instance.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW001",
+        "RW002",
+        "RW026"
+      ],
+      "result001_claim_id": "R023"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "gap_closure_002_impact": "PARTIALLY_PRECEDED",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "PARTIALLY_PRECEDED",
+      "reason": "Pin-before-use is preceded across the supply-chain family.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW011",
+        "RW019"
+      ],
+      "result001_claim_id": "R024"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "gap_closure_002_impact": "PARTIALLY_PRECEDED",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "POTENTIALLY_DISTINCTIVE",
+      "reason": "Unchanged in disposition; now further preceded by PoE's validator/attestation split and by RW028's third-party re-inspection of recorded decisions.",
+      "recommended_manuscript_action": "NARROW",
+      "related_source_ids": [
+        "RW019",
+        "RW027",
+        "RW028"
+      ],
+      "result001_claim_id": "R025"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "UNAFFECTED",
+      "impact": "UNAFFECTED",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "A publication-posture fact.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [
+        "RW019"
+      ],
+      "result001_claim_id": "R026"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "UNAFFECTED",
+      "impact": "UNAFFECTED",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "A commit-identity fact.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [],
+      "result001_claim_id": "R027"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "INTERPRETATION",
+      "gap_closure_002_impact": "PARTIALLY_PRECEDED",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "REQUIRES_NARROWING",
+      "reason": "Same basis as R007.",
+      "recommended_manuscript_action": "NARROW",
+      "related_source_ids": [
+        "RW022",
+        "RW030",
+        "RW017"
+      ],
+      "result001_claim_id": "R028"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "INTERPRETATION",
+      "gap_closure_002_impact": "REQUIRES_CONTEXT",
+      "impact": "REQUIRES_CONTEXT",
+      "landscape_001_impact": "REQUIRES_CONTEXT",
+      "reason": "CMF9 root-cause analysis is the closest analogue to a typed basis.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW022",
+        "RW031",
+        "RW017"
+      ],
+      "result001_claim_id": "R029"
+    },
+    {
+      "changed_this_pass": true,
+      "current_claim_class": "INTERPRETATION",
+      "gap_closure_002_impact": "REQUIRES_NARROWING",
+      "impact": "POTENTIALLY_DISTINCTIVE",
+      "landscape_001_impact": "POTENTIALLY_DISTINCTIVE",
+      "reason": "Upgraded from REQUIRES_NARROWING. CMF9 explains why a violation occurred, not why an evaluation did not occur.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [
+        "RW031",
+        "RW022"
+      ],
+      "result001_claim_id": "R030"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "INTERPRETATION",
+      "gap_closure_002_impact": "REQUIRES_NARROWING",
+      "impact": "REQUIRES_NARROWING",
+      "landscape_001_impact": "REQUIRES_CONTEXT",
+      "reason": "The reporting-boundary interpretation must now be positioned against PoE, SLSA and RW028, all of which separate producing evidence from judging it.",
+      "recommended_manuscript_action": "REFRAME",
+      "related_source_ids": [
+        "RW027",
+        "RW019",
+        "RW028"
+      ],
+      "result001_claim_id": "R031"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "LIMITATION",
+      "gap_closure_002_impact": "UNAFFECTED",
+      "impact": "UNAFFECTED",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "A limitation statement.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [],
+      "result001_claim_id": "R032"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "LIMITATION",
+      "gap_closure_002_impact": "UNAFFECTED",
+      "impact": "UNAFFECTED",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "A limitation statement.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [
+        "RW016"
+      ],
+      "result001_claim_id": "R033"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "LIMITATION",
+      "gap_closure_002_impact": "UNAFFECTED",
+      "impact": "UNAFFECTED",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "A limitation statement.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [
+        "RW016"
+      ],
+      "result001_claim_id": "R034"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "LIMITATION",
+      "gap_closure_002_impact": "UNAFFECTED",
+      "impact": "UNAFFECTED",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "A limitation statement.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [
+        "RW003"
+      ],
+      "result001_claim_id": "R035"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "LIMITATION",
+      "gap_closure_002_impact": "UNAFFECTED",
+      "impact": "UNAFFECTED",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "A limitation statement.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [],
+      "result001_claim_id": "R036"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "LIMITATION",
+      "gap_closure_002_impact": "UNAFFECTED",
+      "impact": "UNAFFECTED",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "A limitation statement.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [],
+      "result001_claim_id": "R037"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "LIMITATION",
+      "gap_closure_002_impact": "UNAFFECTED",
+      "impact": "UNAFFECTED",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "A limitation statement; SLSA reinforces the project-controlled-validation point.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [
+        "RW013",
+        "RW019"
+      ],
+      "result001_claim_id": "R038"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "gap_closure_002_impact": "REQUIRES_NARROWING",
+      "impact": "REQUIRES_NARROWING",
+      "landscape_001_impact": "SUPPORTED_BY_PRECEDENT",
+      "reason": "Further softened: Five-Plane makes the same argument about single-verdict insufficiency.",
+      "recommended_manuscript_action": "NARROW",
+      "related_source_ids": [
+        "RW029",
+        "RW022"
+      ],
+      "result001_claim_id": "R039"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "gap_closure_002_impact": "REQUIRES_CONTEXT",
+      "impact": "REQUIRES_CONTEXT",
+      "landscape_001_impact": "REQUIRES_CONTEXT",
+      "reason": "Unchanged.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW001",
+        "RW002"
+      ],
+      "result001_claim_id": "R040"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "PARTIALLY_PRECEDED",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "PARTIALLY_PRECEDED",
+      "reason": "Observations as addressable artifacts are preceded.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW027",
+        "RW028",
+        "RW010"
+      ],
+      "result001_claim_id": "R041"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "gap_closure_002_impact": "UNAFFECTED",
+      "impact": "UNAFFECTED",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "Consistent with ETSI's separation of constraints from status indications.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [
+        "RW022",
+        "RW003"
+      ],
+      "result001_claim_id": "R042"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "REQUIRES_CONTEXT",
+      "impact": "REQUIRES_CONTEXT",
+      "landscape_001_impact": "REQUIRES_CONTEXT",
+      "reason": "PoE's EAC and SLSA's VSA are both named artifacts occupying the role RESULT-001 leaves unnamed; the absence must be stated against them.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW019",
+        "RW027",
+        "RW021"
+      ],
+      "result001_claim_id": "R043"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "PARTIALLY_PRECEDED",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "PARTIALLY_PRECEDED",
+      "reason": "Package self-verification is preceded.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW027",
+        "RW021",
+        "RW011"
+      ],
+      "result001_claim_id": "R044"
+    },
+    {
+      "changed_this_pass": true,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "REQUIRES_NARROWING",
+      "impact": "POTENTIALLY_DISTINCTIVE",
+      "landscape_001_impact": "POTENTIALLY_DISTINCTIVE",
+      "reason": "Same basis as R005.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [
+        "RW031",
+        "RW027",
+        "RW030"
+      ],
+      "result001_claim_id": "R045"
+    },
+    {
+      "changed_this_pass": true,
+      "current_claim_class": "INTERPRETATION",
+      "gap_closure_002_impact": "REQUIRES_NARROWING",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "PARTIALLY_PRECEDED",
+      "reason": "The two-valued-status critique is now explicitly made in the contemporary literature.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW029",
+        "RW030",
+        "RW022"
+      ],
+      "result001_claim_id": "R046"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "INTERPRETATION",
+      "gap_closure_002_impact": "PARTIALLY_PRECEDED",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "PARTIALLY_PRECEDED",
+      "reason": "Unchanged.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW014",
+        "RW024",
+        "RW028"
+      ],
+      "result001_claim_id": "R047"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "LIMITATION",
+      "gap_closure_002_impact": "UNAFFECTED",
+      "impact": "UNAFFECTED",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "A limitation statement.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [],
+      "result001_claim_id": "R048"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "gap_closure_002_impact": "UNAFFECTED",
+      "impact": "UNAFFECTED",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "A statement about RESULT-001's own figure.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [],
+      "result001_claim_id": "R049"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "gap_closure_002_impact": "POTENTIALLY_DISTINCTIVE",
+      "impact": "POTENTIALLY_DISTINCTIVE",
+      "landscape_001_impact": "POTENTIALLY_DISTINCTIVE",
+      "publication_role": "IMPLEMENTATION_INVARIANT",
+      "reason": "PUBLICATION_ROLE = IMPLEMENTATION_INVARIANT per §8. No examined system documents the absence of an assert-currency parameter, but this may not carry any distinctiveness thesis.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [
+        "RW027",
+        "RW029",
+        "RW003"
+      ],
+      "result001_claim_id": "R050"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "PARTIALLY_PRECEDED",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "PARTIALLY_PRECEDED",
+      "reason": "Named vocabularies of non-satisfaction causes are preceded.",
+      "recommended_manuscript_action": "REFRAME",
+      "related_source_ids": [
+        "RW022",
+        "RW030",
+        "RW029"
+      ],
+      "result001_claim_id": "R051"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "gap_closure_002_impact": "PARTIALLY_PRECEDED",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "PARTIALLY_PRECEDED",
+      "reason": "Reinforced: EAC issuance is conditioned on a validity predicate, and Mandato conditions issuance on chain verification and attenuation.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW027",
+        "RW030",
+        "RW012"
+      ],
+      "result001_claim_id": "R052"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "PARTIALLY_PRECEDED",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "POTENTIALLY_DISTINCTIVE",
+      "reason": "PoE separates the validator's PoE=1 determination from EAC issuance from the record plane. Three separately addressable acts over evidence are preceded in a measured system.",
+      "recommended_manuscript_action": "NARROW",
+      "related_source_ids": [
+        "RW027",
+        "RW019",
+        "RW021"
+      ],
+      "result001_claim_id": "R053"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "UNAFFECTED",
+      "impact": "UNAFFECTED",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "A methodological fact.",
+      "recommended_manuscript_action": "NONE",
+      "related_source_ids": [],
+      "result001_claim_id": "R054"
+    },
+    {
+      "changed_this_pass": true,
+      "current_claim_class": "OBSERVATION",
+      "gap_closure_002_impact": "UNAFFECTED",
+      "impact": "UNAFFECTED",
+      "landscape_001_impact": "UNAFFECTED",
+      "reason": "A bounded-demonstration fact; PoE's deny-side null effect is the analogous invariant.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW027",
+        "RW030"
+      ],
+      "result001_claim_id": "R055"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "gap_closure_002_impact": "PARTIALLY_PRECEDED",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "PARTIALLY_PRECEDED",
+      "reason": "Pass-by-reference with receiver-side verification is preceded.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW027",
+        "RW011",
+        "RW019"
+      ],
+      "result001_claim_id": "R056"
+    },
+    {
+      "changed_this_pass": false,
+      "current_claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "gap_closure_002_impact": "PARTIALLY_PRECEDED",
+      "impact": "PARTIALLY_PRECEDED",
+      "landscape_001_impact": "PARTIALLY_PRECEDED",
+      "reason": "Same basis as R024.",
+      "recommended_manuscript_action": "CITE",
+      "related_source_ids": [
+        "RW011",
+        "RW019"
+      ],
+      "result001_claim_id": "R057"
+    }
+  ],
+  "gap_closure_002_counts": {
+    "CHALLENGED": 0,
+    "PARTIALLY_PRECEDED": 20,
+    "POTENTIALLY_DISTINCTIVE": 2,
+    "REQUIRES_CONTEXT": 4,
+    "REQUIRES_NARROWING": 9,
+    "SUPPORTED_BY_PRECEDENT": 2,
+    "UNAFFECTED": 20
+  },
+  "manuscript_modified_by_this_phase": false,
+  "phase_id": "OIC-ZTL-OAM-DEMO-SLICE-001-RESULT-001-RELATED-WORK-DECISIVE-GAP-CLOSURE-003",
+  "r050_publication_role": "IMPLEMENTATION_INVARIANT — removed from any distinctiveness burden per §8",
+  "record_class": "RELATED_WORK_CLAIM_IMPACT_MAP_003",
+  "supersedes": "RESULT-001-RELATED-WORK-CLAIM-IMPACT-MAP-002.json (sha256 ec8ef46d3361a55b818ce43bb23cb7a9cfdcf0e49e0e31ecbaf7e2a529de6327), preserved unmodified",
+  "total_accepted_claims": 57
+}
