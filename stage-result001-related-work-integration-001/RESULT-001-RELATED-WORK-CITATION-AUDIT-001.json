@@ -1,0 +1,474 @@
+{
+  "absence_from_search_is_not_proof_of_novelty": true,
+  "artifact_id": "OIC-ZTL-OAM-DEMO-SLICE-001-RESULT-001-RELATED-WORK-CITATION-AUDIT-001",
+  "audited_manuscript": "RESULT-001-RESEARCH-ARTIFACT-RELATED-WORK-INTEGRATED-001.md",
+  "audited_manuscript_sha256": "4bb9df8b07da8c908bc7db85041356da64a7528768fe93a72261b4cd9611358c",
+  "citations": [
+    {
+      "anchor": "Evaluation-gated issuance and preserved history under later revocation are demonstrated in a meas",
+      "assertion": "Evaluation-gated issuance and non-retrospective revocation are demonstrated in a measured system.",
+      "asserts_priority_over_source": false,
+      "citation_kind": "ATTRIBUTION",
+      "manuscript_line": 23,
+      "source_comparison_status": {
+        "RW027": "PARTIAL_PRECEDENT"
+      },
+      "source_evidence_depth": {
+        "RW027": "full_text"
+      },
+      "source_ids": [
+        "RW027"
+      ],
+      "supported_by_recorded_extraction": true
+    },
+    {
+      "anchor": "A separately addressable judgment issued over an evi",
+      "assertion": "A judgment issued over an evidence bundle by an authority distinct from the producer is normative in SLSA VSA.",
+      "asserts_priority_over_source": false,
+      "citation_kind": "ATTRIBUTION",
+      "manuscript_line": 57,
+      "source_comparison_status": {
+        "RW019": "PARTIAL_PRECEDENT"
+      },
+      "source_evidence_depth": {
+        "RW019": "normative_sections"
+      },
+      "source_ids": [
+        "RW019"
+      ],
+      "supported_by_recorded_extraction": true
+    },
+    {
+      "anchor": "Translating authoritative legal text into an executable artifact is the establis",
+      "assertion": "Statute-to-executable translation is an established research area preceding this work.",
+      "asserts_priority_over_source": false,
+      "citation_kind": "ATTRIBUTION",
+      "manuscript_line": 63,
+      "source_comparison_status": {
+        "RW001": "PARTIAL_PRECEDENT",
+        "RW002": "PARTIAL_PRECEDENT",
+        "RW026": "PARTIAL_PRECEDENT"
+      },
+      "source_evidence_depth": {
+        "RW001": "full_text",
+        "RW002": "normative_sections",
+        "RW026": "normative_sections"
+      },
+      "source_ids": [
+        "RW001",
+        "RW002",
+        "RW026"
+      ],
+      "supported_by_recorded_extraction": true
+    },
+    {
+      "anchor": "Supplying a checkable logical argument with a request is proof-carrying authorizatio",
+      "assertion": "Supplying a checkable logical argument with a request is proof-carrying authorization/authentication.",
+      "asserts_priority_over_source": false,
+      "citation_kind": "ATTRIBUTION",
+      "manuscript_line": 71,
+      "source_comparison_status": {
+        "RW006": "ADJACENT",
+        "RW007": "ADJACENT",
+        "RW008": "ADJACENT"
+      },
+      "source_evidence_depth": {
+        "RW006": "FULL_TEXT_UNAVAILABLE",
+        "RW007": "full_text",
+        "RW008": "full_text"
+      },
+      "source_ids": [
+        "RW006",
+        "RW007",
+        "RW008"
+      ],
+      "supported_by_recorded_extraction": true
+    },
+    {
+      "anchor": "Currentness gate** — determines, from separately maintained institutional state",
+      "assertion": "Norm temporality and time-varying authorization are preceded.",
+      "asserts_priority_over_source": false,
+      "citation_kind": "ATTRIBUTION",
+      "manuscript_line": 77,
+      "source_comparison_status": {
+        "RW002": "PARTIAL_PRECEDENT",
+        "RW009": "PARTIAL_PRECEDENT",
+        "RW024": "PARTIAL_PRECEDENT",
+        "RW026": "PARTIAL_PRECEDENT"
+      },
+      "source_evidence_depth": {
+        "RW002": "normative_sections",
+        "RW009": "FULL_TEXT_UNAVAILABLE",
+        "RW024": "FULL_TEXT_UNAVAILABLE",
+        "RW026": "normative_sections"
+      },
+      "source_ids": [
+        "RW002",
+        "RW009",
+        "RW026",
+        "RW024"
+      ],
+      "supported_by_recorded_extraction": true
+    },
+    {
+      "anchor": "Three-valued runtime dispositions including escal",
+      "assertion": "Three-valued runtime dispositions including escalation are argued for in contemporary agent-governance work.",
+      "asserts_priority_over_source": false,
+      "citation_kind": "ATTRIBUTION",
+      "manuscript_line": 83,
+      "source_comparison_status": {
+        "RW029": "PARTIAL_PRECEDENT",
+        "RW030": "PARTIAL_PRECEDENT"
+      },
+      "source_evidence_depth": {
+        "RW029": "full_text",
+        "RW030": "full_text"
+      },
+      "source_ids": [
+        "RW029",
+        "RW030"
+      ],
+      "supported_by_recorded_extraction": true
+    },
+    {
+      "anchor": "gated by a single-use issuance authorization cla",
+      "assertion": "Issuance/verification/reliance role separation is preceded; the evaluate-then-issue ordering is preceded by Proof of Execution.",
+      "asserts_priority_over_source": false,
+      "citation_kind": "ATTRIBUTION",
+      "manuscript_line": 87,
+      "source_comparison_status": {
+        "RW012": "PARTIAL_PRECEDENT",
+        "RW027": "PARTIAL_PRECEDENT"
+      },
+      "source_evidence_depth": {
+        "RW012": "normative_sections",
+        "RW027": "full_text"
+      },
+      "source_ids": [
+        "RW012",
+        "RW027"
+      ],
+      "supported_by_recorded_extraction": true
+    },
+    {
+      "anchor": "the execution writes a six-stage evidence tree with a manifest and digest list",
+      "assertion": "Hash-resolvable chain evidence with a separate verification step is preceded.",
+      "asserts_priority_over_source": false,
+      "citation_kind": "ATTRIBUTION",
+      "manuscript_line": 89,
+      "source_comparison_status": {
+        "RW011": "PARTIAL_PRECEDENT",
+        "RW019": "PARTIAL_PRECEDENT"
+      },
+      "source_evidence_depth": {
+        "RW011": "FULL_TEXT_UNAVAILABLE",
+        "RW019": "normative_sections"
+      },
+      "source_ids": [
+        "RW011",
+        "RW019"
+      ],
+      "supported_by_recorded_extraction": true
+    },
+    {
+      "anchor": "SIGNED produces a true mark; explicitly UNSIGNED or INVALID produces a fa",
+      "assertion": "Distinguishing undefined from false, and unresolved-as-not-false, are preceded.",
+      "asserts_priority_over_source": false,
+      "citation_kind": "ATTRIBUTION",
+      "manuscript_line": 120,
+      "source_comparison_status": {
+        "RW013": "PARTIAL_PRECEDENT",
+        "RW017": "PARTIAL_PRECEDENT",
+        "RW022": "PARTIAL_PRECEDENT"
+      },
+      "source_evidence_depth": {
+        "RW013": "normative_sections",
+        "RW017": "FULL_TEXT_UNAVAILABLE",
+        "RW022": "normative_sections"
+      },
+      "source_ids": [
+        "RW013",
+        "RW017",
+        "RW022"
+      ],
+      "supported_by_recorded_extraction": true
+    },
+    {
+      "anchor": "Rhodes and Kang issue an Execution Attestation Certificate only",
+      "assertion": "Rhodes and Kang issue an attestation certificate only when a measured predicate holds.",
+      "asserts_priority_over_source": false,
+      "citation_kind": "ATTRIBUTION",
+      "manuscript_line": 188,
+      "source_comparison_status": {
+        "RW027": "PARTIAL_PRECEDENT"
+      },
+      "source_evidence_depth": {
+        "RW027": "full_text"
+      },
+      "source_ids": [
+        "RW027"
+      ],
+      "supported_by_recorded_extraction": true
+    },
+    {
+      "anchor": "A SLSA Verification Summary Attestation i",
+      "assertion": "SLSA VSA is a judgment over an evidence bundle a consumer may accept or re-check.",
+      "asserts_priority_over_source": false,
+      "citation_kind": "ATTRIBUTION",
+      "manuscript_line": 253,
+      "source_comparison_status": {
+        "RW019": "PARTIAL_PRECEDENT"
+      },
+      "source_evidence_depth": {
+        "RW019": "normative_sections"
+      },
+      "source_ids": [
+        "RW019"
+      ],
+      "supported_by_recorded_extraction": true
+    },
+    {
+      "anchor": "Rules as code and legal knowledge representation.",
+      "assertion": "Catala proved core; LegalRuleML three temporal dimensions plus Authority/Jurisdiction; OpenFisca dated parameters.",
+      "asserts_priority_over_source": false,
+      "citation_kind": "RELATED_WORK",
+      "manuscript_line": 286,
+      "source_comparison_status": {
+        "RW001": "PARTIAL_PRECEDENT",
+        "RW002": "PARTIAL_PRECEDENT",
+        "RW026": "PARTIAL_PRECEDENT"
+      },
+      "source_evidence_depth": {
+        "RW001": "full_text",
+        "RW002": "normative_sections",
+        "RW026": "normative_sections"
+      },
+      "source_ids": [
+        "RW001",
+        "RW002",
+        "RW026"
+      ],
+      "supported_by_recorded_extraction": true
+    },
+    {
+      "anchor": "Authorization, trust management and policy engines.",
+      "assertion": "XACML Indeterminate arises on evaluation error; KeyNote separates evaluation from enforcement; Rego undefined vs false and OPA decision logs; TRBAC times the role.",
+      "asserts_priority_over_source": false,
+      "citation_kind": "RELATED_WORK",
+      "manuscript_line": 288,
+      "source_comparison_status": {
+        "RW003": "CONTRAST",
+        "RW004": "PARTIAL_PRECEDENT",
+        "RW009": "PARTIAL_PRECEDENT",
+        "RW013": "PARTIAL_PRECEDENT"
+      },
+      "source_evidence_depth": {
+        "RW003": "normative_sections",
+        "RW004": "normative_sections",
+        "RW009": "FULL_TEXT_UNAVAILABLE",
+        "RW013": "normative_sections"
+      },
+      "source_ids": [
+        "RW003",
+        "RW004",
+        "RW013",
+        "RW009"
+      ],
+      "supported_by_recorded_extraction": true
+    },
+    {
+      "anchor": "Warrant and proof-carrying systems.",
+      "assertion": "In PCA/NAL the proof is the authorization argument.",
+      "asserts_priority_over_source": false,
+      "citation_kind": "RELATED_WORK",
+      "manuscript_line": 290,
+      "source_comparison_status": {
+        "RW006": "ADJACENT",
+        "RW007": "ADJACENT",
+        "RW008": "ADJACENT"
+      },
+      "source_evidence_depth": {
+        "RW006": "FULL_TEXT_UNAVAILABLE",
+        "RW007": "full_text",
+        "RW008": "full_text"
+      },
+      "source_ids": [
+        "RW006",
+        "RW007",
+        "RW008"
+      ],
+      "supported_by_recorded_extraction": true
+    },
+    {
+      "anchor": "Provenance, attestation and supply chain.",
+      "assertion": "PROV retrospective without integrity; in-toto authorized functionaries; SLSA VSA; CT append-only with a non-static trusted-log set.",
+      "asserts_priority_over_source": false,
+      "citation_kind": "RELATED_WORK",
+      "manuscript_line": 292,
+      "source_comparison_status": {
+        "RW010": "CONTRAST",
+        "RW011": "PARTIAL_PRECEDENT",
+        "RW019": "PARTIAL_PRECEDENT",
+        "RW021": "PARTIAL_PRECEDENT"
+      },
+      "source_evidence_depth": {
+        "RW010": "normative_sections",
+        "RW011": "FULL_TEXT_UNAVAILABLE",
+        "RW019": "normative_sections",
+        "RW021": "full_text"
+      },
+      "source_ids": [
+        "RW010",
+        "RW011",
+        "RW019",
+        "RW021"
+      ],
+      "supported_by_recorded_extraction": true
+    },
+    {
+      "anchor": "Credentials and reliance.",
+      "assertion": "VC-DM issue/verify/validate/rely with no prescribed issuer evaluation and validation out of scope; evaluate-then-issue preceded by Rhodes and Kang.",
+      "asserts_priority_over_source": false,
+      "citation_kind": "RELATED_WORK",
+      "manuscript_line": 294,
+      "source_comparison_status": {
+        "RW012": "PARTIAL_PRECEDENT",
+        "RW027": "PARTIAL_PRECEDENT"
+      },
+      "source_evidence_depth": {
+        "RW012": "normative_sections",
+        "RW027": "full_text"
+      },
+      "source_ids": [
+        "RW012",
+        "RW027"
+      ],
+      "supported_by_recorded_extraction": true
+    },
+    {
+      "anchor": "Signature validation and unresolved verdicts.",
+      "assertion": "ETSI EN 319 102-1 three-valued verdict with sub-indications naming the cause.",
+      "asserts_priority_over_source": false,
+      "citation_kind": "RELATED_WORK",
+      "manuscript_line": 296,
+      "source_comparison_status": {
+        "RW022": "PARTIAL_PRECEDENT"
+      },
+      "source_evidence_depth": {
+        "RW022": "normative_sections"
+      },
+      "source_ids": [
+        "RW022"
+      ],
+      "supported_by_recorded_extraction": true
+    },
+    {
+      "anchor": "Compliance monitoring.",
+      "assertion": "Ten compliance-monitoring functionalities; none covers non-evaluation due to an earlier terminating gate.",
+      "asserts_priority_over_source": false,
+      "citation_kind": "RELATED_WORK",
+      "manuscript_line": 298,
+      "source_comparison_status": {
+        "RW031": "CONTRAST"
+      },
+      "source_evidence_depth": {
+        "RW031": "full_text"
+      },
+      "source_ids": [
+        "RW031"
+      ],
+      "supported_by_recorded_extraction": true
+    },
+    {
+      "anchor": "Normative conflict.",
+      "assertion": "Defeasible deontic logic: superiority relation and weak permission under unresolved conflict.",
+      "asserts_priority_over_source": false,
+      "citation_kind": "RELATED_WORK",
+      "manuscript_line": 300,
+      "source_comparison_status": {
+        "RW017": "PARTIAL_PRECEDENT"
+      },
+      "source_evidence_depth": {
+        "RW017": "FULL_TEXT_UNAVAILABLE"
+      },
+      "source_ids": [
+        "RW017"
+      ],
+      "supported_by_recorded_extraction": true
+    },
+    {
+      "anchor": "Contemporary agent governance.",
+      "assertion": "Rhodes and Kang; Salfeld-Nebgen check-to-use gap; Tallam against Boolean allow/deny; Racioppi signed mandates read as design.",
+      "asserts_priority_over_source": false,
+      "citation_kind": "RELATED_WORK",
+      "manuscript_line": 302,
+      "source_comparison_status": {
+        "RW027": "PARTIAL_PRECEDENT",
+        "RW028": "PARTIAL_PRECEDENT",
+        "RW029": "PARTIAL_PRECEDENT",
+        "RW030": "PARTIAL_PRECEDENT"
+      },
+      "source_evidence_depth": {
+        "RW027": "full_text",
+        "RW028": "full_text",
+        "RW029": "full_text",
+        "RW030": "full_text"
+      },
+      "source_ids": [
+        "RW027",
+        "RW028",
+        "RW029",
+        "RW030"
+      ],
+      "supported_by_recorded_extraction": true
+    }
+  ],
+  "citations_added_beyond_ledger": 0,
+  "counts": {
+    "citations": 20,
+    "distinct_sources_cited": 23,
+    "quotations": 3
+  },
+  "every_citation_traces_to_ledger_source": true,
+  "fabricated_citations": 0,
+  "novelty_first_unique_unprecedented_claims": "NOT_AUTHORIZED",
+  "prohibited_vocabulary_occurrences": {
+    "\\bno prior work\\b": 0,
+    "\\bnovel\\b": 0,
+    "\\bunique\\b": 0,
+    "\\bunprecedented\\b": 0,
+    "\\bwe are the first\\b": 0,
+    "state of the art": 0
+  },
+  "publication_authorized": false,
+  "quotations": [
+    {
+      "ledger_file": "RESULT-001-RELATED-WORK-SOURCE-LEDGER-003.json",
+      "manuscript_line": 174,
+      "quotation": "have not failed but there is insufficient information to determine",
+      "source_evidence_depth": "normative_sections",
+      "source_id": "RW022",
+      "verbatim_present_in_source_ledger": true
+    },
+    {
+      "ledger_file": "RESULT-001-RELATED-WORK-SOURCE-LEDGER-003.json",
+      "manuscript_line": 288,
+      "quotation": "KeyNote does not directly enforce policy; it only provides advice to the applications that call it",
+      "source_evidence_depth": "normative_sections",
+      "source_id": "RW004",
+      "verbatim_present_in_source_ledger": true
+    },
+    {
+      "ledger_file": "RESULT-001-RELATED-WORK-SOURCE-LEDGER-003.json",
+      "manuscript_line": 292,
+      "quotation": "neither unified nor static",
+      "source_evidence_depth": "full_text",
+      "source_id": "RW021",
+      "verbatim_present_in_source_ledger": true
+    }
+  ],
+  "record_class": "RELATED_WORK_CITATION_AUDIT",
+  "search_completeness_claimed": false,
+  "source_ledger_sha256": "49bb905028872b79280854056a34716d88eee634d8f28b998a89c2c289f0630f",
+  "sources_available_in_ledger": 31
+}

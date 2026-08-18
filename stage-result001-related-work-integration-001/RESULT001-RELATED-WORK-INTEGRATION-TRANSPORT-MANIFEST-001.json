@@ -1,0 +1,79 @@
+{
+  "absence_from_search_is_not_proof_of_novelty": true,
+  "authorization_note": "The owner issued this work order and the intellectual adjudication directly. No artifact was written to owner-decisions/** because this role is not authorized to author owner-decision artifacts or to impersonate the owner principal. The absence of an owner-decisions/** artifact does NOT convert the explicit owner authorization into NOT_AUTHORIZED.",
+  "members": [
+    {
+      "bytes": 9024,
+      "path": "RESULT-001-ARCHITECTURE-RELATED-WORK-001.mmd",
+      "sha256": "1f110c80ee5e5c7e01bdaa05c8f3d887a2acce5d48b72ed85ee2a5874f115e15",
+      "sha512": "39062ea43eb9c6426c4c8cf77721b91f9b77f38e01e32ef95da0e282e74836cf071d2afccb3d432d45e1c17cc401a3ea62b829b3d3c4727dcab7a866d8ae7d20"
+    },
+    {
+      "bytes": 15908,
+      "path": "RESULT-001-RELATED-WORK-CITATION-AUDIT-001.json",
+      "sha256": "48e87e777d2320df664111c68d089a7bb4bd259b1b2bdcffe28b34cb4930083e",
+      "sha512": "31473797701a048704b5fe444f098265bf753c7929c8ed29ead032365379f6822b9ac198547cdd4f16a949816524bcd9cb7fc325809d1d3312d6a7b1a709ab02"
+    },
+    {
+      "bytes": 58332,
+      "path": "RESULT-001-RESEARCH-ARTIFACT-CLAIM-MAP-RELATED-WORK-001.json",
+      "sha256": "69b8b50f097dd195ead08c5e0d4e5f514838e160b0d7a917de4f71d4762929db",
+      "sha512": "9422be774f6d7ccbc3402546462b9cc13f9cb6b848c304a2898d229b36021bd6fee5139a883c7907ef9bb78ee1ab92db9cb17ff54032bba05b2971faa9f39b37"
+    },
+    {
+      "bytes": 47068,
+      "path": "RESULT-001-RESEARCH-ARTIFACT-RELATED-WORK-INTEGRATED-001.md",
+      "sha256": "4bb9df8b07da8c908bc7db85041356da64a7528768fe93a72261b4cd9611358c",
+      "sha512": "f6dfc844cd5017262a3da9bc4d66430f9c25ba74b77ea71ee1d12d3678ad422b024942752346bd0d3f2554bcb8fe9a848b955623fb06712b86c727e6afd95468"
+    }
+  ],
+  "not_established": [
+    "INDEPENDENT_TIER1_REPRODUCTION",
+    "INDEPENDENT_ASSURANCE",
+    "PRODUCTION_READINESS",
+    "INSTITUTIONAL_VALIDITY",
+    "NOVELTY"
+  ],
+  "owner_authorization_basis": "OIC-ZTL-OAM-DEMO-SLICE-001-RESULT-001-RELATED-WORK-INTEGRATION-001",
+  "owner_decision_artifact_in_owner_decisions_path": false,
+  "owner_intellectual_adjudication": {
+    "R050": "IMPLEMENTATION_INVARIANT_NOT_CONTRIBUTION",
+    "component_level_contribution": "PRECEDED",
+    "composition_level_contribution": "SUBSTANTIALLY_PRECEDED_WITH_BOUNDED_SURVIVING_SEPARATIONS",
+    "integrated_chain_contribution": "INTEGRATED_CHAIN_DISTINCTION_SURVIVES",
+    "novelty_first_unique_unprecedented_claims": "NOT_AUTHORIZED",
+    "publication_distinctiveness": "INTEGRATION_RESULT_ONLY",
+    "surviving_integrated_properties": [
+      "S1",
+      "S8",
+      "X1"
+    ]
+  },
+  "owner_intellectual_adjudication_received": true,
+  "predecessor_frozen_and_unmodified": true,
+  "predecessor_identities": {
+    "architecture_sha256": "55c667975d131d0dfb971775a1b78524e34347b2c9758bd101743ab4d02b0aba",
+    "claim_map_sha256": "e37ea2dc907d6ca0d290ac58bebfa99be9b197eaca2c5e4f50c3e4c1c9e02422",
+    "manuscript_sha256": "88a6df39b20cd3fd4593daae830ba98a242811016d9312ef737100980294080a",
+    "source_manifest_sha256": "8bbb0a831c792e6ee89dc31783208690e6caf4157475542978ff394f46c8b614"
+  },
+  "publication_authorized": false,
+  "record_class": "IMPLEMENTER_EXECUTION_TRANSPORT_MANIFEST",
+  "role": "IMPLEMENTER_EXECUTION",
+  "search_completeness_claimed": false,
+  "stage_id": "stage-result001-related-work-integration-001",
+  "strongest_supported_claim": "MEASURED_INTERNAL_END_TO_END_TECHNICAL_DEMONSTRATION",
+  "successor_artifacts_created": 5,
+  "successor_artifacts_transported": 4,
+  "withheld_from_ledger": [
+    {
+      "artifact": "RESULT-001-RESEARCH-ARTIFACT-SOURCE-MANIFEST-RELATED-WORK-001.json",
+      "artifact_edited_to_enable_publication": false,
+      "bytes": 8072,
+      "detail": "Inherits the predecessor manifest's internal_source_locations field, which contains local filesystem paths. The standing rule forbids editing an artifact to make it publishable, so it is withheld rather than redacted. It is identified here by digest and remains available to the owner outside the ledger.",
+      "reason": "PUBLIC_DISCLOSURE_PREFLIGHT_BLOCKER",
+      "sha256": "556477c516e3ebd0ce9cdcd4ab17339e99345a64db846f252ebd42833a1ceffa"
+    }
+  ],
+  "work_order": "OIC-ZTL-OAM-DEMO-SLICE-001-RESULT-001-RELATED-WORK-INTEGRATION-001"
+}

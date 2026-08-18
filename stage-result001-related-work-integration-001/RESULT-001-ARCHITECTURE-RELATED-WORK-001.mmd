@@ -1,0 +1,136 @@
+%% RESULT-001 architecture with related-work precedence annotation
+%% OIC-ZTL-OAM-DEMO-SLICE-001-RESULT-001-RELATED-WORK-INTEGRATION-001
+%%
+%% SUCCESSOR FIGURE. The predecessor RESULT-001-ARCHITECTURE-001.mmd
+%% (sha256 55c667975d131d0dfb971775a1b78524e34347b2c9758bd101743ab4d02b0aba)
+%% is frozen and is NOT modified by this artifact.
+%%
+%% This figure adds ONE thing to the predecessor: for each stage, the examined
+%% prior art that precedes it. It removes nothing. The structure, the ordering
+%% and the semantic separations are unchanged.
+%%
+%% READING RULE. A stage marked PRECEDED is not claimed here. A stage marked
+%% PARTIALLY PRECEDED is claimed only in the narrowed form stated in the
+%% manuscript. Only the three integrated properties in Part 3 are what the
+%% contribution rests on, and the contribution level adjudicated by the owner
+%% is INTEGRATION_RESULT_ONLY.
+%%
+%% Search completeness is NOT claimed. Absence from the examined set is not
+%% evidence of absence, and is never evidence of novelty.
+%% Source ledger: RESULT-001-RELATED-WORK-SOURCE-LEDGER-003.json, 31 sources.
+
+%% ---------------------------------------------------------------------------
+%% PART 1 — measured execution sequence, annotated with examined precedent
+%% ---------------------------------------------------------------------------
+flowchart TD
+
+    SRC["Synthetic Source<br/><i>policy text, declared synthetic</i>"]
+    OIC["OIC Representation / Owner Admission<br/><i>extraction confers nothing</i><br/><b>PRECEDED</b> · Catala, LegalRuleML, OpenFisca"]
+    IR["InstitutionalIR + Runtime Binding<br/><i>control envelope, version bindings</i><br/><b>PRECEDED</b> · LegalRuleML, DMN"]
+
+    ZTL["1 · ZTL Logical Warrant<br/><i>pinned external kernel</i><br/>EARNED / ON CREDIT / OPEN / REFUTED<br/><b>PRECEDED</b> · PCA, PCAuthz, NAL"]
+    CUR["2 · Currentness Gate<br/>CURRENT / SUPERSEDED / INELIGIBLE / UNKNOWN<br/><b>PRECEDED</b> · LegalRuleML temporality, TRBAC,<br/>OpenFisca, bitemporal models"]
+    AUTH["3 · Institutional Authority Gate<br/>A1 / A6 / A10 / …<br/><b>PRECEDED</b> · XACML, KeyNote, TRBAC"]
+    NEV["3' · Authority NOT_EVALUATED<br/><i>CURRENTNESS_GATE_DID_NOT_PROCEED</i><br/><b>X1 · NO EXAMINED PRECEDENT FOUND</b><br/><i>recorded non-evaluation with its causal gate</i>"]
+
+    OAM["4 · OAM Decision-Composition<br/><i>demo-specific OAMDecision</i><br/><b>four separately represented fields</b><br/><b>S1 · PARTIALLY PRECEDED</b><br/><i>components preceded; carriage of an epistemic<br/>state alongside the other three not found</i>"]
+    ACT["5 · Bounded Action Gate<br/>PERMITTED / BLOCKED / ESCALATED<br/><i>no real-world effect</i><br/><b>PRECEDED</b> · Tallam, Racioppi, ETSI three-valued"]
+
+    PROP["6 · Governed Propagation<br/><i>envelope + byte-resolvable evidence refs</i><br/><b>PRECEDED</b> · in-toto, SLSA, VC-DM"]
+    CONS["7 · Separate Consumer Revalidation<br/><i>separate OS process, different principal</i><br/>re-resolves currentness, re-evaluates authority<br/><b>S8 · PARTIALLY PRECEDED</b><br/><i>check-to-use gap named by Salfeld-Nebgen;<br/>downstream re-resolution before reliance not found</i>"]
+    REL["8 · Reliance Issuance<br/><i>single-use, exclusive creation</i><br/><b>PRECEDED</b> · VC-DM lifecycle,<br/>evaluate-then-issue by Rhodes and Kang"]
+
+    EVD["9 · Evidence Closure<br/><i>package verification and resolvability</i><br/><b>PRECEDED</b> · in-toto, SLSA VSA,<br/>Certificate Transparency"]
+    OWN["10 · Owner Claim Adjudication<br/><i>separate act, binds evidence by digest</i><br/><b>PRECEDED</b> · SLSA VSA, CT monitors"]
+
+    SRC --> OIC --> IR
+    IR --> ZTL
+    ZTL --> CUR
+    CUR -->|"G1 / PROCEED"| AUTH
+    CUR -->|"gate did not proceed"| NEV
+    AUTH --> OAM
+    NEV --> OAM
+    OAM --> ACT
+    ACT -->|"ACTION_PERMITTED only"| PROP
+    PROP --> CONS --> REL --> EVD
+    ACT -->|"blocked or escalated:<br/>absence recorded with reason"| EVD
+    EVD --> OWN
+
+%% ---------------------------------------------------------------------------
+%% PART 2 — semantic dependency structure of the composition
+%% Unchanged from the predecessor except for precedence annotation.
+%% Sequence above is not dependency. Below, the arrows mean "is an input to".
+%% The composition returns institutional_authorization_status, execution_disposition
+%% and decision_basis TOGETHER from the evaluated component set — execution_disposition
+%% is not computed from institutional_authorization_status. epistemic_status is carried
+%% from the kernel result and preserved as its own OAMDecision field.
+%% ---------------------------------------------------------------------------
+flowchart LR
+
+    KRES["Kernel result<br/><i>disposition + warranty grade + raw verdict</i>"]
+
+    subgraph INPUTS ["Distinct semantic inputs to composition"]
+        I_ROUTE["Appropriate epistemic route<br/><i>component derived from the epistemic result</i>"]
+        I_CUR["Currentness result<br/><i>state + gate reason code</i>"]
+        I_AUTH["Authority result<br/><i>decision + reason code, or NOT_EVALUATED</i>"]
+        I_CTL["Other control components<br/><i>warrant binding, evidence observation,<br/>admission and version bindings,<br/>decision mode, action-proposal identity</i>"]
+    end
+
+    COMP{{"OAM COMPOSITION<br/><i>evaluates the component set;<br/>first unmet component in the frozen order<br/>supplies the basis</i>"}}
+
+    subgraph OUTPUTS ["OAMDecision — four separately represented fields"]
+        O_EPI["epistemic_status<br/><i>carried from the kernel result;<br/>not rewritten by currentness or authority</i><br/><b>S1 · not found carried alongside<br/>the other three in one chain</b>"]
+        O_INST["institutional_authorization_status<br/>AUTHORIZED / REFUSED / UNRESOLVED<br/><i>preceded: XACML, KeyNote</i>"]
+        O_EXEC["execution_disposition<br/>ALLOW / BLOCK / ESCALATE<br/><i>preceded: Tallam, Racioppi</i>"]
+        O_BASIS["decision_basis<br/>SUBSTANTIVE / PRECAUTIONARY /<br/>PROCEDURAL / CONTROL_REQUIREMENT<br/><i>preceded in kind: ETSI sub-indications</i>"]
+    end
+
+    KRES -->|"preserved as its own field"| O_EPI
+    KRES -->|"epistemic result yields the route component"| I_ROUTE
+
+    I_ROUTE --> COMP
+    I_CUR --> COMP
+    I_AUTH --> COMP
+    I_CTL --> COMP
+
+    COMP -->|"returned together"| O_INST
+    COMP -->|"returned together"| O_EXEC
+    COMP -->|"returned together"| O_BASIS
+
+    NOTE["Semantic separation is not causal independence.<br/>The three composed fields are emitted together by one composition<br/>over the same component set — execution_disposition is NOT derived<br/>from institutional_authorization_status. The epistemic result is<br/>preserved as its own field AND supplies a route component to composition."]
+    OUTPUTS --- NOTE
+
+    classDef epistemic fill:#e8f0fe,stroke:#3367d6,stroke-width:2px,color:#111
+    classDef institutional fill:#fff4e5,stroke:#c56b00,stroke-width:2px,color:#111
+    classDef execution fill:#eaf5ea,stroke:#2e7d32,stroke-width:2px,color:#111
+    classDef composition fill:#fdf2f8,stroke:#a3005c,stroke-width:2px,color:#111
+    classDef neutral fill:#f5f5f5,stroke:#666,stroke-width:1px,color:#111
+
+    class KRES,I_ROUTE,O_EPI epistemic
+    class I_CUR,I_AUTH,O_INST institutional
+    class O_EXEC,O_BASIS execution
+    class COMP composition
+    class I_CTL,NOTE neutral
+
+%% ---------------------------------------------------------------------------
+%% PART 3 — what the integration rests on, after the examined prior art
+%% These are the three surviving properties the owner adjudicated. They are
+%% stated as "not found in the examined set", NOT as novelty. Remove any one
+%% and the position is weak; remove two and there is no distinction to report.
+%% ---------------------------------------------------------------------------
+flowchart TD
+
+    ADJ["OWNER INTELLECTUAL ADJUDICATION<br/><b>component level: PRECEDED</b><br/><b>composition level: SUBSTANTIALLY PRECEDED</b><br/><b>integrated chain: DISTINCTION SURVIVES</b><br/><b>contribution: INTEGRATION_RESULT_ONLY</b>"]
+
+    S1["<b>S1</b> — preserved epistemic state<br/><i>a logical/epistemic state carried alongside<br/>institutional authorization, execution disposition<br/>and a typed basis through one executed chain</i>"]
+    S8["<b>S8</b> — downstream revalidation before reliance<br/><i>a separate consumer re-resolves the governing rule's<br/>currentness and re-evaluates the actor's authority<br/>at its own instant, before issuing a reliance artifact</i>"]
+    X1["<b>X1</b> — recorded non-evaluation with cause<br/><i>a persisted record stating a later gate was not reached<br/>because an earlier gate stopped the path,<br/>together with that cause</i>"]
+
+    NOVELTY["<b>NOT a novelty claim.</b><br/>Not found among 31 examined sources.<br/>Search completeness is not claimed.<br/>Absence from a search is not evidence of absence.<br/>Publication: NOT AUTHORIZED."]
+
+    ADJ --> S1
+    ADJ --> S8
+    ADJ --> X1
+    S1 --> NOVELTY
+    S8 --> NOVELTY
+    X1 --> NOVELTY

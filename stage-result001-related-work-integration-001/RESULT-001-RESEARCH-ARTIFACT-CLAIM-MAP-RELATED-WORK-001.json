@@ -1,0 +1,1207 @@
+{
+  "artifact_id": "OIC-ZTL-OAM-DEMO-SLICE-001-RESULT-001-RESEARCH-ARTIFACT-RELATED-WORK-INTEGRATED-001",
+  "claims": [
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "ESTABLISHED_OWNER_CLAIM",
+      "claim_id": "R001",
+      "claim_text": "RESULT-001 executed the integrated OIC-ZTL-OAM chain end to end under one owner authorization.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "An owner-established claim about this execution.",
+      "related_source_ids": [],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "UNAFFECTED",
+      "supporting_case_ids": [
+        "case-1",
+        "case-2",
+        "case-3",
+        "case-4",
+        "case-5"
+      ],
+      "supporting_identity": "owner_claim_decision_sha256"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "ESTABLISHED_OWNER_CLAIM",
+      "claim_id": "R002",
+      "claim_text": "MEASURED_INTERNAL_END_TO_END_TECHNICAL_DEMONSTRATION is ESTABLISHED, bounded to the frozen scenario, implementation commit and kernel pin.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "The owner-established measured claim.",
+      "related_source_ids": [],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "UNAFFECTED",
+      "supporting_case_ids": [
+        "case-1",
+        "case-2",
+        "case-3",
+        "case-4",
+        "case-5"
+      ],
+      "supporting_identity": "owner_claim_decision_sha256"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R003",
+      "claim_text": "Case 1 measured ZTL EARNED/T, epistemic ESTABLISHED, currentness CURRENT/G1, authority A1, institutional AUTHORIZED, runtime ALLOW, ACTION_PERMITTED, reliance ISSUED.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "A measured observation.",
+      "related_source_ids": [],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "UNAFFECTED",
+      "supporting_case_ids": [
+        "case-1"
+      ],
+      "supporting_identity": "result-package 03-runtime/case-1-runtime.json, 04-reliance/case-1-reliance.json"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R004",
+      "claim_text": "Case 2 measured currentness SUPERSEDED/G2 with epistemic ESTABLISHED unchanged.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Reinforced against the manuscript on one side and for it on another: RW031 shows the compliance family does NOT model rule lifecycle, while RW027 pins a policy snapshot and RW028 names the check-to-use gap. Narrow to the gate-ordering property.",
+      "related_source_ids": [
+        "RW002",
+        "RW031",
+        "RW027",
+        "RW026"
+      ],
+      "related_work_action_applied": "NARROW",
+      "related_work_impact": "REQUIRES_NARROWING",
+      "supporting_case_ids": [
+        "case-2"
+      ],
+      "supporting_identity": "result-package 03-runtime/case-2-runtime.json currentness_use_gate_decision"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": true,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R005",
+      "claim_text": "In case 2 authority was not evaluated; the record carries authority_evaluated false with reason CURRENTNESS_GATE_DID_NOT_PROCEED.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "SURVIVES and is now strengthened. The authoritative CMF taxonomy of business-process compliance has no functionality for a rule left unevaluated because an upstream gate stopped the path; CMF9 gives root cause of a VIOLATION. All four contemporary agent-governance sources return zero hits for not-evaluated/skipped/short-circuit.",
+      "related_source_ids": [
+        "RW031",
+        "RW027",
+        "RW029",
+        "RW030",
+        "RW022"
+      ],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "POTENTIALLY_DISTINCTIVE",
+      "supporting_case_ids": [
+        "case-2"
+      ],
+      "supporting_identity": "result-package 03-runtime/case-2-runtime.json authority.authority_not_evaluated_reason"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R006",
+      "claim_text": "Case 3 measured authority A10 (AUTHORITY_BASIS_REVOKED) with currentness CURRENT/G1 and epistemic ESTABLISHED.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Unchanged; CT adds revocation context.",
+      "related_source_ids": [
+        "RW004",
+        "RW012",
+        "RW021"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "SUPPORTED_BY_PRECEDENT",
+      "supporting_case_ids": [
+        "case-3"
+      ],
+      "supporting_identity": "result-package 03-runtime/case-3-runtime.json authority.reason_code_id A10"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R007",
+      "claim_text": "Case 4 measured authority A6, institutional UNRESOLVED, runtime ESCALATE, decision basis PRECAUTIONARY, epistemic ESTABLISHED.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Mandato's PERMIT/ESCALATE/DENY and Five-Plane's argument for richer outcomes both narrow this further, though Mandato is planned and its ESCALATE is oversight routing.",
+      "related_source_ids": [
+        "RW022",
+        "RW030",
+        "RW029",
+        "RW017"
+      ],
+      "related_work_action_applied": "NARROW",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [
+        "case-4"
+      ],
+      "supporting_identity": "result-package 03-runtime/case-4-runtime.json oam_decision"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R008",
+      "claim_text": "Case 5 measured ZTL REFUTED/F and epistemic REFUTED while currentness was CURRENT/G1 and the authority basis passed with A1; the composed institutional_authorization_status was nonetheless REFUSED.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "A measured observation about case 5.",
+      "related_source_ids": [
+        "RW017"
+      ],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "UNAFFECTED",
+      "supporting_case_ids": [
+        "case-5"
+      ],
+      "supporting_identity": "result-package 03-runtime/case-5-runtime.json, 02-ztl/case-5-ztl.json"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R009",
+      "claim_text": "Case 5 records a distinct kernel evaluation under the v2 marking, with input and output identities different from case 1.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "A measured observation about case 5.",
+      "related_source_ids": [],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "UNAFFECTED",
+      "supporting_case_ids": [
+        "case-1",
+        "case-5"
+      ],
+      "supporting_identity": "result-package 02-ztl/case-1-ztl.json and case-5-ztl.json warrant input_hash/output_hash"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R010",
+      "claim_text": "Reliance was issued in exactly one of five cases.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Proof of Execution issues an Execution Attestation Certificate ONLY when PoE=1 — evaluation strictly gating issuance, in a measured implementation. That is the RESULT-001 ordering, and it moves R010 from a narrowing recommendation to explicit precedent. Cite RW027 alongside RW012.",
+      "related_source_ids": [
+        "RW027",
+        "RW012",
+        "RW019"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [
+        "case-1",
+        "case-2",
+        "case-3",
+        "case-4",
+        "case-5"
+      ],
+      "supporting_identity": "result_package 04-reliance"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R011",
+      "claim_text": "Cases 2-5 each carry a persisted reason for the absence of a reliance record.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Recording a reason for a non-produced outcome has an analogue in ETSI sub-indications.",
+      "related_source_ids": [
+        "RW022"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "REQUIRES_CONTEXT",
+      "supporting_case_ids": [
+        "case-2",
+        "case-3",
+        "case-4",
+        "case-5"
+      ],
+      "supporting_identity": "result_package 04-reliance case-N-absent.json"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R012",
+      "claim_text": "Case-1 reliance was issued by a separate operating-system process under a different principal after sixteen frozen consumer checks passed.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Separate downstream checking is preceded many times over; the term remains SEPARATE, not independent.",
+      "related_source_ids": [
+        "RW011",
+        "RW012",
+        "RW019",
+        "RW028"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [
+        "case-1"
+      ],
+      "supporting_identity": "result-package 04-reliance/case-1-reliance.json consumer_validation.consumer_identity"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": true,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R013",
+      "claim_text": "The case-1 separate consumer re-resolved currentness and re-evaluated authority before issuance, evidenced by frozen consumer checks 13 and 15 and the recorded re-resolution and reliance-time authority digests.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "SURVIVES the decisive test. PoE full text has zero hits for re-verify/re-evaluate/re-resolve. RW028's re-verification is retrospective third-party inspection of the log. Mandato's independent verifier checks log integrity. None re-resolves rule currentness AND re-evaluates authority before issuing a reliance-bearing artifact.",
+      "related_source_ids": [
+        "RW027",
+        "RW028",
+        "RW030",
+        "RW012",
+        "RW019"
+      ],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "POTENTIALLY_DISTINCTIVE",
+      "supporting_case_ids": [
+        "case-1"
+      ],
+      "supporting_identity": "result-package 04-reliance/case-1-reliance.json consumer_validation checks 13 and 15"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R014",
+      "claim_text": "The case-1 reliance record digest is 21fc11e8861bedd3f77869ef61f7c794c5ec728b7a3dcb0c236b50550f9bcb83.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "A measured observation.",
+      "related_source_ids": [],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "UNAFFECTED",
+      "supporting_case_ids": [
+        "case-1"
+      ],
+      "supporting_identity": "result-package 04-reliance/case-1-reliance.json reliance_record.reliance_record_digest"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R015",
+      "claim_text": "The canonical package verified with 27 artifacts checked, 0 mismatches and 0 missing files.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Same basis as R016.",
+      "related_source_ids": [
+        "RW021",
+        "RW011"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [
+        "case-1",
+        "case-2",
+        "case-3",
+        "case-4",
+        "case-5"
+      ],
+      "supporting_identity": "evidence_closure_sha256 201c5e22…, result-package 05-evidence/SHA256SUMS"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R016",
+      "claim_text": "The complete evidence freeze holds 41 regular files, of which the checksum list governs 40 — it excludes itself — verifying with 0 mismatches and 0 missing files.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Package-versus-checksum-list verification is preceded by CT's inclusion and consistency proofs.",
+      "related_source_ids": [
+        "RW021",
+        "RW011"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [
+        "case-1",
+        "case-2",
+        "case-3",
+        "case-4",
+        "case-5"
+      ],
+      "supporting_identity": "complete_freeze_sha256sums_sha256 af670b0d…, freeze tree file count"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R017",
+      "claim_text": "The case-1 raw reliance chain is resolvable with 0 unresolved references.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Same basis as R016.",
+      "related_source_ids": [
+        "RW021",
+        "RW011"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [
+        "case-1"
+      ],
+      "supporting_identity": "evidence_closure_sha256 201c5e22… case1_raw_reliance_chain_resolvable"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "claim_id": "R018",
+      "claim_text": "Propagation evidence references carry a locator and a digest, and the consumer recomputes rather than trusting an identifier.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Byte-resolvable evidence with recomputation is standard; PoE adds envelope and event hashing.",
+      "related_source_ids": [
+        "RW027",
+        "RW011",
+        "RW019"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [
+        "case-1"
+      ],
+      "supporting_identity": "src/oic/demo_runtime.py resolve_evidence_ref at a2ece68f; work/case-1 envelope evidence_refs"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "claim_id": "R019",
+      "claim_text": "The demo-specific OAMDecision composition record carries epistemic_status, institutional_authorization_status, execution_disposition and decision_basis as four separately represented fields that are not semantically interchangeable.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Five-Plane argues with a measured core that Boolean allow/deny is structurally insufficient and enumerates richer outcomes. The four-field claim must be narrowed to the specific set including a typed decision_basis and a preserved epistemic field.",
+      "related_source_ids": [
+        "RW029",
+        "RW030",
+        "RW022",
+        "RW003"
+      ],
+      "related_work_action_applied": "NARROW",
+      "related_work_impact": "REQUIRES_NARROWING",
+      "supporting_case_ids": [
+        "case-1",
+        "case-2",
+        "case-3",
+        "case-4",
+        "case-5"
+      ],
+      "supporting_identity": "schemas/demo/oam-decision.schema.json at a2ece68f; result-package 03-runtime/*-runtime.json"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "claim_id": "R020",
+      "claim_text": "The kernel-derived epistemic_status is preserved as its own field and is not rewritten by a currentness or authority outcome; the other three fields are composed outputs and the composition reads an appropriate-epistemic-route component alongside currentness, authority and the other control components.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "KeyNote's advice/enforcement split remains the precedent; ETSI adds a structured status upstream of the relying decision.",
+      "related_source_ids": [
+        "RW004",
+        "RW022"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [
+        "case-2",
+        "case-3",
+        "case-4"
+      ],
+      "supporting_identity": "src/oic/demo_runtime.py _components/_compose at a2ece68f"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "claim_id": "R021",
+      "claim_text": "Authority is not a ZTL ground; the evaluated formula names only the amount and evidence grounds.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Unchanged.",
+      "related_source_ids": [
+        "RW001",
+        "RW002"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "SUPPORTED_BY_PRECEDENT",
+      "supporting_case_ids": [
+        "case-1",
+        "case-2",
+        "case-3",
+        "case-4",
+        "case-5"
+      ],
+      "supporting_identity": "demo/.../SCENARIO.json ztl.positive_formula; result-package 02-ztl kernel_input"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "claim_id": "R022",
+      "claim_text": "An unobserved or unknown evidence state supplies no kernel mark, leaving the atom unverified rather than false.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Reinforced: ETSI's insufficient-information verdict is the same instinct at the validation layer.",
+      "related_source_ids": [
+        "RW003",
+        "RW013",
+        "RW022"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [],
+      "supporting_identity": "src/oic/demo_compiler.py EVIDENCE_STATE_TO_MARK at a2ece68f"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "claim_id": "R023",
+      "claim_text": "Extraction confers no executability; a candidate becomes executable only when an owner-authored admission record names it.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Unchanged in substance; OpenFisca added as a deployed instance.",
+      "related_source_ids": [
+        "RW001",
+        "RW002",
+        "RW026"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [
+        "case-1",
+        "case-2",
+        "case-3",
+        "case-4",
+        "case-5"
+      ],
+      "supporting_identity": "src/oic/demo_compiler.py compile_policy admission gate at a2ece68f; 01-oic candidates vs admission_ids"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "claim_id": "R024",
+      "claim_text": "The kernel is reached at a pinned commit through exactly one bridge, which verifies the checkout before importing.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Pin-before-use is preceded across the supply-chain family.",
+      "related_source_ids": [
+        "RW011",
+        "RW019"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [
+        "case-1",
+        "case-5"
+      ],
+      "supporting_identity": "adapters/ztl/demo_bridge.py at a2ece68f; result-package 02-ztl kernel_execution_identity"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "claim_id": "R025",
+      "claim_text": "The evidence package reports the measured condition; the claim became established only through a separate owner adjudication bound to the evidence by digest.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Unchanged in disposition; now further preceded by PoE's validator/attestation split and by RW028's third-party re-inspection of recorded decisions.",
+      "related_source_ids": [
+        "RW019",
+        "RW027",
+        "RW028"
+      ],
+      "related_work_action_applied": "NARROW",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [
+        "case-1",
+        "case-2",
+        "case-3",
+        "case-4",
+        "case-5"
+      ],
+      "supporting_identity": "owner_claim_decision_sha256, canonical_record_sha256"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R026",
+      "claim_text": "The implementation and synthetic scenario are available in the public repository; the evidence bytes remain owner-held.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "A publication-posture fact.",
+      "related_source_ids": [
+        "RW019"
+      ],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "UNAFFECTED",
+      "supporting_case_ids": [],
+      "supporting_identity": "repository pointer 041ba2da, evidence_hosting OWNER_HELD_EXTERNAL_FREEZE"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R027",
+      "claim_text": "RESULT-001's implementation identity is a2ece68f and is not rewritten by the later provenance merge ac52dcde.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "A commit-identity fact.",
+      "related_source_ids": [],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "UNAFFECTED",
+      "supporting_case_ids": [],
+      "supporting_identity": "pointer historical_implementation_commit"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "INTERPRETATION",
+      "claim_id": "R028",
+      "claim_text": "Case 4 shows that an unresolved institutional question need not be recorded as a negative finding about the proposition.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Same basis as R007.",
+      "related_source_ids": [
+        "RW022",
+        "RW030",
+        "RW017"
+      ],
+      "related_work_action_applied": "NARROW",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [
+        "case-4"
+      ],
+      "supporting_identity": "case-4 measured values"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "INTERPRETATION",
+      "claim_id": "R029",
+      "claim_text": "Cases 2, 3 and 5 end in BLOCK with different decision_basis values while case 4 ends in ESCALATE; case 5 is the substantive refutation among them.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "CMF9 root-cause analysis is the closest analogue to a typed basis.",
+      "related_source_ids": [
+        "RW022",
+        "RW031",
+        "RW017"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "REQUIRES_CONTEXT",
+      "supporting_case_ids": [
+        "case-2",
+        "case-3",
+        "case-4",
+        "case-5"
+      ],
+      "supporting_identity": "decision_basis values across cases 2,3,4,5"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": true,
+      "claim_ceiling_compatible": true,
+      "claim_class": "INTERPRETATION",
+      "claim_id": "R030",
+      "claim_text": "Recording a question that was not asked as NOT_EVALUATED preserves information a satisfied code would have destroyed.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Upgraded from REQUIRES_NARROWING. CMF9 explains why a violation occurred, not why an evaluation did not occur.",
+      "related_source_ids": [
+        "RW031",
+        "RW022"
+      ],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "POTENTIALLY_DISTINCTIVE",
+      "supporting_case_ids": [
+        "case-2"
+      ],
+      "supporting_identity": "case-2 authority record"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "INTERPRETATION",
+      "claim_id": "R031",
+      "claim_text": "The architecture applies its own observation/adjudication separation to itself at the reporting boundary.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "The reporting-boundary interpretation must now be positioned against PoE, SLSA and RW028, all of which separate producing evidence from judging it.",
+      "related_source_ids": [
+        "RW027",
+        "RW019",
+        "RW028"
+      ],
+      "related_work_action_applied": "REFRAME",
+      "related_work_impact": "REQUIRES_NARROWING",
+      "supporting_case_ids": [],
+      "supporting_identity": "owner_claim_decision_sha256 vs package measured flag"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "LIMITATION",
+      "claim_id": "R032",
+      "claim_text": "This result is bounded to one synthetic scenario, one policy family, one implementation commit and one execution.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "A limitation statement.",
+      "related_source_ids": [],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "UNAFFECTED",
+      "supporting_case_ids": [
+        "case-1",
+        "case-2",
+        "case-3",
+        "case-4",
+        "case-5"
+      ],
+      "supporting_identity": "scenario_bundle_digest, implementation commit a2ece68f"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "LIMITATION",
+      "claim_id": "R033",
+      "claim_text": "No qualifying independent Tier-1 reproduction is established or evidenced in the RESULT-001 record.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "A limitation statement.",
+      "related_source_ids": [
+        "RW016"
+      ],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "UNAFFECTED",
+      "supporting_case_ids": [],
+      "supporting_identity": "owner_claim_decision_sha256 d14f896c… not_established list; evidence_closure_sha256 201c5e22…"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "LIMITATION",
+      "claim_id": "R034",
+      "claim_text": "No production-readiness, institutional-validity or legal-validity finding is made.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "A limitation statement.",
+      "related_source_ids": [
+        "RW016"
+      ],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "UNAFFECTED",
+      "supporting_case_ids": [],
+      "supporting_identity": "owner_claim_decision not_established list"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "LIMITATION",
+      "claim_id": "R035",
+      "claim_text": "The bounded action gate performs no real-world effect and is not non-bypassable production enforcement.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "A limitation statement.",
+      "related_source_ids": [
+        "RW003"
+      ],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "UNAFFECTED",
+      "supporting_case_ids": [
+        "case-1"
+      ],
+      "supporting_identity": "03-runtime bounded_action performs_real_world_effect false"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "LIMITATION",
+      "claim_id": "R036",
+      "claim_text": "RESULT-001 is not a benchmark.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "A limitation statement.",
+      "related_source_ids": [],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "UNAFFECTED",
+      "supporting_case_ids": [],
+      "supporting_identity": "pointer benchmark_status NOT_A_BENCHMARK"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "LIMITATION",
+      "claim_id": "R037",
+      "claim_text": "The evidence bytes are not publicly released and no qualifying independent reproduction has been submitted to or established by this record, so no reproduction claim is made.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "A limitation statement.",
+      "related_source_ids": [],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "UNAFFECTED",
+      "supporting_case_ids": [],
+      "supporting_identity": "repository evidence pointer 041ba2da… evidence_publication_status NOT_PUBLICLY_RELEASED"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "LIMITATION",
+      "claim_id": "R038",
+      "claim_text": "The remote CI runs referenced in the repository are project-controlled validation of the project's own test contract and do not constitute independent assurance.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "A limitation statement; SLSA reinforces the project-controlled-validation point.",
+      "related_source_ids": [
+        "RW013",
+        "RW019"
+      ],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "UNAFFECTED",
+      "supporting_case_ids": [],
+      "supporting_identity": ".github/workflows/ci.yml at implementation commit a2ece68f; live-ztl-demo job"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "claim_id": "R039",
+      "claim_text": "A single verdict that does not separately preserve these states cannot, by that verdict alone, distinguish them.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Further softened: Five-Plane makes the same argument about single-verdict insufficiency.",
+      "related_source_ids": [
+        "RW029",
+        "RW022"
+      ],
+      "related_work_action_applied": "NARROW",
+      "related_work_impact": "REQUIRES_NARROWING",
+      "supporting_case_ids": [],
+      "supporting_identity": "problem framing bounded to the architecture under test"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "claim_id": "R040",
+      "claim_text": "In this experiment authority is evaluated as a separate institutional condition and is not encoded among the ZTL grounds.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Unchanged.",
+      "related_source_ids": [
+        "RW001",
+        "RW002"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "REQUIRES_CONTEXT",
+      "supporting_case_ids": [
+        "case-1",
+        "case-2",
+        "case-3",
+        "case-4",
+        "case-5"
+      ],
+      "supporting_identity": "scenario_bundle_digest, 02-ztl kernel input"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R041",
+      "claim_text": "Observations are recorded as their own artifacts: the raw kernel result, the synthetic evidence observation, and the consumer's re-resolved currentness and reliance-time authority values.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Observations as addressable artifacts are preceded.",
+      "related_source_ids": [
+        "RW027",
+        "RW028",
+        "RW010"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [
+        "case-1"
+      ],
+      "supporting_identity": "result-package 02-ztl raw_kernel_result, 00-source evidence_observation, 04-reliance consumer_validation"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "claim_id": "R042",
+      "claim_text": "Criteria are the frozen evaluation rules and predicates the observations are tested against — the currentness evaluation procedure, the authority evaluation procedure, the warrant requirements in the runtime binding, and the component predicates required before ALLOW. Reason codes such as G1, G2, A1, A6 and A10 are controlled outputs of those evaluations, not the criteria themselves.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Consistent with ETSI's separation of constraints from status indications.",
+      "related_source_ids": [
+        "RW022",
+        "RW003"
+      ],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "UNAFFECTED",
+      "supporting_case_ids": [],
+      "supporting_identity": "src/oic/cdc_currentness.py resolve_currentness/evaluate_present_use, src/oic/cdc_authority.py evaluate_synthetic_authority, src/oic/demo_runtime.py _components, at implementation commit a2ece68f"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R043",
+      "claim_text": "RESULT-001 instantiates no separately named adjudication artifact; the evidence closure record verified the package and recorded the owner decision as pending.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "PoE's EAC and SLSA's VSA are both named artifacts occupying the role RESULT-001 leaves unnamed; the absence must be stated against them.",
+      "related_source_ids": [
+        "RW019",
+        "RW027",
+        "RW021"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "REQUIRES_CONTEXT",
+      "supporting_case_ids": [],
+      "supporting_identity": "evidence_closure_sha256 201c5e22… record_class RESULT_BEARING_EVIDENCE_CLOSURE"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R044",
+      "claim_text": "The evidence closure verified the canonical package against its digest list, re-checked the freeze, and confirmed the case-1 reliance chain resolves with no unresolved references.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Package self-verification is preceded.",
+      "related_source_ids": [
+        "RW027",
+        "RW021",
+        "RW011"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [
+        "case-1"
+      ],
+      "supporting_identity": "evidence_closure_sha256 201c5e22… canonical_entries_checked / unresolved_raw_references"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": true,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R045",
+      "claim_text": "A question the currentness gate did not reach is recorded as NOT_EVALUATED with its reason rather than as an authority answer.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Same basis as R005.",
+      "related_source_ids": [
+        "RW031",
+        "RW027",
+        "RW030"
+      ],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "POTENTIALLY_DISTINCTIVE",
+      "supporting_case_ids": [
+        "case-2"
+      ],
+      "supporting_identity": "result-package 03-runtime/case-2-runtime.json authority record"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "INTERPRETATION",
+      "claim_id": "R046",
+      "claim_text": "An architecture whose institutional authorization status admits only two values has no place to record the unresolved state measured in case 4.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "The two-valued-status critique is now explicitly made in the contemporary literature.",
+      "related_source_ids": [
+        "RW029",
+        "RW030",
+        "RW022"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [
+        "case-4"
+      ],
+      "supporting_identity": "case-4 measured institutional_authorization_status UNRESOLVED"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "INTERPRETATION",
+      "claim_id": "R047",
+      "claim_text": "Where the states are not separately preserved at decision time, the distinction is available only by later inference from surrounding records, not from the verdict alone.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Unchanged.",
+      "related_source_ids": [
+        "RW014",
+        "RW024",
+        "RW028"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [],
+      "supporting_identity": "problem framing bounded to the architecture under test"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "LIMITATION",
+      "claim_id": "R048",
+      "claim_text": "One execution over one bounded policy family supports the owner-established measured claim for exactly that scenario, implementation and kernel pin, and nothing wider.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "A limitation statement.",
+      "related_source_ids": [],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "UNAFFECTED",
+      "supporting_case_ids": [
+        "case-1",
+        "case-2",
+        "case-3",
+        "case-4",
+        "case-5"
+      ],
+      "supporting_identity": "owner_claim_decision_sha256, scenario_bundle_digest"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "claim_id": "R049",
+      "claim_text": "The architecture figure separates the measured execution sequence from the semantic dependency structure; in the dependency part a single OAM COMPOSITION node emits institutional_authorization_status, execution_disposition and decision_basis together from the evaluated component set, and epistemic_status is carried from the kernel result as its own field.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "A statement about RESULT-001's own figure.",
+      "related_source_ids": [],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "UNAFFECTED",
+      "supporting_case_ids": [],
+      "supporting_identity": "src/oic/demo_runtime.py _compose return tuple at a2ece68f; RESULT-001-ARCHITECTURE-001.mmd"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_distinctiveness": false,
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "claim_id": "R050",
+      "claim_text": "The currentness gate exposes no caller parameter through which currency can be asserted; a supplied controlling record can only produce refusal or be ignored.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "PUBLICATION_ROLE = IMPLEMENTATION_INVARIANT per §8. No examined system documents the absence of an assert-currency parameter, but this may not carry any distinctiveness thesis.",
+      "publication_role": "IMPLEMENTATION_INVARIANT_NOT_CONTRIBUTION",
+      "related_source_ids": [
+        "RW027",
+        "RW029",
+        "RW003"
+      ],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "POTENTIALLY_DISTINCTIVE",
+      "supporting_case_ids": [],
+      "supporting_identity": "src/oic/cdc_currentness.py resolve_currentness docstring and asserted_controlling_record handling at a2ece68f"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R051",
+      "claim_text": "The authority evaluation distinguishes the named conditions A1 (satisfied), A6 (competing operative bases, no frozen precedence) and A10 (revoked basis).",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Named vocabularies of non-satisfaction causes are preceded.",
+      "related_source_ids": [
+        "RW022",
+        "RW030",
+        "RW029"
+      ],
+      "related_work_action_applied": "REFRAME",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [
+        "case-1",
+        "case-3",
+        "case-4"
+      ],
+      "supporting_identity": "src/oic/cdc_authority.py AUTHORITY_REASON_CODES at a2ece68f; 03-runtime case-1/case-3/case-4"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "claim_id": "R052",
+      "claim_text": "Reliance issuance is gated by a single-use issuance authorization claimed by exclusive creation.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Reinforced: EAC issuance is conditioned on a validity predicate, and Mandato conditions issuance on chain verification and attenuation.",
+      "related_source_ids": [
+        "RW027",
+        "RW030",
+        "RW012"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [
+        "case-1"
+      ],
+      "supporting_identity": "src/oic/cdc_reliance.py claim_issuance_attempt O_CREAT|O_EXCL at a2ece68f; work/case-1-issuance-attempt.json attempt_state"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R053",
+      "claim_text": "Execution, evidence closure and the owner claim decision are distinct acts recorded in separate artifacts with separate digests.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "PoE separates the validator's PoE=1 determination from EAC issuance from the record plane. Three separately addressable acts over evidence are preceded in a measured system.",
+      "related_source_ids": [
+        "RW027",
+        "RW019",
+        "RW021"
+      ],
+      "related_work_action_applied": "NARROW",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [],
+      "supporting_identity": "canonical_manifest_sha256 f114c267…, evidence_closure_sha256 201c5e22…, owner_claim_decision_sha256 d14f896c…"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R054",
+      "claim_text": "The five cases were declared before the result-bearing execution.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "A methodological fact.",
+      "related_source_ids": [],
+      "related_work_action_applied": "NONE",
+      "related_work_impact": "UNAFFECTED",
+      "supporting_case_ids": [
+        "case-1",
+        "case-2",
+        "case-3",
+        "case-4",
+        "case-5"
+      ],
+      "supporting_identity": "implementation work order predeclaration; five-case suite present at implementation commit a2ece68f prior to RESULT-001"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "OBSERVATION",
+      "claim_id": "R055",
+      "claim_text": "The bounded action gate performs no real-world effect.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "A bounded-demonstration fact; PoE's deny-side null effect is the analogous invariant.",
+      "related_source_ids": [
+        "RW027",
+        "RW030"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "UNAFFECTED",
+      "supporting_case_ids": [
+        "case-1",
+        "case-2",
+        "case-3",
+        "case-4",
+        "case-5"
+      ],
+      "supporting_identity": "result-package 03-runtime bounded_execution_attempt.performs_real_world_effect false"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "claim_id": "R056",
+      "claim_text": "The separate consumer receives governed material by path and reads the bytes itself rather than by in-memory object transfer.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Pass-by-reference with receiver-side verification is preceded.",
+      "related_source_ids": [
+        "RW027",
+        "RW011",
+        "RW019"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [
+        "case-1"
+      ],
+      "supporting_identity": "src/oic/demo_runtime.py _consumer_job / _run_consumer at a2ece68f; work/case-1-consumer-job.json"
+    },
+    {
+      "canonical_record_sha256": "d98f3f5afc17193b21aa684f51af4e902a46b9a98ee75ff2560e670a5dbe8403",
+      "carries_integrated_chain_distinction": false,
+      "claim_ceiling_compatible": true,
+      "claim_class": "ARCHITECTURAL_DESCRIPTION",
+      "claim_id": "R057",
+      "claim_text": "The bridge verifies the external checkout is at the pinned commit before importing or invoking the kernel.",
+      "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
+      "precedence_note": "Same basis as R024.",
+      "related_source_ids": [
+        "RW011",
+        "RW019"
+      ],
+      "related_work_action_applied": "CITE",
+      "related_work_impact": "PARTIALLY_PRECEDED",
+      "supporting_case_ids": [
+        "case-1",
+        "case-5"
+      ],
+      "supporting_identity": "adapters/ztl/demo_bridge.py pin check at a2ece68f; ztl_commit 56e1ff05…"
+    }
+  ],
+  "counts": {
+    "CHALLENGED": 0,
+    "PARTIALLY_PRECEDED": 22,
+    "POTENTIALLY_DISTINCTIVE": 5,
+    "REQUIRES_CONTEXT": 4,
+    "REQUIRES_NARROWING": 4,
+    "SUPPORTED_BY_PRECEDENT": 2,
+    "UNAFFECTED": 20,
+    "carrying_integrated_chain_distinction": 4,
+    "total": 57
+  },
+  "owner_authorization_basis": "OIC-ZTL-OAM-DEMO-SLICE-001-RESULT-001-RELATED-WORK-INTEGRATION-001",
+  "owner_intellectual_adjudication": {
+    "R050": "IMPLEMENTATION_INVARIANT_NOT_CONTRIBUTION",
+    "component_level_contribution": "PRECEDED",
+    "composition_level_contribution": "SUBSTANTIALLY_PRECEDED_WITH_BOUNDED_SURVIVING_SEPARATIONS",
+    "integrated_chain_contribution": "INTEGRATED_CHAIN_DISTINCTION_SURVIVES",
+    "novelty_first_unique_unprecedented_claims": "NOT_AUTHORIZED",
+    "publication_distinctiveness": "INTEGRATION_RESULT_ONLY",
+    "surviving_integrated_properties": [
+      "S1_PRESERVED_EPISTEMIC_STATE",
+      "S8_DOWNSTREAM_CURRENTNESS_AND_AUTHORITY_REVALIDATION_BEFORE_RELIANCE",
+      "X1_NOT_EVALUATED_WITH_CAUSAL_GATE_PRESERVED"
+    ]
+  },
+  "predecessor_claim_map_sha256": "e37ea2dc907d6ca0d290ac58bebfa99be9b197eaca2c5e4f50c3e4c1c9e02422",
+  "predecessor_frozen_unmodified": true,
+  "predecessor_manuscript_sha256": "88a6df39b20cd3fd4593daae830ba98a242811016d9312ef737100980294080a",
+  "publication_authorized": false,
+  "record_class": "RESEARCH_ARTIFACT_CLAIM_MAP_RELATED_WORK_INTEGRATED",
+  "related_work_source_ledger_sha256": "49bb905028872b79280854056a34716d88eee634d8f28b998a89c2c289f0630f"
+}
