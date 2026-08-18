@@ -1,0 +1,85 @@
+{
+  "absence_from_search_is_not_proof_of_novelty": true,
+  "authorization_note": "The owner issued this work order and the intellectual adjudication directly. No artifact was written to owner-decisions/** because this role is not authorized to author owner-decision artifacts or to impersonate the owner principal. The absence of an owner-decisions/** artifact does NOT convert the explicit owner authorization into NOT_AUTHORIZED.",
+  "members": [
+    {
+      "bytes": 6702,
+      "path": "RESULT-001-ARCHITECTURE-RELATED-WORK-001.mmd",
+      "sha256": "67041c972469959e77b9cc2fdc36bef274035b62736c1dcdac3de8e47b6466d7",
+      "sha512": "90b1a66385f0e90a28970e8f0dcb65d3ee68840534910fb5f8e05c04e151cccd558022f877e81eaa62721dbbb6a7cf1f0f8859cc1573ef81b1f6748312806af6"
+    },
+    {
+      "bytes": 12624,
+      "path": "RESULT-001-RELATED-WORK-CITATION-AUDIT-001.json",
+      "sha256": "e1da4ddd373257dc6bd2b0eeb037fb2b817054295971a1490c14f645a1101970",
+      "sha512": "2940805bb1392453d8b6671db261488426c1a447c3b1cfb62c4e1577c830226109bf827ec5a5e932f4351fd01b81c969c3a8800c47202d1a8d877a69937c14ef"
+    },
+    {
+      "bytes": 58332,
+      "path": "RESULT-001-RESEARCH-ARTIFACT-CLAIM-MAP-RELATED-WORK-001.json",
+      "sha256": "69b8b50f097dd195ead08c5e0d4e5f514838e160b0d7a917de4f71d4762929db",
+      "sha512": "9422be774f6d7ccbc3402546462b9cc13f9cb6b848c304a2898d229b36021bd6fee5139a883c7907ef9bb78ee1ab92db9cb17ff54032bba05b2971faa9f39b37"
+    },
+    {
+      "bytes": 51027,
+      "path": "RESULT-001-RESEARCH-ARTIFACT-RELATED-WORK-INTEGRATED-001.md",
+      "sha256": "eafbb450a9ef37f04e15c9c68f72dfefd371771a033a2b965505357fe0256ece",
+      "sha512": "000bf9a47a0d5d986063b9dcded5428f8ea41c00e83b01367ce528761d0a17b4656e391ac8547b5ff08455353b1ab59f7ce5b34c9613c0771ca30c41854ff4d5"
+    },
+    {
+      "bytes": 8164,
+      "path": "RESULT-001-RESEARCH-ARTIFACT-SOURCE-MANIFEST-RELATED-WORK-001-PUBLIC-REVIEW.json",
+      "sha256": "9610395079d2db102a6c57eb93dd5d3b0cbcae3d90fa2e1d29d49f527951b750",
+      "sha512": "0a87c73cbeac9224be11630ca4fed399e15a6e66a115e40179e862b556980aff45172db752eef0b5415308eb1ae0d715721916f46ab49832a547cd8053827265"
+    }
+  ],
+  "not_established": [
+    "INDEPENDENT_TIER1_REPRODUCTION",
+    "INDEPENDENT_ASSURANCE",
+    "PRODUCTION_READINESS",
+    "INSTITUTIONAL_VALIDITY",
+    "NOVELTY"
+  ],
+  "owner_authorization_basis": "OIC-ZTL-OAM-DEMO-SLICE-001-RESULT-001-RELATED-WORK-INTEGRATION-001",
+  "owner_decision_artifact_in_owner_decisions_path": false,
+  "owner_intellectual_adjudication": {
+    "R050": "IMPLEMENTATION_INVARIANT_NOT_CONTRIBUTION",
+    "component_level_contribution": "PRECEDED",
+    "composition_level_contribution": "SUBSTANTIALLY_PRECEDED_WITH_BOUNDED_SURVIVING_SEPARATIONS",
+    "integrated_chain_contribution": "INTEGRATED_CHAIN_DISTINCTION_SURVIVES",
+    "novelty_first_unique_unprecedented_claims": "NOT_AUTHORIZED",
+    "publication_distinctiveness": "INTEGRATION_RESULT_ONLY",
+    "surviving_integrated_properties": [
+      "S1",
+      "S8",
+      "X1"
+    ]
+  },
+  "owner_intellectual_adjudication_received": true,
+  "predecessor_frozen_and_unmodified": true,
+  "predecessor_identities": {
+    "architecture_sha256": "55c667975d131d0dfb971775a1b78524e34347b2c9758bd101743ab4d02b0aba",
+    "claim_map_sha256": "e37ea2dc907d6ca0d290ac58bebfa99be9b197eaca2c5e4f50c3e4c1c9e02422",
+    "manuscript_sha256": "88a6df39b20cd3fd4593daae830ba98a242811016d9312ef737100980294080a",
+    "source_manifest_sha256": "8bbb0a831c792e6ee89dc31783208690e6caf4157475542978ff394f46c8b614"
+  },
+  "publication_authorized": false,
+  "record_class": "IMPLEMENTER_EXECUTION_TRANSPORT_MANIFEST",
+  "role": "IMPLEMENTER_EXECUTION",
+  "search_completeness_claimed": false,
+  "stage_id": "stage-result001-related-work-integration-001",
+  "strongest_supported_claim": "MEASURED_INTERNAL_END_TO_END_TECHNICAL_DEMONSTRATION",
+  "successor_artifacts_created": 6,
+  "successor_artifacts_transported": 5,
+  "withheld_from_ledger": [
+    {
+      "artifact": "RESULT-001-RESEARCH-ARTIFACT-SOURCE-MANIFEST-RELATED-WORK-001.json",
+      "artifact_edited_to_enable_publication": false,
+      "bytes": 8072,
+      "detail": "The governing full manifest remains byte-identical and withheld. A deterministic public-review projection is transported separately; it omits only $.internal_source_locations and does not disclose that value.",
+      "reason": "PUBLIC_DISCLOSURE_PREFLIGHT_BLOCKER",
+      "sha256": "556477c516e3ebd0ce9cdcd4ab17339e99345a64db846f252ebd42833a1ceffa"
+    }
+  ],
+  "work_order": "OIC-ZTL-OAM-DEMO-SLICE-001-RESULT-001-RELATED-WORK-INTEGRATION-001"
+}
