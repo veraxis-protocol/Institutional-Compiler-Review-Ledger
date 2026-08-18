@@ -1,5 +1,5 @@
 {
-  "$comment": "Ledger transport metadata. NOT one of the seven original export members, and NOT an owner decision. Follows the ledger's existing non-circular manifest convention (manifest_self_inclusion=false); this manifest's own SHA-256 and SHA-512 are reported in the PR body and terminal return.",
+  "$comment": "Ledger transport metadata. NOT one of the seven original export members and NOT an owner decision. members[] uses the exact keys the ledger verifier requires: path, bytes, sha256, sha512.",
   "artifact_state": "READY_FOR_OWNER_ADJUDICATION",
   "bound_accepted_identities": {
     "accepted_claim_map_sha256": "e37ea2dc907d6ca0d290ac58bebfa99be9b197eaca2c5e4f50c3e4c1c9e02422",
@@ -11,64 +11,75 @@
     "owner_claim_decision_sha256": "d14f896c58249394564e8a95b011e2f9f6c843cc29ad9a13f6d62cc0ffb79c5b",
     "repository_provenance_baseline": "ac52dcde01b0db1fdf8ecac6321db7a4e1efd81a"
   },
+  "canonical_lossless_representation": {
+    "note": "The unchanged ZIP holds the original seven members under their original filenames, including RESULT-001-RELATED-WORK-OWNER-ADJUDICATION-EXPORT-MANIFEST-001.json.",
+    "original_member_count": 7,
+    "zip": "OIC-ZTL-OAM-DEMO-SLICE-001-RESULT-001-RELATED-WORK-OWNER-ADJUDICATION-EXPORT-001.zip"
+  },
+  "correction_reason": "The initial transport manifest used relative_path/byte_length, which the ledger verifier reads as a missing member path. Mechanical-verification run 32142020447 failed with 'duplicate/missing member path None'. Corrected to ledger-native member keys; no research byte changed.",
+  "corrective_successor_of": "2ab55cf386dcb587b8a1b717148dcf89df75eb39",
+  "independent_review_acceptance": false,
   "manifest_self_inclusion": false,
   "manuscript_integration_authorized": false,
   "members": [
     {
-      "byte_length": 5352,
-      "relative_path": "RESULT-001-RELATED-WORK-DECISIVE-GAP-CLOSURE-PROTOCOL-003.md",
+      "bytes": 5352,
+      "path": "RESULT-001-RELATED-WORK-DECISIVE-GAP-CLOSURE-PROTOCOL-003.md",
       "sha256": "f4b3f70012d85df99f32fffa52df938882c78e3b3413a1a3c8cc371160bef21a",
       "sha512": "3acfe949063d6c8d744d4c72464843f78a675a5ce3bbf612e26931b4f5e5eeb64fb3f0277bfa065d1e4239fbb8a14fb6e0398cb158878696679380f0a54942c9",
-      "source_identity_verified": true
+      "source_bytes_changed": false
     },
     {
-      "byte_length": 70107,
-      "relative_path": "RESULT-001-RELATED-WORK-SOURCE-LEDGER-003.json",
+      "bytes": 70107,
+      "path": "RESULT-001-RELATED-WORK-SOURCE-LEDGER-003.json",
       "sha256": "49bb905028872b79280854056a34716d88eee634d8f28b998a89c2c289f0630f",
       "sha512": "4b964a3b4806b8ac68e85fe94f10fea85f03bd9cc687cd46ddc887a2ea57fe5822545fcfc87b0f3afaa181c494fd7823c04395b22a0fdd66f912dd9ec065e152",
-      "source_identity_verified": true
+      "source_bytes_changed": false
     },
     {
-      "byte_length": 5871,
-      "relative_path": "RESULT-001-RELATED-WORK-CAPABILITY-MATRIX-003.md",
+      "bytes": 5871,
+      "path": "RESULT-001-RELATED-WORK-CAPABILITY-MATRIX-003.md",
       "sha256": "6cc6a17940ba9a9f9f3e04578efd99bdac6831e2626f87b64b32119cc352ddd4",
       "sha512": "317ed2e76c9f2404b4ef3265168e9a999b277ba2f1f61789fb6eee43d8968323bb753a0f01135b2481887c1ea4335b0d660484b2aa641080805ce8344535b461",
-      "source_identity_verified": true
+      "source_bytes_changed": false
     },
     {
-      "byte_length": 28972,
-      "relative_path": "RESULT-001-RELATED-WORK-CLAIM-IMPACT-MAP-003.json",
+      "bytes": 28972,
+      "path": "RESULT-001-RELATED-WORK-CLAIM-IMPACT-MAP-003.json",
       "sha256": "b519ea825cabea21c91a41bbc9cb25ccf1720899ebcda294828540e062c1d571",
       "sha512": "3294b579016780129d7d502681737778a981b97992866389a12bfdc4805464a685217effb895ba8c756a50cc4d6cbafcbdc1c22796bc865ef3a70bb36a8689a3",
-      "source_identity_verified": true
+      "source_bytes_changed": false
     },
     {
-      "byte_length": 16158,
-      "relative_path": "RESULT-001-RELATED-WORK-FINDINGS-003.md",
+      "bytes": 16158,
+      "path": "RESULT-001-RELATED-WORK-FINDINGS-003.md",
       "sha256": "48cf3b4f053d85036bde88f36723bbcd176dcfff9f548c1036b91c48f00729d9",
       "sha512": "a746a909dd609c4b820bbafe29405e1dbcc3296c65cfed7323cd903e17b3ec45a0345991de971dcdc50b7fc9fd357b3b42af66c5983789b5d53757b6abe8fa75",
-      "source_identity_verified": true
+      "source_bytes_changed": false
     },
     {
-      "byte_length": 3959,
-      "relative_path": "RESULT-001-RELATED-WORK-OWNER-ADJUDICATION-EXPORT-MANIFEST-001.json",
+      "bytes": 3959,
+      "filename_mapping_reason": "The ledger verifier mechanically validates every *MANIFEST*.json as a ledger-native manifest. This source artifact matches that glob but uses the export schema (filename/byte_length, no sha512). Its bytes are transported unchanged under a non-matching filename; the original filename and the original seven-member structure remain inside the unchanged ZIP.",
+      "path": "ORIGINAL-OWNER-ADJUDICATION-EXPORT-RECORD-001.json",
       "sha256": "d676e95b16874c7aeecadfe8e0e600e9d92806d8284a83f715ef7ff19f0fdf2e",
       "sha512": "0b52bcfdd330593ca3e12260c6a946b2e67d78e9d524badf50890a8d672ab8a8ac39c9e82fb551a8e0890258c195b6ee4b579c1fa0bd97397695c2d8b55c76c5",
-      "source_identity_verified": true
+      "source_bytes_changed": false,
+      "source_original_filename": "RESULT-001-RELATED-WORK-OWNER-ADJUDICATION-EXPORT-MANIFEST-001.json",
+      "transport_filename_changed_for_ledger_manifest_namespace": true
     },
     {
-      "byte_length": 711,
-      "relative_path": "SHA256SUMS",
+      "bytes": 711,
+      "path": "SHA256SUMS",
       "sha256": "f3b1582c758c965311280fc02e05f53c02a7a553376389b657e08ba8f8565c4c",
       "sha512": "be314b97021b1a29001799e0c2bf14933278e2a1d876c147b8ffc56bd7b76764047dc6a64edb5412cf45cf02d912c1c1cbef01d04b791fda58ca2401bd96dc23",
-      "source_identity_verified": true
+      "source_bytes_changed": false
     },
     {
-      "byte_length": 35830,
-      "relative_path": "OIC-ZTL-OAM-DEMO-SLICE-001-RESULT-001-RELATED-WORK-OWNER-ADJUDICATION-EXPORT-001.zip",
+      "bytes": 35830,
+      "path": "OIC-ZTL-OAM-DEMO-SLICE-001-RESULT-001-RELATED-WORK-OWNER-ADJUDICATION-EXPORT-001.zip",
       "sha256": "bccb20d43944b713141062999dfd3c3d34747be8d58b36f0a7191fca147cb321",
       "sha512": "5cbb8c2e9806cffa7bf323242625ac0c5ba94312abc6e6240841c2803d225023d2d09a06dca9984fa627791a7a2be7034b1ef9db92399a006be807f49ac83a71",
-      "source_identity_verified": true
+      "source_bytes_changed": false
     }
   ],
   "merge_is_not_acceptance": "RL-06: commit existence, CI PASS, reviewer acceptance and owner acceptance are distinct state transitions.",
@@ -82,7 +93,6 @@
     "performed": true,
     "personal_or_machine_identifiers_found": 0,
     "private_keys_found": 0,
-    "quotation_note": "Third-party material appears only as short attributed quotations from public standards and open-access preprints. No licensed full text, PDF, or unreleased document is included.",
     "result": "PASS",
     "third_party_full_text_or_pdfs_included": false
   },
