@@ -2,6 +2,23 @@
 
 Status: **OPERATIONALLY ACTIVE**
 
+Verify the current ledger mechanically:
+
+```bash
+make verify
+```
+
+Exercise the public positive and fail-closed cases in disposable copies:
+
+```bash
+make falsify
+```
+
+These commands verify transport and integrity controls. They do not accept
+evidence, confer institutional role, mutate the governed source repository, or
+adjudicate their own result. See [`AGENTS.md`](AGENTS.md),
+[`SECURITY.md`](SECURITY.md), and [`VERSIONING.md`](VERSIONING.md).
+
 This repository is the transport and evidence-lineage layer for independent review of the Institutional Compiler. It is intentionally separate from the governed source repository. A commit here records evidence *about* the governed system; it does not mutate the system under review.
 
 ## Governing identity model

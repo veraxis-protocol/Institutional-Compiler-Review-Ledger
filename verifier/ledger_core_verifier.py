@@ -11,7 +11,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 INFRA_PATTERNS = [
     '.github/**','verifier/**','schemas/**','policy/**','CODEOWNERS',
-    'ROLE-IDENTITY-MAP.json','LEDGER-INVARIANTS.md','README.md'
+    'ROLE-IDENTITY-MAP.json','LEDGER-INVARIANTS.md','README.md',
+    'AGENTS.md','SECURITY.md','VERSIONING.md','Makefile','scripts/**','docs/**'
 ]
 # RETIRED authority class. BOOTSTRAP was temporary initial-installation authority
 # and is decommissioned (RL-15). The name survives here only as a detection marker

@@ -39,6 +39,10 @@ jobs:
           fi
           echo "exact_head_match=true"
 
+      - name: Review dependency changes
+        if: github.event_name == 'pull_request'
+        uses: actions/dependency-review-action@2031cfc080254a8a887f58cffee85186f0e49e48 # v4.9.0
+
       - name: Verify ledger mechanics
         env:
           LEDGER_ACTOR: ${{ github.actor }}
