@@ -9,10 +9,6 @@ import argparse, fnmatch, hashlib, json, os, re, stat, subprocess, sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-INFRA_PATTERNS = [
-    '.github/**','verifier/**','schemas/**','policy/**','CODEOWNERS',
-    'ROLE-IDENTITY-MAP.json','LEDGER-INVARIANTS.md','README.md'
-]
 # RETIRED authority class. BOOTSTRAP was temporary initial-installation authority
 # and is decommissioned (RL-15). The name survives here only as a detection marker
 # so the guard below can fail closed if the retired authority is ever reinstalled.
@@ -41,6 +37,22 @@ def match(path: str, pattern: str) -> bool:
 def matches_any(path: str, patterns: list[str]) -> bool:
     return any(match(path,p) for p in patterns)
 
+def infrastructure_patterns(policy: dict) -> list[str]:
+    """Return the active infrastructure paths, failing closed on bad policy."""
+    role_paths=policy.get('role_paths')
+    if not isinstance(role_paths,dict):
+        raise Failure('policy role_paths must be an object')
+    if 'INFRASTRUCTURE' not in role_paths:
+        raise Failure('policy role_paths must declare INFRASTRUCTURE')
+    patterns=role_paths['INFRASTRUCTURE']
+    if not isinstance(patterns,list):
+        raise Failure('policy INFRASTRUCTURE paths must be an array')
+    if not patterns:
+        raise Failure('policy INFRASTRUCTURE paths must not be empty')
+    if any(not isinstance(pattern,str) or not pattern.strip() for pattern in patterns):
+        raise Failure('policy INFRASTRUCTURE paths must contain only non-empty strings')
+    return patterns
+
 def git(*args: str) -> str:
     p=subprocess.run(['git',*args],cwd=ROOT,text=True,capture_output=True)
     if p.returncode: raise Failure(f"git {' '.join(args)} failed: {p.stderr.strip()}")
@@ -64,6 +76,7 @@ def verify_retired_bootstrap_absent():
     """
     role_map=load_json(ROOT/'ROLE-IDENTITY-MAP.json')
     policy=load_json(ROOT/'policy/PATH-AUTHORITY.json')
+    infrastructure_patterns(policy)
     found=[]
     for p in role_map.get('principals',[]):
         if RETIRED_ROLE in p.get('roles',[]):
@@ -97,6 +110,7 @@ def principal_for_actor(actor: str, role_map: dict, role: str) -> dict:
 def verify_path_authority(actor: str, branch: str, base: str, head: str):
     policy=load_json(ROOT/'policy/PATH-AUTHORITY.json')
     role_map=load_json(ROOT/'ROLE-IDENTITY-MAP.json')
+    infra_patterns=infrastructure_patterns(policy)
     verify_retired_bootstrap_absent()
     role=role_for_branch(branch,policy)
     principal=principal_for_actor(actor,role_map,role).get('principal_id')
@@ -107,7 +121,7 @@ def verify_path_authority(actor: str, branch: str, base: str, head: str):
     if bad: raise Failure(f'unauthorized paths for role {role}: {bad}')
     # Steady state: only INFRASTRUCTURE may alter protected infrastructure paths.
     if role!='INFRASTRUCTURE':
-        infra=[p for p in files if matches_any(p,INFRA_PATTERNS)]
+        infra=[p for p in files if matches_any(p,infra_patterns)]
         if infra: raise Failure(f'non-infrastructure PR alters protected verifier/policy paths: {infra}')
     return {'role':role,'principal':actor,'principal_id':principal,'changed_files':files}
 

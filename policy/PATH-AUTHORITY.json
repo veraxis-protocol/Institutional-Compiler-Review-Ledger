@@ -19,7 +19,13 @@
       "CODEOWNERS",
       "ROLE-IDENTITY-MAP.json",
       "LEDGER-INVARIANTS.md",
-      "README.md"
+      "README.md",
+      "AGENTS.md",
+      "SECURITY.md",
+      "VERSIONING.md",
+      "Makefile",
+      "scripts/**",
+      "docs/**"
     ]
   },
   "branch_role_prefixes": {

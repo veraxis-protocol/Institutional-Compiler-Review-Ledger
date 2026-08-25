@@ -10,6 +10,12 @@
 /ROLE-IDENTITY-MAP.json @veraxis-protocol @inventor1975
 /LEDGER-INVARIANTS.md @veraxis-protocol @inventor1975
 /README.md @veraxis-protocol @inventor1975
+/AGENTS.md @veraxis-protocol @inventor1975
+/SECURITY.md @veraxis-protocol @inventor1975
+/VERSIONING.md @veraxis-protocol @inventor1975
+/Makefile @veraxis-protocol @inventor1975
+/scripts/ @veraxis-protocol @inventor1975
+/docs/ @veraxis-protocol @inventor1975
 
 # Implementer evidence routes to the independent reviewer.
 /stage-*/ @inventor1975

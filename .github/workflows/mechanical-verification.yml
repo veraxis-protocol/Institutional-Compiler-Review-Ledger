@@ -39,6 +39,10 @@ jobs:
           fi
           echo "exact_head_match=true"
 
+      - name: Review dependency changes
+        if: github.event_name == 'pull_request'
+        uses: actions/dependency-review-action@a1d282b36b6f3519aa1f3fc636f609c47dddb294 # v5.0.0
+
       - name: Verify ledger mechanics
         env:
           LEDGER_ACTOR: ${{ github.actor }}
@@ -52,3 +56,6 @@ jobs:
           else
             python3 verifier/ledger_core_verifier.py verify-all
           fi
+
+      - name: Run bounded falsification and policy regression cases
+        run: python3 scripts/falsify_ledger.py
