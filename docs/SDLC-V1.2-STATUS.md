@@ -15,7 +15,7 @@ matrix uses the canonical public-release gate definitions in owner-authorized
 | I | Security & Vulnerability Management | PASS | `SECURITY.md` covers evidence-integrity threats, malicious submissions, private disclosure, dependency scope, and bounded response. Exact-head dependency review is green. |
 | J | API & Versioning Integrity | PASS | `VERSIONING.md` declares compatibility treatment for verifier behavior, schemas, invariants, policy maps, pins, and accepted-state identities. |
 | K | Machine-Readable Discovery & Licensing | NOT ESTABLISHED | Machine-readable path-authority and identity policy artifacts exist and are verified, but no repository license grant or SPDX identity is established. No grant is invented. |
-| L | Public Falsification Completeness | PASS | `make falsify` publicly exercises valid state plus unauthorized path/role, tampered manifest, and retired-BOOTSTRAP authority refusal (4/4). |
+| L | Public Falsification Completeness | PASS | `make falsify` passes 5/5 executable cases: 2 positive (valid ledger; declared policy drives enforcement) and 3 negative (unauthorized path/role; tampered manifest; retired BOOTSTRAP). |
 | M | Agent Interaction Observability | NOT ESTABLISHED | `AGENTS.md` preserves `GitHub transport attribution != institutional role` and states the no-hidden-telemetry/dark-local boundary. No approved observability ingestion pipeline is implemented. |
 
 ## Independent Adjudication
