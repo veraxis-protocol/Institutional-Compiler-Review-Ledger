@@ -56,3 +56,6 @@ jobs:
           else
             python3 verifier/ledger_core_verifier.py verify-all
           fi
+
+      - name: Run bounded falsification and policy regression cases
+        run: python3 scripts/falsify_ledger.py
