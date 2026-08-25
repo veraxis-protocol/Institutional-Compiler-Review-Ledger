@@ -84,10 +84,38 @@ def main() -> int:
         policy_path.write_text(json.dumps(policy, indent=2) + "\n")
         expect("retired BOOTSTRAP authority", verify(candidate), 1, "retired BOOTSTRAP authority is present")
 
-    print("PASS bounded ledger falsification harness: 4/4 expected outcomes observed")
+    with tempfile.TemporaryDirectory(prefix="ledger-policy-source-") as temp:
+        candidate = Path(temp) / "ledger"
+        copy_repo(candidate)
+        base = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=candidate, text=True).strip()
+        subprocess.run(["git", "switch", "-c", "infra/declared-policy-proof"], cwd=candidate, check=True, capture_output=True)
+        policy_path = candidate / "policy/PATH-AUTHORITY.json"
+        policy = json.loads(policy_path.read_text())
+        policy["role_paths"]["INFRASTRUCTURE"].append("declared-policy-proof.txt")
+        policy_path.write_text(json.dumps(policy, indent=2) + "\n")
+        (candidate / "declared-policy-proof.txt").write_text("declared policy controls enforcement\n")
+        subprocess.run(
+            ["git", "add", "policy/PATH-AUTHORITY.json", "declared-policy-proof.txt"],
+            cwd=candidate,
+            check=True,
+        )
+        subprocess.run(
+            ["git", "-c", "user.name=Falsification Fixture", "-c", "user.email=fixture@example.invalid", "commit", "-m", "fixture"],
+            cwd=candidate,
+            check=True,
+            capture_output=True,
+        )
+        head = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=candidate, text=True).strip()
+        expect(
+            "declared policy drives enforcement",
+            verify(candidate, "--actor", "veraxis-protocol", "--branch", "infra/declared-policy-proof", "--base", base, "--head", head),
+            0,
+            "MECHANICAL_VERIFICATION_PASS",
+        )
+
+    print("PASS bounded ledger falsification harness: 5/5 expected outcomes observed (2 positive, 3 negative)")
     return 0
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
