@@ -1,0 +1,44 @@
+{
+  "blocking_defects": 0,
+  "competing_candidate_reviewed_as_object": false,
+  "evidence_modified": false,
+  "independent_assurance_established": false,
+  "independent_reproduction_established": false,
+  "members": [
+    {
+      "bytes": 21325,
+      "path": "RESULT-001-RELATED-WORK-INTEGRATION-FINAL-INDEPENDENT-REVIEW-001.md",
+      "sha256": "e1ca9deaba7d40be362e7b2f9cf30133e9265537a1c5002a7c3e359f60bcc6f3",
+      "sha512": "6454d13ea7d80c5146fd6e5f0f51dfbe90fc95313d476f75ce447773a70d2c2a3749b4e034ae3b5d30fe9f36007b44373c10f283ebee230fcccec0007716b5fd"
+    }
+  ],
+  "mermaid_render_exit_code": 0,
+  "mermaid_render_output_bytes": 65243,
+  "mermaid_render_output_sha256": "96b1b5b23bda87789781ddc7ec2d1329782821c4ff95711d8d4dad025f8fdacb",
+  "mermaid_rendered_independently": true,
+  "non_blocking_observations": 4,
+  "owner_decisions_authored": false,
+  "principal_id": "INDEPENDENT_REVIEWER_001",
+  "publication_authorized": false,
+  "r043_determination": "ACCEPTABLE_HISTORICAL_DESCRIPTION",
+  "record_class": "INDEPENDENT_REVIEW_MANIFEST",
+  "review_decision": "ACCEPT_EXACT_HEAD_BF0882B2",
+  "review_id": "RESULT-001-RELATED-WORK-INTEGRATION-FINAL-INDEPENDENT-REVIEW-001",
+  "reviewed_artifact_identities": {
+    "RESULT-001-ARCHITECTURE-RELATED-WORK-001.mmd": "67041c972469959e77b9cc2fdc36bef274035b62736c1dcdac3de8e47b6466d7",
+    "RESULT-001-RELATED-WORK-CITATION-AUDIT-001.json": "e1da4ddd373257dc6bd2b0eeb037fb2b817054295971a1490c14f645a1101970",
+    "RESULT-001-RESEARCH-ARTIFACT-CLAIM-MAP-RELATED-WORK-001.json": "69b8b50f097dd195ead08c5e0d4e5f514838e160b0d7a917de4f71d4762929db",
+    "RESULT-001-RESEARCH-ARTIFACT-RELATED-WORK-INTEGRATED-001.md": "eafbb450a9ef37f04e15c9c68f72dfefd371771a033a2b965505357fe0256ece",
+    "RESULT-001-RESEARCH-ARTIFACT-SOURCE-MANIFEST-RELATED-WORK-001-PUBLIC-REVIEW.json": "9610395079d2db102a6c57eb93dd5d3b0cbcae3d90fa2e1d29d49f527951b750",
+    "RESULT001-RELATED-WORK-INTEGRATION-TRANSPORT-MANIFEST-001.json": "2e8789b66381145a0e900b05ad78102aa6baa7c65bfbf4e03abf9d1e8a9629fc"
+  },
+  "reviewed_head": "bf0882b2f3dad4719633d5c31737244bcf2ecf27",
+  "reviewed_pull_request": 13,
+  "reviewed_repository": "veraxis-protocol/Institutional-Compiler-Review-Ledger",
+  "reviewer_authored_a_competing_candidate": true,
+  "role": "INDEPENDENT_REVIEWER",
+  "rw024_determination": "WITHIN_LEDGER_SUPPORTED_SCOPE",
+  "source_ledger_sha256": "49bb905028872b79280854056a34716d88eee634d8f28b998a89c2c289f0630f",
+  "source_projection_derivation_independently_verified": false,
+  "stage_paths_modified": false
+}
